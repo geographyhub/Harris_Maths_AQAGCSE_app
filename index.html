@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GCSE Mathematics · AQA 8300 Revision · Harris Federation Maths</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F4F6F9; --card:#FFFFFF; --ink:#0F1B2D; --mut:#5A6B80;
+  --blue:#1B3B8B; --blue-deep:#12295F; --red:#C1121F; --red-bg:#FBEAEA;
+  --f:#0E7490; --f-bg:#DFF1F4; --f-line:#9CD3DC;
+  --h:#6D28D9; --h-bg:#ECE6FA; --h-line:#C9B8F0;
+  --line:#D4DCE6; --radius:14px; --shadow:0 2px 10px rgba(15,27,45,.08);
+  --grid:rgba(27,59,139,.055);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'IBM Plex Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px;
+}
+.mono{font-family:'IBM Plex Mono',monospace}
+/* ---------- masthead ---------- */
+header{background:var(--blue-deep);color:#fff;position:relative;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:24px 24px;pointer-events:none}
+.mast{max-width:1000px;margin:0 auto;padding:26px 18px 18px;position:relative}
+.mast .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#A9BEE8;font-weight:600}
+.mast h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(30px,6vw,46px);line-height:1.02;margin:6px 0 4px;letter-spacing:-.01em}
+.mast h1 .eq{color:#F4B740}
+.mast .strap{color:#C7D4EE;font-size:14.5px;max-width:640px}
+.countrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.count{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:10px 14px;min-width:150px}
+.count .cl{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#A9BEE8;font-weight:600}
+.count .cd{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:22px;line-height:1.15}
+.count .cd span{font-size:12px;font-weight:500;color:#C7D4EE}
+.count .cw{font-size:12px;color:#C7D4EE}
+.count.next{background:var(--red);border-color:#E4626C}
+.count.next .cl,.count.next .cw{color:#FBD3D6}
+.hflogo{position:absolute;top:18px;right:16px;background:#fff;border-radius:8px;padding:6px 10px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.hflogo img{display:block;height:24px;width:auto}
+/* ---------- tabs ---------- */
+nav.tabs{position:sticky;top:0;z-index:50;background:var(--blue);box-shadow:0 2px 8px rgba(15,27,45,.25)}
+nav.tabs .in{max-width:1000px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none}
+nav.tabs .in::-webkit-scrollbar{display:none}
+nav.tabs button{flex:1 0 auto;background:none;border:none;color:#B9C7E6;font-family:'Archivo',sans-serif;font-weight:700;font-size:14.5px;letter-spacing:.02em;padding:14px 18px;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap}
+nav.tabs button.on{color:#fff;border-bottom-color:#F4B740}
+/* ---------- tier toggle ---------- */
+.tierbar{position:sticky;top:49px;z-index:49;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 18px;display:none}
+.tierbar.show{display:block}
+.tierbar .in{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.tierbar .lbl{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:600}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:999px;background:#fff;overflow:hidden}
+.seg button{border:none;background:none;padding:8px 20px;font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;cursor:pointer;color:var(--mut)}
+.seg button.onF{background:var(--f);color:#fff}
+.seg button.onH{background:var(--h);color:#fff}
+.tierbar .note{font-size:12.5px;color:var(--mut)}
+/* ---------- layout ---------- */
+main{max-width:1000px;margin:0 auto;padding:26px 18px 60px}
+section.tab{display:none}
+section.tab.on{display:block}
+h2{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(21px,4vw,27px);margin:34px 0 6px;letter-spacing:-.01em}
+h2:first-child{margin-top:0}
+.sub{color:var(--mut);font-size:14.5px;max-width:720px;margin-bottom:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:14px}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:14px}
+/* paper cards */
+.pcard{border-top:5px solid var(--blue)}
+.pcard.p1{border-top-color:var(--red)}
+.pcard .pk{font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.pcard h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:19px;margin:2px 0 4px}
+.pcard .pm{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--blue);font-weight:600;margin-bottom:8px}
+.pcard ul{margin:0 0 8px 18px;font-size:14px}
+.pcard li{margin-bottom:3px}
+.pcard .tip{background:var(--red-bg);border-left:3px solid var(--red);padding:8px 10px;border-radius:0 8px 8px 0;font-size:13px}
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:14px;background:#fff;border-radius:10px;overflow:hidden;box-shadow:var(--shadow)}
+th{background:var(--blue);color:#fff;text-align:left;padding:9px 12px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:none}
+td.mono,th.mono{font-family:'IBM Plex Mono',monospace}
+.tw{overflow-x:auto;margin-bottom:14px;border-radius:10px}
+/* badges */
+.bF,.bH,.bB{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10.5px;font-weight:700;letter-spacing:.08em;padding:2px 8px;border-radius:999px;vertical-align:middle}
+.bF{background:var(--f-bg);color:var(--f);border:1px solid var(--f-line)}
+.bH{background:var(--h-bg);color:var(--h);border:1px solid var(--h-line)}
+.bB{background:#EDF1F7;color:#40506A;border:1px solid var(--line)}
+/* unit cards */
+.yearhead{display:flex;align-items:baseline;gap:10px;margin:26px 0 10px}
+.yearhead h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:20px}
+.yearhead .yh-note{font-size:13px;color:var(--mut)}
+.unit{background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:12px;box-shadow:var(--shadow);margin-bottom:10px;overflow:hidden}
+.unit.tF{border-left-color:var(--f)}
+.unit.tH{border-left-color:var(--h)}
+.unit .uhead{display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer;user-select:none}
+.unit .unum{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:13px;color:var(--mut);flex:0 0 auto}
+.unit .utitle{font-family:'Archivo',sans-serif;font-weight:700;font-size:15.5px;flex:1}
+.unit .udom{font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--mut);flex:0 0 auto}
+.unit .uchev{color:var(--mut);transition:transform .2s;flex:0 0 auto}
+.unit.open .uchev{transform:rotate(90deg)}
+.unit .ubody{display:none;padding:0 16px 15px;font-size:14px}
+.unit.open .ubody{display:block}
+.unit .uspec{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--blue);margin-bottom:8px}
+.unit .ubody ul{margin:0 0 10px 18px}
+.unit .ubody li{margin-bottom:3px}
+.unit .trap{background:var(--red-bg);border-left:3px solid var(--red);padding:8px 10px;border-radius:0 8px 8px 0;font-size:13px}
+.unit .trap b{color:var(--red)}
+.placeholder{border:1.5px dashed var(--line);border-radius:12px;padding:14px 16px;color:var(--mut);font-size:13.5px;background:rgba(255,255,255,.6);margin-bottom:10px}
+/* formulae */
+.fx{font-family:'IBM Plex Mono',monospace;font-size:14px;background:#F0F3F8;border-radius:6px;padding:2px 7px;white-space:nowrap}
+.fgroup{margin-bottom:6px}
+/* flashcards */
+.deckrow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.deckrow button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 16px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13.5px;cursor:pointer;color:var(--mut)}
+.deckrow button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.fcwrap{perspective:1200px;max-width:560px;margin:0 auto 14px}
+.fcard{position:relative;width:100%;min-height:230px;cursor:pointer;transform-style:preserve-3d;transition:transform .5s}
+.fcard.flip{transform:rotateY(180deg)}
+.fface{position:absolute;inset:0;backface-visibility:hidden;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:26px;text-align:center}
+.fface.back{transform:rotateY(180deg);background:var(--blue-deep);color:#fff;border-color:var(--blue-deep)}
+.fface .fq{font-family:'Archivo',sans-serif;font-weight:700;font-size:19px;line-height:1.3}
+.fface .fhint{position:absolute;bottom:10px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+.fface.back .fhint{color:#A9BEE8}
+.fface .fa{font-size:16px;line-height:1.5}
+.fbtns{display:flex;justify-content:center;gap:10px;margin-bottom:8px}
+.fbtns button{border:none;border-radius:999px;padding:10px 22px;font-family:'Archivo',sans-serif;font-weight:700;font-size:14px;cursor:pointer}
+.fbtns .again{background:var(--red-bg);color:var(--red)}
+.fbtns .shuf{background:#EDF1F7;color:#40506A}
+.fbtns .got{background:#E2F3E8;color:#1B7A3D}
+.fmeta{text-align:center;font-size:12.5px;color:var(--mut);margin-bottom:20px}
+/* practice */
+.pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.pillrow button{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 15px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13px;cursor:pointer;color:var(--mut)}
+.pillrow button.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.mcq{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-bottom:14px}
+.mcq .mtop{display:flex;justify-content:space-between;gap:10px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--mut);margin-bottom:8px;letter-spacing:.06em}
+.mcq .mq{font-weight:600;font-size:15.5px;margin-bottom:12px}
+.opt{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#FAFBFD;border-radius:10px;padding:11px 14px;margin-bottom:8px;font-size:14.5px;cursor:pointer;font-family:'IBM Plex Sans',sans-serif}
+.opt:hover{border-color:var(--blue)}
+.opt.right{background:#E2F3E8;border-color:#1B7A3D;font-weight:600}
+.opt.wrong{background:var(--red-bg);border-color:var(--red)}
+.opt:disabled{cursor:default}
+.mexp{display:none;background:#F0F3F8;border-left:3px solid var(--blue);padding:10px 12px;border-radius:0 8px 8px 0;font-size:13.5px;margin-top:4px}
+.mexp.show{display:block}
+.score{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--mut);margin-bottom:14px}
+/* worked gym */
+.gym{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px;margin-bottom:18px}
+.gym .gtop{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.gym .gt{font-family:'Archivo',sans-serif;font-weight:800;font-size:16.5px}
+.gym .gm{font-family:'IBM Plex Mono',monospace;font-weight:700;color:var(--red);font-size:14px;white-space:nowrap}
+.gym .gq{font-size:15px;margin-bottom:12px}
+.gym .gq .qnote{font-size:12.5px;color:var(--mut);font-style:italic}
+.gfig{display:flex;justify-content:center;margin:10px 0 14px}
+.gfig svg{max-width:100%;height:auto}
+.step{display:none;border-left:3px solid var(--line);padding:7px 12px;margin-bottom:6px;background:#FAFBFD;border-radius:0 8px 8px 0}
+.step.show{display:flex;justify-content:space-between;gap:12px;align-items:baseline}
+.step .sw{font-family:'IBM Plex Mono',monospace;font-size:14px}
+.step .sm{font-family:'IBM Plex Mono',monospace;font-weight:700;font-size:12.5px;color:var(--red);white-space:nowrap}
+.step.final{border-left-color:var(--red);background:var(--red-bg)}
+.step .sn{display:block;font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;color:var(--mut);margin-top:2px}
+.gbtn{border:none;background:var(--blue);color:#fff;border-radius:999px;padding:9px 20px;font-family:'Archivo',sans-serif;font-weight:700;font-size:13.5px;cursor:pointer;margin-top:6px}
+.gbtn.done{background:#EDF1F7;color:var(--mut);cursor:default}
+/* misc */
+.callout{background:#fff;border:1px solid var(--line);border-left:5px solid #F4B740;border-radius:12px;padding:14px 16px;box-shadow:var(--shadow);margin-bottom:14px;font-size:14px}
+footer{border-top:1px solid var(--line);padding:22px 18px 40px;text-align:center;font-size:12.5px;color:var(--mut)}
+@media (max-width:560px){
+  .hflogo{top:12px;right:10px;padding:4px 8px}
+  .hflogo img{height:18px}
+  .step.show{flex-direction:column;gap:2px}
+  .mast h1{font-size:30px}
+}
+@media (prefers-reduced-motion:reduce){
+  .fcard{transition:none}
+  html{scroll-behavior:auto}
+}
+:focus-visible{outline:3px solid #F4B740;outline-offset:2px}
+</style>
+</head>
+<body>
+<header>
+  <div class="mast">
+    <div class="hflogo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYkAAABFCAIAAAAw4o2RAABRpklEQVR4nO29d5ckyZEnZi5DR6Qu1dVqFLCL3cWRe0c+fnw+PpLHIw97u8ACGNXTolTqzNAu+YdHZmVV9/TUQC1E2dTrqcoM4dLcxM/MkLUWHumRHunPkqy1CKH9n8roVoq6bbZ1ta2LWrTCaGQRIxgBAgALD9rOCAAAWbDSGAuWY+IxL/aDNIjSIAo934Kt2mZV5tuqbJQEAIIw6p6PfuDpu7YjQBbAcRiEEALEKPGZF/lB6gc+9w67CQjQ3SfTh73mkR7pkf7jyVqrtK5Eu66KWbHe1pXUCgGihGCErP0RvAkhZKxVRltrGaGRFwy0IpiEnu+uaZVcVcXNZlm2DQAQTBBCP0qUQYAs2D1vwgh7jCV+aMD6jPlwwJs+xPAeedMjPdKfL93btMaYVop1VV6uF6+WN9N8rZREgAilBGNrrHkYb8KAEEbaGK2VtZZSNgjTs96QYJKFkbumaJt3q/mXN2/XZQ6ACKUYYWutBYvgh1+DACFABow1FhAghCgikeePk0xb42S0227eFQ8dPfKmR3qkP1Oy1oK1cLBptTFV28zy9Vezy3+5+PbV4ka3DUIYc04xMdaYh8k1GCGMsDLaSGGtJdw7zYY/bc59xk96A/fqdVX85vrt//nNr6brBQAQ7hFMtDXwQNEJIQTI7pqEEWKE9sP4xfAIAMZJdpT299casMjCPfb0yJse6ZH+fOkeG9DGVKKd5ZtvZlf//e23v7p+Y+sSMEZewAjVRj+cNxGMpdZWNGAM8sNPhscY0Ek2aKRw12zq8qvpxf/96jfvppeAEPYDSog2xtqHyU0IIUDGGmMMIMAIe5QdJb2irQdR8pOTp3e6eZcFO3rkTY/0SH8x5OxNtRSbupzlG7tZQlUAwdYLBaFg9AOFGo2Qxhi0BlGDNjZoptxfVUUlGmW0u6ZVcl0VV5slrOaAkAlCQQnoHyE3ASCwBowGhAzCNWPX1h6nvbytpVZ3+vWhBzzypkd6pL8kQggRjDmhHmPAOHAPMAbG4cfwJkAIMAaswRogBhj3GWeUOoO3u4RgzCj1GS+5BwgB50AoEAPWPOwVGACB1WAMIACEgXKfcU4YwwQhfOfaDz3gkTc90iP9xdCeMQXcS7wAnDkZY/hddTogBIwBP0z8IOQepxTvuAbFJOReFkRlGANC8LvqdE5uAoR9yjI/jL3AY5xg/EMPeORNj/RIf1GEEHKchWLCCAVCAWMglBGCEfoxvAkBICAUkAFCKSEEY4zQHmTk+CAjhBEKCLlrMPrRvAkhBAhZhBmhjBCKd+/5IXrkTY/0SH9JZK21Foy1xhptNBgNYMFojNDD5SaLEADubjcGjDbGGGvtIXrTWmOtNkYbAwiBMQiBNsZaeBhvAgTIWAtGA8KAQButjTHWWGsfgpN65E2P9Eh/YeQAjcZa40AG1sLuzwfyJgBA791+j2U4SLdjgs6qbSxylz0Y3wSmwxwYANi38IEAzkfe9EiP9DdNyCEjHd376vZj9KcPbXvkTY/0SH+7hBBCyCJAGFDHog6/AoT3nz3AQvSHpUfe9EiP9LdLnR5njbbGwcrtwVfGOkOUAYQeik74w9EPe/Ie6ZEe6a+MnLOv85ZZA1pLraRW2mhjjbM1GWukVkIp0Mphmj6o9/3x6JE3PdIj/W2R09QIxu7HedQs7Gzhu5/ObO3CjRHGGBOE8Z+QPT3qdI/0SH9bZMFqYwBAag3GACDAhBPGKaOEYkwAYQAgmHLKPMqAEAAwxiik99jLPwE9yk2P9Eh/K+RUOQAwWsm2gbYGJQBBxHjmB1kQRl7AKAcAhLBHvSyIBmEUeh4AgBJKtlbt9LtdEqg/XmsfedMjPdLfCjndDDnDtgNeYhIH4VmanWeD07TXDyOfdrpUyPlxkr0YjE96/TgIAGOwAGABoe4pf2Td7lGne6RH+lshY401yFoLGGPie5SlfniaDV4Mjz+fnL0YnY7jzHO8ydrY888HR39/9gkmLFstFlW+aaqibZTRxhiXWOqPyp4eedMjPdJfPTlRyYJW1lrAJPb8o7R/ko1OepOzwfF5f/IkG573snGcMARG1QAo4t6z4ZlBwWRwfrWeX66nrxeX384up/lKyRYsAKGASfeCByDFfyw98qZHeqS/dkKAELYuXYm1lHmnWf/nT17+w9knzydPj3pH/TBJOU+YDZAkaq20RpgEiJ6mSRb1Pz99sa2Ki+Xlv779kiGrVDtVYp8pBe0kKPhDl0V55E2P9Eh/teSqCYCL4QUAjBGhk6T32eT8n5998V+ef/FyfJqFIQGNdY11bsTayI2xLcIE0zgl/X444l5P2/Q6CyIKQjZSKYzwoi6lMdaBof44mt0jb3qkR/rLI7RDQsLu54PASAzIAIDR1gLGKPTCfpx8Njn/xyef/cOTT784Oj2OPbBLqK91faPbpWmXUmysaRHGmMWEDb3oDKOnxBs9iag6Om6kJJiFXvTl7OImX9VtDWABfSDnyb5x77XwoYzskTc90iP9hZHb9Q5CaXfbHgOyDuYNe1EGYYSgg1AaRrxx2v98cvrz80//p/NPPhlN+txCewHlr9v1L9vitRFLrQqlamsVQhhjRlhqw5Mg/4TEnyP/6Uk0+uenz9Mgjv0IYyK1upFCGYNdG6xjRWAdWrNjQwe86fZ/D2JPj7zpkR7pL4wcgNsFu4ExAADGYGS0Oaiz4opRYqSNAaMBkEfZJB383cmz//TkxU8m45GnoX3XFr8Wq/+nWv5ClK9BbxGog5S7FhBv+KAMvsLJW7/382Tw8xe955H3TFu0rIp5sSqbctM2xlrQ2tmdMEIOXn6Q99I4pmXwLmTvMUfKIz3SXx/ZXco3ZTRoDVqBxaC1BHQvX7gF0BaBsQ7HFDA+TgcvRqefjiZnEY70hcx/3a5+ITb/o93+VjVzZAFjwNB53awFCw2IrW23qK3AqMQLIOxNosmzweiT0fHb5dW62jbaNKIBV5sAE4ORu9MiZA9qGQCyEmGlb9PL/WBPH3nTHbLuHzduCP4DEkM80iP9/oS61HDdSsbE47wXxsdp/6w3PIr9FC2h+FW1/L/a9S9Nc4FMQfAe6n37BPe7UWtbfaMpEkHM/Qx8SBl70u9/Mj5ZVXkh1bUUnfi2gxQ8qIU/RI+86Q65RDUPttY90iP9qekwXzgQsssXThghGoGx1tlzjLVdgROMGeH9MDpOesdJNgj8CLdYXLbbXzarX4jiW2RbjAhmIYDZxaIAgEWAABGwClRt1FJXr6p1pmlmEkTQ6Tjkz4dHs6KYltW6KhrZAkJACMVYu9yYnU6HOoaHMCNkl5UcP2SP3fKme1oggi4j3gdvc9faw4v3I/fjhvpvnSw44+H9wXxvLh4H9pEAADBCFBNOacB4xD1pNEaYcI8Rqoyx1riYOWOM1tqCpYRGfniaDZ72x6dJ0uOWmY1tL1X1RtbvVJsTApgGCLO7Fc4tALaIgOn+MnLVFt9p0gPjkRD63tFpb3iW16/Xq1m+xEpYhDDjBGNtLViLEHY5ea01zmvnURZwz2OMEYofXsugSzBlb9UZtDO6v78pukwK9jbtOdrpP8h+6Ia/BHI8wu5/3clQf3S+8N5gvk+oa8afVKL7wMHzV0GHZzD60w7pjyYE94YfI0QJ9RlP/WgUZ8dNWXs+wZhznxHibOEuMZMyRippreHMG8a9F4Ojz8anZ2mcUkHUXLdTo9bItJ1jr+MgZv9W9ylYA1YDwggbAKvlEspvCY4oTZNwMEl6ZwPzZLXYlMslAQOIMo8g5IxJDlagrbVGA0IIYY/SYZT2oyTyfEbo/Y6+NxHdFbv8mw8bMfTnPqe/Ax3woD9px/5sB/PPr0V/GPpTZkf7/ek+Xgljn/F+FD/pjzZtFfl+KRqCsM/4oTKFEdLGCCWN1T7zR8nw+eDok8HwNPEDVOp2Zpq5UjVCmBBXfxcDwC1EsyN3QFuEmVulVje6uQQSsfCJH/1kECXnQ76qthSaZdEzgBjl+zpUbpz3pRAwQoyQLIjO++NJ0gsYv9PND83Jo73pkf56yB7ETfxl8aDvo3udoJjEfnCcDSygJIy+qIpaCYywRyhGyMAuExwga63UyljtUS8L+5O0Pwm8Hq09vdbNxrQbpRoAhDvrNf6ew8gCIIQoYALWGN2AXEE7pXLJkeyH0QuaUmzOYp43WwuYEoZ2VivYYZ0cq3I2Mp/xQZScZsPEDw5f88F6dY+86YFk/3olifvUlQaC2x5jwH8RvbfWGmMt2NtkIH/J9L44jTEOuDdKeqEXHPcGrZLKGgTIVQo/0FWRtdYYba0hhPk8Cf3AR5qpGZSgjdC61Vpaa8Aa6G5936Rgdw4/BABgDVgFVoNtEUiGwfN8L/Qzn7/IQiEriyhGH/PTIYQoJh5jEfdjz7/31fudfeRNYF1OP6OFUkJJqZXLCkgwZoRySnlX0fQvfq0/hLQxUiultTbadgYOwgmj5MHu4f84wns54HvIWCu1UloZa9383jN8/AUQQpQQVx/c7HLmfljmsQasQZhSGlLKiG2RJebOtXuW9HG00UFE3q4kFAIgGPsUYz/wIdWaA6Lo47wJEMbIlSO+t5w+aNSgAGCMEVo1UtRSNFohhDxMOKWcMo9QSgi6KyALpRopWiWV0Xv9FmPMMOWUckrpnQXyZydx3GuQk37LtllVxbLYbuqyEi0g8BnPgmgQJf0wjr2AU0YOBsFZzX9PQ5E2RmhVy7aR0nEEs1sEFsAhaAnGAeOxF0TcY4Te44+/5+A6E/zhM6VWRVtXbdNIoY1hhEaenwbR4WJyk/57vPZPSodDJLVaFNtFsWmVDD1/HGejONv35c+wX/ZuIK3SuhRNKZq6bRsllDYajKvgdGvC3klQxmprDcHM41Hg+QE2nhXEWkAEYYqQMzW57JIP6DXCCBGLMCAKQLQFrWSjYVu3RbkQsraIEERvs6Xs2rPfKRhhRknAeOyFSeAfcgn7oa1EAUAbnTfVTb6+2a6WTY0x7nEvC+JBFPfDOOQ+xeRwW1aimebrRbEtRaOtpRhTQj3KEi/ohXEvjCg/XMfg8PMfY80/ZA3eO9oB7qjgd6CSd5/z3lfo1v1wF5NqrBVSrqvi3XL6zezq3Xq+KnML0Auis/7oxfAYhsDw/QPWWvuxtBDfj9s83ADSqE1dTvP1osyLthZa7btprZVGa2N8ykZxepYNSdKjPnZH08F+25WAvv3oodvLwo45HdwltNw21SLfbutSah0wPoxTTll0IIS76UAI7d2a+27/qJ39cVegvX/V7/B8C4AOB1wpNS82X08vtk09jBKKySBKyQFvgt1KsXee8bu8/aD1+4f8yPbbLjRt/0mrxKLcXm2WN5vVvNwWbSOMRhYYIXsjNHQhvlZpaa1h1EuCbBxnkziY+KoHKCABpZGhnkbEAN616xbZ5Drb9dgCILAIkMUIc0AeIrFFvtCoqqrrxrxZXF8t3ubN1gBhhCFA9tbi1CklAIAxppgknj+Ksyf98bPROGDeYU/hfeMaACit11Xxan796+u3N9sVIWQUpWe90fPhxAlgGCFykL03b+q3y9mr+fWi3CpjGKU+44kXTJLeE6N9xiJ+uI7tLhz5x0zLXfq+af0IVPIjX8G9UTBGarWty3er2b9fvf7N9durzdICTJLeF9UTikgWRFkQhdb/gef8eBJKLcv8u8XNu9V821TGGooJwRgAtDGtksqYiHtCyZj7/SCyH2zDR3v6ETo44Q7lJl22zbLKF8VWSBl7PiNkGKeHN+53++/p1vz4nehBV92hfakQgF2Y/l3SxpRtMy+2q6oAgFq096ps72+4ffvvJ0j9zrPTNemu4NQquSi2r+bXX968e7W4mRfbRkkMiFNKMDZ7Px0gbY3U0ljjUa8f9c57o09HYzXK/ITHfED8vi0DYa0xCiNAmAHCd61O+8Gw1igLCiGCiY/YiPhniE9ayxdl/s2i+Je3X3519eWyWBnAnHKMsNkXjAJw4TUAQDD2KBtGyfPhkbZmEMfjuLfvl4M+3BukjjetquKb2dV/e/3lbH5NKBn0xtum5oRkQRR7AcMEDrS0vKneLKb/dvHq3WqujOacx54/DNNy2HiUje6u4w++9QNzADsJ4GFny6HY+EDaKdbvizpWaV22zTRfv5pf/+rq9evFFABOeyOKyUk6eDY8ki5h4MEx2IUz/pgGvE+ON71eTF/NryrRBoynfhgwbgGkVo0UylgCIKRUWhtzBwJl75qr7/f0+wfznqB0j5zvuRJt0dZCSoSgVdItr8NXf+CYO3y+/Rjb/j2RU7ebBg7EN2st2EWxneXrWgif8XHac0uxk56gwydTjDllPuNuP3+gbd8/swdy4sd7Z+H7GdLuggeu8zurVWqdN/U0X79eTn978+5ysxRSIECMMYqJi6TFCGFAyhqllQHLCUuDeJmvlGoSj50mQ+ofczWWxDdaKgUUAyL6wFS0Z8sYEAKrrZZaAxCgrEeDc5L8BILnDYTLqni7vP7t9ZtfXX63ypcWMGUeRURbvcM3IW3NXm4KGD9Kegihk2zYSHGnm91yvUOdTrepitfLm395+01+9RpRFo+3GOGjJDvvj2WstL0DRiia+t169uur11/PrrRW3POzIDpJ+wjBOMn2b3XTbIwBDF3ZGHR4GHaa8SEmeic7H6pmds8K3j+mze2bdijJ3bPtrsv79+5VmA4ZthOzHQRDGd1Imbf1ui6hLsDatRcUbVMrobQy1nQ8zVrnqdXWYIPuRB/dpzu4zQ/aMqRS66q4Wi/ereYAcJr2E8/P/MgCtEo0lBtrQ85jz/fJnY20A2x2797LpR0D3Y3W+9zJfeWGAblarWh/iwVAxhhtrNkVen0/ZnwH0wVku/53StAeuWo7R9Hhq3fzeNt81JnrDgfpds52k3NHSe/avmM07hPiVGtrldFvl7N/efv1LN+M4+znTz/tBRHBBAAscvI7EEKyMDrrD3thlAVR4of4Q+MDXcjFbcP2n98ylbvTuf/29tRAXf+6qbkdgdvl/sOmjLtkrBFalaLd1NWyKpZlrkSLECKME0zcfLlmG2udN4NiUrSNkm3A2Fn/KD96YliAvAmiqUHc2MqdM85UvXsPArCAXDEo7cJ1MQbM+jT+DCc/a/3n29ab5qur9fXVZnqzXZdlbhEizCeYaGvgAGZljAYAjEnAuUdZ3ta1EureaQe3c76nzhZeiXZebF8vp3J6CYwxQs96o01dNkpqcz9ouFFiVeaX68XrxY3RivlBP4zB2nGcFU0ttd73r8ssg/CHIOro9t/vnyAEh/P7vRd96Lbb/x1+7vY0PnBZOleUz3gWxsfZ4Onw6C0m1trTbHicDfphHHCPYoJ2rIa45th7oMnfRQhQRlei3dRV0dQh91I/PMuGwyi1AM7bAAAeZYMoSfzw0BDuMuZ8YCR+CMe+03O6hu+lyL0TF3clFQnFxGDzvid+P6Hvf/5RFftwsD42mwfa4r0nuK/ucLG9AIcQMkpeb5b//c3XrxfT58Ojk97wZ6fP9wzdWAsIMUIGUYIxFko5X8dhLz5SOwTtRvZ7m71v+g+PwO8ubTu4kEtCILUSWoFWgJDGmFrr5KY9b3ICoNBKKImtvtwkV3mxamxtk4Ad0+AZD58aI4ltEcJg9b14OgALQAAsQoAxUN7z4ud+7+9N+pPcjpfb7eVmcbW+XpbrSrZKa0BIY0Wt1Y5F7ngTGO2aTjWRRitjPnDifYgoAFhrldaNFLKpoS5BcdnUlWhaJaXR2hpj7QHmBUmjGinKtjFNDVpKgILQSrSNFFIrc/e1zs33O0/GH5zez2xFCQ24N4zTTyanBuxxNliUubW2HyZP++PPJqfjJPMZv3fbQwKCfpCMtcpoZbQF6zM+itPzwXgYZRbAoRkcJMR5yjhlaC/tPZg+fv37uBJOmXPxdjGZd12T7o/3VaH/KDpUeTBC26b6bjn9cvoOYVS0Nb0naSJEMUn9MOC+MYZgwu/6PX+sjv5j5+IPQrYDW1vtUiO57EjGaEDWmk627ERicF+BloXV82J7vV1db7fLXhx5Ryz7p1jVlCe6eqvkSqsSWYMQ3klPxloAhAEQIiHlfT97Hg9+TgY/U/7TOofr/PK7xc3b5fWq3EqXIAXgTjMQ0u7tLiGUQU4SN/sj5YeIAtwb4I5x7obAGGu01dro287uzI0PmZnfzS/7Y+/qzASugQ+7b685WGsYoaM4o5Qdpf1tUzVCAFiP8sQPB2GUBlHAPYTRh1v1sBX6/o2dyXZnJkyDYJT0TnrDQZhYAHc2OgmFEuozRgkFhO57lXdkjAXUBVjeectOsvigmxYAtNEAaM9uEHIakPs5CJ0Ep89+gClrY9CuKOP7HXyIYeUjIB1jjAELAATfD16/t8S1MZUQq7qcl8W6qWopjLX48GILCCFGGMVdw/ButL7PgKa7aH70Pjs2twP7A/O/NwZ/9KoHk90bJ7q/37/ivjnWWANq21TXm9l384vTJAhG6TD6Jx9HmA+a5f+rNr/WskVWEoQRwgiQtchaZaxFJCB8TKNP2eAfSP+fIXzRmnBezb9bTL+eXrxZzjZ1Ccbus6PYvfVj37S9YbQTbx5a8sD5xV0CTgqM7388yjhlnFC2+9nfwwn1KPMYA8YBIWDco5wTxgilmByuUWdV1UYrY/ZppYwz2QAgAIwwxYQT6jHGKWOEEEz2orW1do+lEloZY3BnyGQUE2utULKRolHSbeOA8ZD7HqXW2kbJRgrpQrEx8SjzKSMYa6NrJRsphFbWAiMkYDzkXsA9j/FeEDVSKK1hh730KHWiBMYYAVhrHTqxVbJVUigHSjJ7vkgwpg60Sagbw4+gFhECgjGnNPT8NIj6cTJKelkQuW+1Md1L31v9FsBYo/RdvCgCgknXZjcX+JZl3BpurFVaCy2FUkIpaRRG2NmGtTHruqxFq7R+/2zbKzxSKb17uzQdVBUj1EFVKWMOqgoIdp4ad8iZXTS5Uzqk1u7I5ZQGzPMo20+61O6nEyphF3/vBpZ1aFikLSijHVJmnm/WVVFLIYyqpVjX5Sxfn/RHANBKYawlCAMgpbXU2ljj4DZuYd+azKx16lKrtNRKGe1MJwRjRsh+LxB8a6aw1jqLrzbGGGN3OuZunJVTJnYoVupR5p7wu7lS3DFAECYYA8aACSAEGBOMzS5A5PBKDeCKhrdazfPlt7M3w9D32CdocNSPI4a5NVobDcRHptnBJyxYi60BRAkf0PA5Tv4eZ/8ovZdSBZfF9tXs8pvZuzfL2aLMhZLgWmJ3Fes6qxxCgIwFcH60zlaAO4PAA3p6G+vbZYTZdZgR6jMWci/2/ENMAACE3HfjSzEBbACT3SsxOTg/pdarqphu18tyu66roq0bKdRO4UQIKCY+4yHzIi/ohVE/jPtBlARRxD3XeG3Npi5vtstpvllVRaukx/gwSsdxGnNfGrUq82m+mZfbRgmP8pN0cN4f9cNYKDnNN9f5alPXBmzEvWGYjKLEp6yRYlbls2KzbSptbeoFZ73h08F4EKYG7Loql+W2FC1CKKAs4F7iBWkQMkJdr4RSqyqfF9tllW/rsmiaUjSNlMpqay0lxKc85Dzzo2GUTJLeKOmlQbgfur2V+nABdUyQsYB74QGM6FaWeW/aGim2dbmuy21dVW3dSqmMRghckHrE/TQIe0GUBRGj7PBGa20t2mWZT/PVqioaKQEsJ8xnnBJsLbRalW1di9bctVbuySFOllW+rkp38NidicFjPAvCUZz1wzjyAtd+Y00jRSOF0FIppYwWWkutGiWKpmmU4IRN0uy0N+KUWWuLploU201VVrJppFJGdRKVtRihgHmDKBnFWS+MGaUIoUYKqVReV19ev327nBZtrYwu2vrtcvrry9eVaH3OCcIB8zihxtqiqdd12SrBKeuHcS+M9/KS0LKo601dbpqyaNu2S4bdfU8wDpjXD+Nx0uuHMd5bsoxplGilaIRopZBaa2u0tdpooVSrZSulUMqA4ZQmXjAIk36UxF7gMX7Hv/EwKC/aMR2MEHYqGHKIawSA97KK47cYIYswwsQCSKMXxeab2YXPOKIBYP9ZL+57L1mvjWmg63egC60bpVtrFCBEMGU0Yv4RCZ9J/2VDz9dtONusv55P/8fbb76evpvm60q0YCymCCG8dxw7Q/ruJMPO2eJa6MSOBzLl2xwpnQa7/3GHFSD0Xl1yvHMJuWTAtjNI6XuOwEaKm+36q+nFt7Ord6vZrNiWonGHobYGIcQJjTw/88MsSI7S3tPe6HwwftIfk7QXcA8AtNGLcvPbm7e/uXr3ejnLRZP4wfPB5OXweBQlrZJvV7OvZ5evl9OirZMg+tnpc60/Vb1h0db/fvX2V9dvLjZLDTAM4+e98bPBOPWCvKm/W82+XV7f5GtjzXHa/6ezFxiQMbZsmy+nF7+5fntTbBBCwzA+yQbPB5MXo2OPsMDzrLXruvh2dv3V9N3r1cwd1JumKkQjlLJgPUJjL+gF0Unafz48/uL4ic+9Q95kwKJ76ou1Zpf72f2wH0oeKLVaVcXFcnaxns/ybdFWQkljDEKIEcIpi7k/SrIn/TEaomGcwU5HVlo3ol0U2+/m11/Pr663y0ZKj9KI+x5jaL+kMdLWKq3dRN+zOuVNdbmev5rfXG2WZdsgBAghZbRUymNsGKfn/fF5f3KcDRI/xBgZYyrZrsp8W1d1U1eyraWoVVu27arKayFSP/z8+Enmx4MwMcZsqvLNYnq1WWzqqpZCW40xRhaEVlqbyPOf9EefTE4pIT0Sg7GNEKsyv1xOf335+s1yWja11qao6+/mN/928aoW7SBOe2GMYxxZX2q9KPPXy5ttXSZB+GJ4nAYRBgCELNhNXV2t5xerxSxfb5rKzSnBBANIo40xkeef9oafSEkQ6oWJW+3amlq0GxdUUBVF2wittLUGrBMta9lWbSuMYoT0guisN3zSHx+lg36chNy75UcWLPph9mR38t0ur86t4tTl0e3m8a5H1kGF6uLVEjQgabEyphEnzzNv6H3us6GXrrDeKrmVsjBGIkQYDTnPiDc2dFjadNaQt9v1l7Ppb67f/vvVm28XV+umstZAZ8uzt9rmzvkLFt1pYRf68kBz073ccreKohVKFU29LPNZvhZKhNx3/MKdumXbyi7Awt3pnHkOmd4NbiXam+3q29nVLy+++3Z+NSs2zgSgjZFGG2sQQh5lMfd7QXyaDWbjk0o0GKGQ8x1vMpu6fL24+R/vvvn19bt1U2VBNNuut1U5idNKtN/Mr3559frL6UVel6O0b4w5TXox95Zl/uXNu//66jevFjcaYBJn0+HxPF+nXrCuy6/mV7+dXVxtlhbsy+GxT9hZNvIom+br/+/1V//HN796tbjGCJ/1hj89PhdSxl4wCFNOadE2l+vFr6/f/OLt19/MLmf5tmjrUrTNLnyHERIyL/PDaTZspUz84El/fGdh3RebuqWmjVORZCuFv5N0tDGH6u2eQZRtM9uuv5tff7e4WZa51Gp3iqL9XbNi0yrpM574oTOiA0DR1NPt6vXi5uvpxavFzbLKASD2fOFLjzKngyiXLBEhgnHE/SwIKSH78IJatNPt6s1y+mp+db1dCaU8yjilymiHHdnUZdk0tRDamPPBOAlChJBjppfrxWK73tSl4zhS66KtnU562gyV0c7EWct2UxeLYruuS+eppIRYa8u2KduGUya18hgLuUcJIQhroxvRbqpyWW6LpnLd18YUTb0otsMwcdhgt7alVsty+2p+PS824yQbhIm1FmHsujbL16/m19/Nb+bFplUSI+yUR2ttLUUrBSWkaGqltDb6fKD7UUIJQQDGGIfdfbecLctcGs0I9blHCdHGOMdRo4S1dlMVjWiFUsZaSolH2X5sHyg33S6bnTXwdvfe2cIAAMZxJ4RcarVailmZa+uKj4u23RbNyZNefxg8SfiJj2psCmJqahUgCtivUSggrBSb1/LNev3b6dUvL7/78ubd29VsUeVCK2c47zjhIcs5RIvcIiv2fzyI7vAmAACX6BOgbJvL9eI312/Ltok936M84B5CULXtb67f3uTrRkqAvQhwa4jGqJPk86aeFZvLzeJyvZjl66JtEEKcMkxRq2Ql26pt1lVxbW1C+Xq7KtoaAALuZUGUBpHPuLG2kXJZ5pfrxZvlNK+rZRAYa1spB0FYiubbxc2vb96o6QXU9bwuL0Yn26ZqlXRAytfL6c38GhAq21orlTelT/mqKr9b3lwvb6DYAMbvEFkU27JtKtGuq/JivfhqenFz8w4QLkWTeMHzwXHZNlXbANhpvvl6evmrq9f/evHq7eJ63TQIgGLKCPEpcytFa72tS47JIIpXVX4fY/bB9WcddzdaK6Wk1caC1cZoo914EuzkdqSNFsoNyPztcnq9WQqtYi8YREnAOQbUSDHN14tyu65LY23ih4MoGSUZwURpPc3Xv7p6/ZurNxfreS0Eo7QXRGkQ7gCfdltX03yzKPNaCY+yk2xwnPZ9xh3nqkR7s1m+ml+/WU6XZa6NCRhPgyjyfARQy3bbVHlTr6tyUeatUj5jke+7uIJSNO/Wi1fTy3mxMdakfpj6YeIFyMf9ME6DyBmbnAucUxpy3wAYaxgmjFJt9KostNFC61WVX6znAfMQQr0gIhj73MvCqBfGLmkZQZgTGvtBP0z6UZL4oTNBIIS0MXlT3WxXN9sVQlBL4Za90mpV5her2av59dvlrFUy9vxBlKR+SAgRSpZtWzRV3taX60VeV8syz9v6i+Pz42zgrEiNFJeb5a+v315vVxjho7R31h/3w5hgIrRKfdEoUbZNLdqb7UpqjRCO/CALIvrwHNs/njpG4LAX1oI1rRSLcovAgNVlW90U+dng5DTtH8XROAz6Xpj6hFOsLdq2+qZsrotqWjWLsrjezL+dXX558+btarauCqkVIIwRtreM6A9MO97kUAIAXQZigG1dfTO7aqX8ZnrlM0YJ8SjDCNVSvF3O3ixnhWgBEGAMB5b3fVSwNqaWbdk2bnPGXpD4QeIFvSD2GGukWJT51XZ1tV2WZb6pCtXWNVi/M1ik4yTzCHNChdK6lqKRArSsBb7eroSUIeOtErNyo+oKlIKdudR5c7Q1jRKlaEAKQLgW7U2xLmVDECradlkVoCQgApT5jHuEEYwtWGW0NEpoBUoCQu5wc6a9WrSlqL9b3Pz25u1vbt59M79ebZYC0DBKjpP+JM0SL3QQ6qKpa9E6zMGdmjzv0aFxWhstpGzatmzqkHJrQWjpTPKUEJ95nDEAEFqtyuJqvbhYzaf5upEiDcJnw6OX45NBFAPAqsj//erNqi4WVQ4IsjAaxWnIvCSMatlerOe/ePv1v757JZR80ht/Oj59PpwkQRhyP/YChOBqvVTm1dv1/Gqz9BiLuAcAPmMB49ZaFzzw2+u3N/kKAI2TbJxko7iXBaFHWavk2+XsXy9efXlz8WY1k0ZPkvSkNwy4RzEVWk/z9Zezi+vNKubeF0dnR2nvNBsG3I/84Kw3SoIQACxYn3vjpOdRLrUmmAScc0KFlrN88245mxabRorrzQqj7r9Jko2SzKOsluKrxXVw/Q6hIvD88/74706ffXp05nOOAfmcY4ytNa0SeVPlbd0qufd1FU31bjn7bn5zsZpvmyrxw/P+5JPJ6TjOEEZV25Zts6ny18vp19OrN8vpq+U0F03o+eMkI5gEjBtj58X26/n1u/U89cNRko6T7NPxacA959gXSt5sV69m15ebRSnmlNBJ1jvrDQ/DynYozT8gNKGTWW7fYK1QalmV2sK6br5ZLYfRxVlv+GIw/mw8+Ww89v1h6Edaqdl29ovLm3+9fPvdelk0VdVWi2Jzs12s61Jp2QlLgGxnDPwRAtEDaWdvuiM3UQDYNtWr+c10u3Yp9ZyXBCMktMrbel2VlWwBOrlp37DD9hGMI88fJ5kxRqhhwHg/jIdRGnKvkeJ6u/p6dsUp/Uprma/LppL5+u1qdpT2zvvj58OjQZgAAMHEGfYZIZIyQKgUTSslJ4RiTDBJskHuB2DMcW/0YnQ8iFJGqQUwABjhLtM7QrWSQiuMEEI4CyMcJRhQxL2Xw6PzwTj1Q4yQtgYAKCFAKQAwQpyjDSFUy3bblG8WN9/Ort4spzf5Wrc19oLUD58Pj744OjvJBh5ljRLLMl9XhbF2ECXDOPXYHVP0+0KT44lOU363mg3DJK+rvRJhrA24N077k6zvYyyUWhRbJ4dKrZzO+JPj8787fTZJewBws1m1Ws3KTd7U27p6u5yNojTzI6eM3OTrr2aXX80uMz/8x7OX/3D24vOjs9DzOWWxFxCM+mGyqPLf3LxzSSacSuU8U8babV2+XU7fLKeNEqe90cvxyfPh0Sjp9YIo9gJldC+Mr7arf3n37TRfB9z7u5PzL+oy4J6rWVa09XW+vtouT9J+7IefjE8/m5wlQcQpCz0/8nxn4k39kBMqUw0AnLKQe4wQJw+G3KNz+m41W1eFtTbg3jBKzwfj2Kf9KFFanV68CriHEAq592Qw/unps6ejIwCoRevtFNsuCUyHnCAAAMbO88138+t3y9m2qRihR2n/08nZz86eH6V9C9bJO5uq4JRdrpfX21UlbyghL8fHXxw9SYPI4aRqKebldlpsKKGxHz4fHn1+9CTyAwdS00a/Xc5aKa+3K+dO2daVUOrO6vijUceFd6Z3ofWqKjd1ZZc3AWVHaX9+9ETrJvWDs94xoqHRzaKsfnX1+n//6l+/nV9LrQjGyphatsoYwOQe6uOPITod8KZ96zEBACf1WGt36GdXvwEZawwAWBBGAdy2z/3PQQQAACPcC6PnwyNOSDk6thZ8SkPup34YcO5mKOS+Mrpom7loq7YWol2U2+vN8ma7WleFm7Y9AhAjRAgxCEkppLGK8XGSnfYGozjzGaMI96L0Z6dPz/ojRqiDnyKEKMaAsUZIWwtgA+aPkt5ZbzCJ+xH3A8YncfrJ+HQQpdrqVkmptXOc7T3Hbvm2Uq6rYrpd32xXizLXbQNKgQcB48MoeTaYfDo+7YWxAbNtqryplDY+45Osn+4AAY4wQvfOF+cydx43jCBv6mGcWguVaIumlkb1w+Tvz557HueMSa2WZX6zXRVtHXLvKB18Mjl9MTp2jAkAjrL+89HRdb6q2mZRbOfF5pvZVRbElJBGym1drauibJthlBxl/U8np08G40NH3nE2OM4G4yS72a6MMU7dcPZxbUwl2kWZr6qCU9qPkuej40/HJ2kYE4QBgAF9OT45yYaR56uN3tTFNF/P8k3g+Q4ooI2uZdtIQTAZJb0X45PzwSTyA6cXIAQWgGKS+GEahF3C+h15jGOMWyW3TT3L14tia4xZlXmjxB6iMUp6aRA53Y1TmgXRflic+RK6JWp3ebWxAxAUbf1uNf92dj3N1wBoFGfng8n5YHySDQghAMApy4Io8QOp9b9fvQWAZZVfrOeX68Wi2HqUEUCuFy7RDSd0FGdPB5NJ2uMHyWe1MYM49Rgz1jgMitR6j1f7E8A40c7wZKwVSoKWINoWbCXqgNHTbLBtamksABiL8ra5WC++nL5bzy4BIfBDRGhXeQ4j5CSmP7y0dEvfm1hLWyO1MrsAlFuoILKAnZ55xyu39/p3aBeMBmGChjCMYq21A4O6OHtOmTaGYFK27XS7vt6sqrKojAGwpWiXVbEotpu6bJVglBFXNMI5Za0B6woEQsD5eX/0z08/+/vTZye9oYPVDKMk4v6yyBvntTVGWwMGrDGEsMTzn/SGPz0+/6cnLz+dnPXCmGLisiZQhG/yVSPbVkljjbbgIgFtFwcIyphWqkYKoZQLsz4AmFuHD+qFccD5kTXOZeb0kdiPDm1MCKF7Z4yxVmi1qcuibQpRT4ttGkQIoBTtuioaJY7TAab05eR0GGVSqXWZz/NNq+Rx2j8fjM96o+wu++uH8dP+uKgqqfWqzN8sZ6kfBYxTQoWSGFDIvWGUHqf9Sda/hzBwEI2n/UnZNLVoXHJCZRwwzUqtKtHWUjhf+DBKszDGt0FYEHvBME7GcTbL1xjhvKlu8lXo+w7nSjFhmPiU9YLwOO2f9Ueh7ztPvDXW4WI+EjViARihHmUEY6mV1toh0fZj66T7XcjLDhPzgec484WlmHBCAGBdld8tp98urrd1ddobPh1Mng8mwzgjB8A0jHHkBWeD0dlgNEyyWbltpVgU2+vNMvECTpjzO3uEBZRlQThJe8fZgNM7gage4wH3As45ZYRga8ENbJekZd/x74HX/gHIggXTefL2RihjhFKlkLWUrVJOe7AAUutCtJumhrYBypz7bedp6572R6X3eNPOlO7WgTPEOna7A1N1sTy1FPqWc+2CcLrU5YAA+YynfkgwVlq1ShZtXbSN1B1SrhSNsYZTGnu+5wdECW2NtqYSbd7WZdu0SjHKHF7LMXsAAIQAE0bZUdL7fHL2n599/r++/OmL0TFnzL06b+pNVe79gBbAZR2NuHeS9n9y9OS/PPv8f3n5k787eZaFMQAYaxsp1mV+k6+kVtpo5IxopvOL2R0o2aPM2WUi7gPjoJUxphTNvNxebBZJEFqEBlEccC/gXsR9B0GkhB7qcbcdOSBjrTKmVbIQrd/WCiwCVEuxaqpatj73S9lKoy1YoeS2qdZ1oYwmmPiMY4SKtrZgQ+4hhJz24RGa+oFPWavkrNi8W8/HSZYFEVibeMEkzo7T/ijJEj+E9yj1wyf9USvFuio4ZQCwA0CC0/IaKQLGpdZCyaKp3amT+AEldF0VxpiIe5kfeoQ6P0YvjD3KEaCA8dQLVKhGcTZOeoMo3bMhZTR1hlXbOQEcutWdc8ZaoVQpmkWZ523t8vARhO8hsHbFrDtHtsPEvH/2upWMEaakA15umvJivbjaLJ1Ged4fn/VG+4TWDjYJABjjQZSe9obn/fGqzD3KyraZbtfjOIu8wCmSiRf0gmgYJY5xvy8LcUpD7kWe7zO+z2rSReO9Pxl/aNqvPYwwwUQCgNau6q87Na3V1iiwYI0yRhnjgEEYCAXKPcpcTjH4o/MlgFvs5R6wbwxoDQCR5/fDOAvimHuUUIIJp5QgUst2VeY3+epmuyqlgAPkPtzB10KrxKrMp+V225TbupwXG5duhiBMMdHGbKriJl9XstVgMSYOGSG0qndQb3DmbYQdyhZZCxh5jGdBdJYNXwyPPp2cfjo5decbQoigbrveZvBxixWhxAvOesPPJqc/OXry6fjUMSb3/JB7VVsDdLE4CCGEMGDrXupmwme8H8ZHaf8o7fc38+vtqm4qK8Ws2Hw9v5LGzqv8NBtOkmwQJb0oGcfZIIyzIIo9jMm9THt3CAGihESezyk9zgZP+uPI8xEgodWmrlolJknvSX8Ucg8j5FyQLgudU+6MsQ4lzylFCLVK1m2zroptXdaibaQwAHlT5U3NKQWAiPuDMB6E8T5hc7ehrbUAFOOAe/0oGSc9p8cBgENdAYDUuhLtui6V1her+avZVdHUQiuldcg9RmnZNBeruTMF7K+vRIsAIwB3Vllre2Gc+MGeMe3GHEGXA6RaV8WmLrZN1UjpYuu1sa2WedvcbFfTfFO0dcg82Em19/zXt6PdxdPAoXCHwPk8bwWrWrarqlhXRez5AePDKB1Eic84ACijjbX7aAeEUD+Mj9PBNF05Brquik1dOonNpzzy/NgLYi8IuX+7Fzr/LDjDEyd76Dy6RST9CckBfQjGxmKEMVirO3HewRw7hGP3O1gHnLcd9NxatIdW/WHoFrG1fyZC6FZuQqjLVu8qrAOkfvhiePxidDxJes6LHHsBI2xVbb+ZXv7bxauirsqqgN3ZZTszE3JIPKX0xWbx2+u3X84u363ni3w9LTabqjLWeIRyxijCUqt1Xbn0fdqoLg7DGmG0MFofhJh3yGNtELYeZcMwPc0GJ+mgH8bkbkSI2cVPdNh5Y8BqZG3oecdp/7w/PkoHoXc/Q5vt8kSgPWjEfaiscSwy5F7AeKPEotpebpc3m9VVUxul8qZ+tZzOy+Kb+VUviAdhPIyTYZKdZaMXw8kno+MXo5PBQUIrA3Z/PO5DMXzGR3GW+sE/PHnxs9MXiR8AdJBFrXXih8dZfxilBONWylqJWoqiqd+hGVg7C9aMUooJIwQAnDhTyWZdlXlTIQCfUo9SAKu0tta4c9tnnKB9AN0dPdNFBXmcM8qskgB7gcRKrZzSvanKr6cXIeODaNlZWChjhNay/W4xXVW5MoZiQjHBCLvQeWdLCrlnrIn4nXysCBDdxcoVbf1uNXu7nF1vl+uyaJR0Fk9ASGpdKbEqi/l2VYmaYXKbkhLdTVBw++QPRP91GMGDADpjjJCika1PKUHY2QccYhu54NeDh3BCsiDsh1EjBFiopSjbJvQCay0lhFHGKCMHIcS74UVotyy7rw4Xwp+WXISk4z2oC+Tfx/IjJ1k6jc9tA1cLE0wXbfaHdcndckRr7M5S4oSL9+Um7eSm2AueDib/ePbi2WAS+0HAvCyIOGWzfB0xb1FsvptfA8A9uQkjjAAcbvPb2dV/++63//3t19/Or2fFphQNWBR7fuaHoedRTJTRedtsm6qWrdEaMN6HGb/feWMMGG2BeYz3w3gcZ/0wvucFk0o5x7ADIloA6O6CgPFBlIzjLPGDe0PrImlgxwcPv3KQSAAIuBd7PiG4UmLTVI0UAeebuhJatVotynxWbDAgn7LY8/thdNYb/eT4vGqbkPtZEO0ZaLfTDsgBUPth/HQw/p+ffva/vfy7vf1IamUtOHnHkXCoemNaJbd1NadboZRL0O52+z51hgNeTpJe5PmTpBdwz4LV1mCEXKjdveE97DhCCGN8kB2lO9hc1oRGCmOMA+VqrZXRUmsngzjNnWLSC2OXijv1Qwc9AZf6nnFrrXfXyLV/u1BqXmxfza+/urm42a5q0Tqku4N3KWNqJYu2rqVw4X6H2bNgtwI/0q8DurMEHLjMmRcB3cmUsk/8dftAQD5lEffBAkbI6bm6k/ExJYQQ4lxGd+/qXnSgd95+/qenA1Gla8gh7fhBFxOzX7J3b/nDENqFbTmv1+FXt+t+x86ty2ngKkk96Y9ejo7TIIp2EJh+EE23q14QcRf9u5c4dg+xFhoplmX+an79b5ff/fLN1+9WM6kkMD5O+k/74ye9URqG1sK2Ka82q0aKvKk1aLfCvq8Pe4ApI9QxuNjznW/bJaVECGndKcMHp1N3Fyc04n7iBQHjGKF9LheEkIsIg915cTBot+YzRmgaRD73nLcy9cPvVieLIl/X5aLM58VmVeZFXVZtXZXb+Qavt+taisQPzwfj02yYBCG+DY6700dntfUoS/xgFKeHhu33S4Ds1Cu0LzHQCyJOaRf5ucte4JySbmOH3HegxEYKabSx1mVoctKowzreG3anR79fVwbtQv8wgcQPsiDqhbE2ulUKEBCEPcYwIb0wooSO4uysN5qkvcgLnDCLADFMLGWcUOff2KczssZqY7Z1eb1Zfje/fr2YlqIOmdcP4yyIKMHaWsebPMqs1kXTBRveYTG7aUO3c3e7lb7PxN6tkQPw8H7tmB0vMTsDsBu33Ua6XSF2t5bwzq1swXYdPHjx4b7+oKD3JyYEO3V6H+l21zbanfGok6T+eA3mH6p2c8CbOkstgAUEiCBn/fViP0j8YB/um/hByDknlNy2teuTkwJdbOe83L5bz18tbqarmSxz8IKjdPBPZy//+emnPz152oviWojXy+kvL74TUm7qWmkF3Yzu2MT+6R3LcF5mRDDe5y3ogFeE7EN2DsLuYdeobpTpLpScYkIwwd16An13Ezpbqd0t8b3vBBPsE34+nHiUT9L+Tb5elNtlkd9sV04NebeeX29XTV2apl5r/doP3q5mN9v1pi5Dz3O86TCn3QGuH4y1Suv2DtrlewgBIyQNopPe8JPx6STJ9i4LAOf3MRaAIMwoZYS41A5Cy5vtWmollNLGZU5wruJ97k5nknV5L43W2lh9m90CIYRczR+W+mHIvefD4y9OzidJzxhTSyerYmut1EqD4YSlQdQP44j7CGOH+Adrcec+cyLZ7SRLrRrZLvLN5Wp+sV6sqjxg/Kw//vzo7KQ3oAi3Wrl8j1frBUPocgUEkV3N2DsL+PZUuj1aOgUf3VkbByOKEMaEYIIwNmC10UprSoi13ROQRY7JEQBtTCNlLYXQGgE4UPiOUd7Vi+5uddjxx8OV+TvTXvXa61/73x52+53xP5Dk7gqUu48OFNT7nfr4Kw56esj2H0QHMSu3g2sfYKKzdm/m250HducfaZVc18U0X99sV2WZg1bg+ef98T+ePf/fXv705+efZGG8KHOf8elm5VHmCv3BHQZx8KZ9e/bS8J5hAAAA2dnKzC41+f6Grk8H4UZO0T/MG4l3xor9i5yMtjeog9OVlHKWnUGUcEonSa8UTV5Xi2Lzbjn7OrlM/QBj/K1W0JRtXc6KzbTYLMu8aOvD0/ve3LgD1vk986ba1OUdne7ukeIQsM4aMorTJ/2RA47u7SN7u3Un4GBkHUahKtZVKbXeNpVDzwqtEELvi2bK6KKp11WR11X30p0R1CFgI+4NouR8MP7s6MmT/ggAGin3ziyX1dxlmHBuPpesBjrsmwHr0kPdOYZbJfO6muXr6Xa1qQpjbT9KPjs6++fnn58PxgThSrSlaFZV4RG6LvNVsdWuMuRdDcPuTLiwCxIgH4YRgL0thw2uikzo+QSTVsm8rUvRMNrlBTIWHeoapWhnxeZmuwaAcZwlXuBiYnKodzk2dmLU9+xhe7vSfnfaP2TPQOyDtu3d2+3hkr+vr+0tQZ2J6faaH9Hwu7G+H1YJnQO6QzLCbX7Q+0vTzaR+734AcGftvRRZ99VxZ0I2uhLttqk2dQltA7hzRWVB2Aui1AtCyleAhJJ5U6/rsmlr0Ao+lGvxB94F1n40C12Xwm/XsA9NwYdfBLv94+QdoWTeVABWaC2VUkZjjHt+mHnBMIgS5mELDvdMMNFKghSyqfK2rkUrDzA4HyS7AwRKrYVLtAoAFoRWbnIx7pyVBGOPUo8ytEv8lPjhcTbw7laXv0etEgSh683KWLuqirytj9JB7WD975HSelHmF+vFpilj7gMAI4QSonZ4EWexSvxgGGf9KP3gQw5pz7Y+snMaKTZ1uSi227rURofcmyS9Z8PJ89GxuyD0/NDzlTFd8s+dvnb3gV3ed5flghH68WHZlwAJueeqEJoOX7pd12Xih8zlHTpgTMaYdVW8Wc6+W05TP/yckGGUDuPUZx7A1gHB/sR+t/c3xY+9HX7oCfcKsPw+dKg4u0+U1kVTrcpcaIEA+cwLfT9kPqM7O6tTJ/EuYZXdJVs5DHDHO/FknzsGI4wxNmiXL2ons7pVuDtAkPuoVWpdlZfrRcQ8Rtm79eI3V29fLW9uio0UjXs+w5gSck9sRAevM52Vdv+6DwuJOxUaE4yRxcp1Z3/X9/G+g7ucDOZC8DuPfpkXbb2qirxttDGB5/WDKPVCDOBTHjDuYsrtgfjVIQARJuh+npnbl96e8JjuftxXxhIEQAnuBGQATmjsBbHnN0q4/Vy2zUdC9hx5lKdBnAURJ7RRclUVi2qbN5XTXO5dXMn2Jl+/W88r0eB04DY5xUQb6zxWCJC1ILVW+oNH2AdGFXZ6Id7j5O6Sq11ato3UmhEWeF4vjO/Br9zxsK6KvKkaKTDG+wP2cDT31hNyPwPo/hLYmYQ6J2ziBydp/zTrr6uyke3Ndj1ONsMo9d9jbZVo5sXmcrO8yTeMssjzj9L+MMncnnMhEfhDprp7A/JjtZsPdbHbFAhjAGTR3pD8IB6y31AIYwTWoA9sjf12oBhbjHXHE7B9WLv32h/qrCd4b9XCCO8zjgopZ9v1m/n1qtyChX6cTHqDUdyL/HCfv6lTrYXLQGxvXYvmPcl596HLZOguvk0DjAAoJs6XEXtB5flgjTJ6UW6/nl0ShC7XC4TwrNh8Nbu8WC9K0YA1gLDLYWT2LpNbc8zt68AeXvC907AzYRp50J0flJf2dyljYBemixByMmel6qvN4rvF9HKzLEUbev5x2jtKeiHjZdNcbVerqqhcSjZMwPNZEPWCKPHDgHt7Q7i19+sL7T0m0O3eW28FwU79vOVrAfcGUTKIknmxceFyHuWcsqfDiXN+aWOEUtbuk+QiRgjG2OXtz4Io5J4FyJv6erN6u5y+GJ8A3KaOrER7vVldrhfX25U2uh/EtnOHIewS2niBwwEsy/zNcsoIzcJo7/hzXkKXrtPbu+F3btzdPH6PWoC65KvO7WisqUQjtXKKlVDq3Wr+Zjm7WM1nDt/Eb/FNuwe4xJiEICS12tbVpsyzKAEAl+Xy3ly75EoAEHv+k97o+fDoDZoJpa42y8QPEz9wYAsA0EYThLXWbxbTq80ybyroQPDZKMnSIGqFAICuUPvDltkPS+/fd/vuAWaXQA0QAmuMRfuIsQcQQhaZfcbx/QY5uH2/He7yBHPPBfm9L4AOqt3BjHBnyrR2Z1QBAIBWivl2/XZ+c7WeW2uPegMLQBCx+1oGxhipFEgBogVrQQohpdJKO3axd+hAh2eTSrVSghSgFBDq0ua6dYkAccJiL+iH8SBMtn7YtA2I5t1qrpSc5ut+ECHAjRJFWwslY+61nl9JZaXIEUq8ppXCVd+2u2z/rZQgBAgBlLVSCiWdK/2D82us1UZLLVvXHa1Aiu6WDxU1gt22cYu1u8toV5rBWZfdwX6Tr7+eXf76+t1NviaYjJP0KO3F3BdKzYvNm9X8ZrsGJYHykPNB0j9KesMoif1gb9uy1h6e9naX4Ve63L7vpZq8JxfEXnCc9h2ucl5sK3FVi7aW7aYuYz9wyYwq0QolHaY0C+JhlIR+AABpEB6lg/P+OG9rpfW3s6v/+uo302ITMO62tNJmU5e/uXp7sZqvq4IR4tIoO1UFI5QG4Uk2uNmsira+WM9/8ebreb4dp1kaRAHl0KVgboSSnLJhnI6SLPYCgjHG2I2hy4H3fsJfTlnih1kQBdzTxqyr4mI9H8wSl9vEWttKeblZvF3O3i1n83xTNDXF2NxdAB12n3GKcF5Xr+bX/3bxapINfMp9xhI/9CnbIXWsVKoWwhnCfMbP+qNPytNGyevt6nK9MNZYsK2UqR8QTKSWUuuyab6aXrxdzQhGZ73hy9HxWX/UC2P36q6DUgglXZrmD+5Yl0nZgcK+bwF/hCxY06X62m1A0boIXoUJHObq/igZhAwmoBUIAUa5bSWV2jfJ7s657hWAQIrGWjAa3lulH24qQhYQ2A7LDYQ0AF3U1/4J1jai3ZTFstjO8w1YyyhNwzj0fITQHT/dzoOBYCe970XwQ2lvh/qHna7h0oJ2MBOMscdYP0yO08GT/mhTbG62a6NlXW5ftfVNvg6YRzEJGM/8YBIlfT9Y+8H1drNpKiOV6qpUdhru/tCGvYQItw37oLMDHbZwD9aAWzvbBwl17jzY97tLIbq7QFtTK7muq4vN8pv5VS3byPOzIPIpd6E2ZVvXUgLCQZSOkuzF6PjZYDJJe7EfHBjvb/Ne7nXS/aDfsx4cugkdJX542hs1Sm7qappvppvluiq2TbUotr0w5pRqbbZNVYmGYjyOs5ejk8TzQwhgB1j72ZMXFmBRbN8u50KpV/Nrl6WIE1pLsSi238yvtlVBEA4Y55QhAJf0zoXavRyfbOvq1fxqnm82dfVmOTvu9SdJL/YCZKGRbd5UrRChF7wYHzuO4NKzAXRBzvh27m7JZYCqRPtus9DWzoptJVuMcKtkxH1jTSPEsswXxXZd5a0UYCyBW0e+I4JJ4oWTKOv5oZDym+nVf/3uy6f9cT9KxnGKesB3mS0IJgiQNlpoCQCU0uNsUMl201TrurzerGrRtFJu67Ifxh5lrZTbplqU26v1clnkx2l/nPR+fv7Ji9GRw/Faa/brDMNua3zPMjv4FwF8GJZ1ePEHPneLc++sg8OfBxLabxT3BHJfy7Soy3CLABzwEBHAeldP/Me9AsDtXNxVbuncC9ZaoaRQUhuNAQHe6ShtQwmlAEAwdgfys/HpaymAsmfj0ye90TBKQu45dO8BY4KQe+M4ezY4Eko3WkVekAXRUdo7SvsOaxcwbxinn4xP/unJS4xQtpovq7xoG200wliDZRjFfnA+GD/tjTih02LzajG93K60McdZ/yjpJV7gktV7jA2i5Lw/XtdlKdrYD0+z4Wk2HOzadncwHGfkvTA6zQYvRyffWCS1djFQgygNuEcwubcxnC7gUkGfZsOXw+O3mChjzvvj02zYD+OQex7jvtaxH2ZR3IviuAiEVo2Spi4xqp2YTTAZxUHs+b0gPusNvzh68pPj8+NscBgEf48oIbEXjOMMAxpGacS9O9EV7xklAu6Nkkxota7KRbF1Qsqy3BKMi7b2KHO500rRcEIJwifZYF+S12P8rD/6T+efBJR/Pb282a7mxdYlnBpECcOklmJdFVIpl90l8YPTbJj4IUbYyU29MH4xOm6kMNa8ml9v6kpqra0WSsWejwG1UhRNJaRMg2gYJ/tMEh5lEff6YXyU9MHa/i4i5LBfPmVCq9Pt8PViuq5LqfWyzC9W89QPjTWtlC5hS+wFk6Qn/LAfJW5C9w8hmEyS3hdHT8q22dSVNvpyvSAIK6M9QodR6rBdsR9Mkp6xphfEDmmFEU7D+Kw/XpT5ui6FUpVo8qa6XC+qtvEoE0qtqmJebivRpkF4kvU/m5x9cXx+1hs5g52x1uEBz7Jh6jeTpBd+aNIRQi4mvJHC5eT7sRXSnE9pGCWn2TCvq4DxWrYYdRr0xw0dh+TMr0rrSrTK6NQPnw0mR0kv9UNKKABghCMvOMkGz8anF8xz0GWPMrWLp/tBckev8050ID7GxnF2kg1u0ZFuTDjvRQkAQhj1ojj0Akoocjodo3Sc9P7+9Fkp2ovxCSL0tDf8dHL6YnTszo17vrleGH9+9KRV6unwSBgdMC/kXi+Mnw0mJ9kg4r4DOn8yOVVaD+L0YrNcFttNXTZSAAInNE3i7Plwct4bBZTNq+LZaH6Tr6XS/Sj6bHJ2kg1cMGTiBy9Gx//5xReTtF8rGXJvECZPeqPno6NBlNzPjoQQJSTxw/P++J+evAyZ/8nRudJ6EqefjE5ejE56YbJPUHswT5hT1gvjZ8OjVossiGbFRls7jrNPxyfPhhNXupIQctYf1VIAQsM4XZW5NBp20p0TNFI/HIRxL0qP0/7z/vjF6HgYp4evu8dsfMaP0t7nR2d52h9E6TBK7wRzvMebEIKQ++Mkez46FkrGvp83NcYQMM+ZaQjCLlmtR5krXUU68zwghAZR8unk1EH8Xy9u1nWBEIq9wFnxEcYE436UcEI9xiPPy/xonGQuNMztq0nal1ohgIB7s3yjjAk9z2d8F3HGEYDhJg2i2A/2AAWfsmGUPh8dh4yDhZPe8F7uBABAGPfC+Hw4WVelz3klmoBxn3KKCSBCMUmC0CmttRBKq8jzz4eTw+dghE+ywX86/yTi/qzYAtg0iPxdrSAXJ8AoHSXZZ0dnwzhxhQz2I5yF8dPBxElq67ow1nJKu5GhyCnmGKFhnD4fTl6OTk6yQRJE4DBiCKVB9Hx0pIyupXjSHw+i5P3tijHOgujpYJL4gZvH9+se3h+Wu9+6IoYvRycYoXGUruqiUdJ5TjFyRU0exJucXuCwadqamHvHaf/l6PgkG/icAwAhZJz0/vHJCwt2Wmw9yjI/2Jc1f8grnHZgwSpjECCCESUkC6Lz/tjFh7qLPMYHSSaNzsIYEIr9IA3jxA98xl0SNTZOsr8/fR574arKEcK9IBon6XE26IUxf4839cP4s+MnkR9s6kpbwzDllAbcG4bJUdYPOKeEhMg76w0pJuOkN6/ybVVsm0rs0j87IWUS90ZxwjDJRfN0eLSuSqV16PFJ0jvJBgHjFOPED5+Pjimmn47PhNGc0JD7/TAcxdngQ5nbKKapHz4ZjCmhJ9lwXVfa2oT7ozg9yQb9KGa7EIrD6fcY60XxMzMJOH/SHxdtY6xNvGAUp5O0NwgTjzGPMQSIUzqIk88np3lTuxzhLgqIYOxTHnle6odpEA/CZBglDnx4+C58V6n0GZskfQyoUSLk/jBOyD3etPt9j39DCCLPP+sNGcaTtJc3Vas6eJF7uCtD5GL0BnHmmu1udh9ywkLujZJ0VRVCSYIwI5QggjBgQJyygHs+Yy4kNWA88QPXKoRQ7PnH2YBgkoXxqsxrKWyXY8u5vhCAJRgnfniU9vdCDad0GCcW7ChKASANovQ93gQAnLHjtK9PzTBOi7Z2cr6rZOUAU+64UlprrSilvTDOwoPnIBjF2U9Pnw2idF5sK9EijGLu98I4CUJGGULACBnG6SeTk+O2H3I+OOBNnFAX4TwI001TNEK47AsuynJkjYVOOHI6XewFTmhCgDDCaRA+Hx5HPJBG9YJ48CF0BUY4C+Nnw8k4yTil/TDxGcfvyU37JiF0P92XT9kozhBCvSB8PphUQkijd/Hw8GDWBIAAI2SMdaECHqGpH47i9CjtBcxzAsQ4zf7xycthlOaioRgHtEsc+mDWBAAAFgyYTqHDOOC8H8Yn2cDxJoRQ4HnDOMMYV00DCALuJ0HoNJWuilbZNpu6dHnmMSCPsdDzYi+IPN/JTXfgZ229qcu8qdsdINgh/QLGI8+PPH+XW0OVbVM0tct5UstWaY0RYoQGzHMR2wHnCKBR0mXs1sYw4srYhrEfUEyEktu62tZVLYSxxrlyXHGqgHs+44foQWutttZZZIumcaWJrbWM0JDvusMYvavWOdt5q2Ql2qptatEKrcACozTkXuj5AeOUEGNM657cNmXbtFJqozsnJupiqTy66xoPAu455PpHDkaXEalqG2W0C0MJuf/BIou32FwAa63UqpGi7BpT10JIrWBX6NlVKk79qBdG+y20J6V1KZptXW6bqmwboZR1idYo3Zfqc+ewWz2MUE7ZPqyve3XbFN20CqmV6TL5uep4zM1g4of7aP5atJVohZQA4DEee/4HIq7BtkoWTZM3VdHUlWikUtZaQoi/X1qEGmuVVhbAoyz2g/CA+wulGtkWTe1CnYVWripyL4yyIHIWVtd4oSQjJPYCl97EjbCzrNWiLdq6aOtKtK2SZocmcW1wLryAeeTA9+rWRtHWVdtqa3zG0yDaZ1k5XGm1aGvRujSSPnML+L6R4d6YHJ5mDqPrHuLKL5pdkXH0YL7kCB3AxHYpgLz9/tXGFG29Kou8qfb1pRFC8GOt9x38srNZM0J8xmM/cNI6WGiVKJo6b6q6bS1Yn3mx3+0ddOCiklIrZQwGhHEH7XG1p/dQBUdKKxd0arQBZ9rdFfNzt+CD3SVd6LwQQgttLEWYU+pmhRMGGMBaaboakN06oIRT6hIYWmOEVs5l6KJpMMJOPiS7uni3o+Bce8Yoo5U2yqiuTCdCrmEUE0wwubXPubvAgtEuXY3WWmsDBlkEGFGMCaEUY4wRuNBto6XRUimljXEF2Y11tneMMcXYyRqHScU+gg51sAm1K+XYwak+dLHjTXuowf7jUrTbutzWVS1bawxCmBHiUR54XsSDgHNO2C4m5U4zlFZ5W2/rqmwbqRUC7HPucroHvNt4WmtlDALAGFNC7vHHRrZ5U293TARh5Orchcxzih7bBXM47q+MNtoAIEwww4TeSR3jkEHIXdxKUTT1pinrtlVaU0pDz0/8IPEDn3ILoLSUxmBADql/b6y01tu62tRlJdxy506H8jgjmJiujGt3TLrlYIzdoS4AduX/tk1VikYpQzAOOHdcKfKC/WUWurgOa1zFJ6W0sWAJxowy9h52zLE/Y7TLQ08QwZiQzmPzYbrHm7oF49bpPht9J939LrxpfzvZLT+3f51/XEjpzjzbrTqEHugIfO9t0AWcIYLdiyjBGCxoa1opKtHUrbBgPOpFvu8zTgn5/wHya4SExiL+QgAAAABJRU5ErkJggg==" alt="Harris Federation"></div>
+    <div class="eyebrow">Harris Federation Mathematics · Years 10 &amp; 11</div>
+    <h1>GCSE Maths <span class="eq">= 8300</span></h1>
+    <div class="strap">AQA · Papers 1, 2 &amp; 3 · Foundation &amp; Higher · the Federation teaching order, the formulae sheet decoded, and practice marked like a real script.</div>
+    <div class="countrow" id="countrow"></div>
+  </div>
+</header>
+<nav class="tabs"><div class="in">
+  <button class="on" data-tab="papers">Papers</button>
+  <button data-tab="topics">Topics</button>
+  <button data-tab="formulae">Formulae</button>
+  <button data-tab="cards">Flashcards</button>
+  <button data-tab="practice">Practice</button>
+</div></nav>
+<div class="tierbar" id="tierbar"><div class="in">
+  <span class="lbl">Your tier</span>
+  <div class="seg">
+    <button id="segF" class="onF">Foundation</button>
+    <button id="segH">Higher</button>
+  </div>
+  <span class="note" id="tiernote">Foundation · grades 1–5 · check your tier with your teacher</span>
+</div></div>
+<main>
+<!-- ================= PAPERS ================= -->
+<section class="tab on" id="tab-papers">
+  <h2>Know your three papers</h2>
+  <p class="sub">Three papers, one qualification. Each is 1&nbsp;hour&nbsp;30, worth 80 marks, and counts exactly a third. <b>Any topic can appear on any paper</b> — you cannot revise "by paper", only by topic.</p>
+  <div class="grid3">
+    <div class="card pcard p1">
+      <div class="pk">Paper 1 · 8300/1</div>
+      <h3>Non-calculator</h3>
+      <div class="pm">1h 30m · 80 marks · 33⅓% · Fri 14 May 2027 (am)</div>
+      <ul>
+        <li>No calculator — arithmetic is being tested on purpose</li>
+        <li>Fractions often beat decimals here: ⅓ is exact, 0.333… is not</li>
+        <li>Know your times tables, squares to 15², cubes of 1–5 and 10</li>
+        <li>Exact trig values (sin&nbsp;30° = ½ etc.) love this paper</li>
+      </ul>
+      <div class="tip"><b>Golden rule:</b> show working for every mark. A wrong answer with correct method still earns method marks — a bare wrong answer earns nothing.</div>
+    </div>
+    <div class="card pcard">
+      <div class="pk">Paper 2 · 8300/2</div>
+      <h3>Calculator</h3>
+      <div class="pm">1h 30m · 80 marks · 33⅓% · Thu 27 May 2027 (am)</div>
+      <ul>
+        <li>Calculator allowed — and expected. Bring a scientific one you know</li>
+        <li>Write down the full calculator display <i>before</i> rounding</li>
+        <li>Use the fraction button, S⇔D, and ANS to avoid re-typing</li>
+        <li>Check DEGREE mode before any trigonometry</li>
+      </ul>
+      <div class="tip"><b>Examiner intel:</b> "You must show your working" means it — a correct answer alone can score zero on those questions.</div>
+    </div>
+    <div class="card pcard">
+      <div class="pk">Paper 3 · 8300/3</div>
+      <h3>Calculator</h3>
+      <div class="pm">1h 30m · 80 marks · 33⅓% · Mon 14 Jun 2027 (am)</div>
+      <ul>
+        <li>Same rules as Paper 2 — and the last exam of the series</li>
+        <li>Sat over two weeks after Paper 1: keep revising between papers</li>
+        <li>Topics that didn't appear on Papers 1–2 very often turn up here</li>
+        <li>After each paper, list what <i>hasn't</i> come up yet — then revise that</li>
+      </ul>
+      <div class="tip"><b>Strategy:</b> the gap between papers is revision time most students waste. Papers 1 and 2 tell you exactly what Paper 3 is likely to ask.</div>
+    </div>
+  </div>
+
+  <h2>Foundation or Higher — how the tiers work</h2>
+  <div class="tw"><table>
+    <tr><th></th><th>Foundation <span style="font-weight:400">(grades 1–5)</span></th><th>Higher <span style="font-weight:400">(grades 4–9)</span></th></tr>
+    <tr><td><b>Grades available</b></td><td class="mono">1 2 3 4 5</td><td class="mono">4 5 6 7 8 9</td></tr>
+    <tr><td><b>The overlap</b></td><td colspan="2">Grades 4 and 5 can be earned on either tier — but a Higher student performing below grade 4 level risks a U. All three papers must be the same tier.</td></tr>
+    <tr><td><b>What's different</b></td><td>Basic + additional foundation content only. More marks for standard techniques.</td><td>Everything Foundation covers, plus Higher-only content. More reasoning and problem-solving marks.</td></tr>
+  </table></div>
+
+  <h2>Where the marks live — topic weightings</h2>
+  <p class="sub">Set by Ofqual, identical for every exam board. This is your revision-time budget: <b>Higher students, algebra is nearly a third of your exam.</b> Foundation students, number and ratio are half of yours.</p>
+  <div class="tw"><table>
+    <tr><th>Topic area</th><th>Foundation</th><th>Higher</th><th>What that means</th></tr>
+    <tr><td><b>Number</b></td><td class="mono">25%</td><td class="mono">15%</td><td>Foundation's biggest earner. FDP, calculation, standard form.</td></tr>
+    <tr><td><b>Algebra</b></td><td class="mono">20%</td><td class="mono">30%</td><td>Higher's biggest earner by a distance. No algebra, no grade 7+.</td></tr>
+    <tr><td><b>Ratio, proportion &amp; rates of change</b></td><td class="mono">25%</td><td class="mono">20%</td><td>Huge on both tiers — percentages, proportion, compound measures.</td></tr>
+    <tr><td><b>Geometry &amp; measures</b></td><td class="mono">15%</td><td class="mono">20%</td><td>Angles, area/volume, Pythagoras &amp; trig, circle theorems (H).</td></tr>
+    <tr><td><b>Probability &amp; Statistics</b></td><td class="mono">15%</td><td class="mono">15%</td><td>The most predictable questions on the paper. Bank these marks.</td></tr>
+  </table></div>
+
+  <h2>The three assessment objectives — what a question is really testing</h2>
+  <div class="tw"><table>
+    <tr><th>AO</th><th>Weighting F / H</th><th>What it tests</th><th>How to spot it</th></tr>
+    <tr><td class="mono"><b>AO1</b></td><td class="mono">50% / 40%</td><td>Use and apply standard techniques — recall, notation, routine procedures.</td><td>"Work out", "Solve", "Simplify", "Factorise". Do the method, show the steps.</td></tr>
+    <tr><td class="mono"><b>AO2</b></td><td class="mono">25% / 30%</td><td>Reason, interpret and communicate mathematically.</td><td>"Show that", "Prove", "Give a reason", "Explain why". Every line must follow logically — and end with a conclusion.</td></tr>
+    <tr><td class="mono"><b>AO3</b></td><td class="mono">25% / 30%</td><td>Solve problems — translate a situation into maths, choose the method yourself.</td><td>Wordy, real-life setups with no named method. Your first job is deciding <i>what maths this is</i>.</td></tr>
+  </table></div>
+
+  <h2>Command words — the question tells you the answer's shape</h2>
+  <div class="tw"><table>
+    <tr><th>Command</th><th>It means</th></tr>
+    <tr><td class="mono"><b>Write down / State</b></td><td>No working needed — it's a 1-mark recall or read-off. Don't waste time.</td></tr>
+    <tr><td class="mono"><b>Work out / Calculate</b></td><td>Working IS needed. "Calculate" hints the calculator is useful (Papers 2–3).</td></tr>
+    <tr><td class="mono"><b>Estimate</b></td><td>Round every value to 1 significant figure first, then calculate. Do NOT work exactly and round at the end — that scores zero.</td></tr>
+    <tr><td class="mono"><b>Show that</b></td><td>The answer is given — the marks are ALL in the working. Reach the printed result with clear, complete steps.</td></tr>
+    <tr><td class="mono"><b>Prove</b></td><td>Formal reasoning: algebra set up in general terms (2n, 2n+1…), every step justified, and a closing statement.</td></tr>
+    <tr><td class="mono"><b>Hence</b></td><td>You MUST use the previous part. "Hence or otherwise" — "hence" is nearly always faster.</td></tr>
+    <tr><td class="mono"><b>Simplify fully / Factorise fully</b></td><td>"Fully" is a warning: one more step exists. 2(2x+4) is not fully factorised; 4(x+2) is.</td></tr>
+    <tr><td class="mono"><b>Give a reason</b></td><td>Quote the geometric fact by its full name: "alternate angles are equal", not "Z angles".</td></tr>
+    <tr><td class="mono"><b>You must show your working</b></td><td>An unsupported answer — even a correct one — can score zero on this question.</td></tr>
+  </table></div>
+
+  <h2>How your script is actually marked</h2>
+  <p class="sub">AQA examiners award marks by type. Once you know the codes, "show your working" stops being teacher advice and becomes a scoring strategy.</p>
+  <div class="tw"><table>
+    <tr><th>Mark</th><th>Name</th><th>Earned by</th></tr>
+    <tr><td class="mono" style="color:var(--red)"><b>M1</b></td><td>Method mark</td><td>A correct method, even with wrong numbers carried in. This is why working = marks.</td></tr>
+    <tr><td class="mono" style="color:var(--red)"><b>A1</b></td><td>Accuracy mark</td><td>The correct answer following a correct method. Usually can't be earned without the M mark.</td></tr>
+    <tr><td class="mono" style="color:var(--red)"><b>B1</b></td><td>Independent mark</td><td>A correct fact or value on its own — no method required.</td></tr>
+    <tr><td class="mono" style="color:var(--red)"><b>ft</b></td><td>Follow-through</td><td>Marks for correctly using your own earlier (wrong) answer. One slip doesn't sink the question.</td></tr>
+  </table></div>
+  <div class="callout"><b>The cheapest marks in GCSE maths:</b> writing one line of method on a question you can't finish. Examiners award M1 for a correct first step constantly — blank space is the only guaranteed zero.</div>
+
+  <h2>The formulae sheet — given vs memorise</h2>
+  <p class="sub">You WILL get a formulae sheet in your exam — but it covers only a fraction of what you need, and AQA is banned from asking questions you can answer just by copying from it. Full breakdown in the <b>Formulae</b> tab.</p>
+</section>
+
+<!-- ================= TOPICS ================= -->
+<section class="tab" id="tab-topics">
+  <h2>The Federation route through the course</h2>
+  <p class="sub">These are the actual units, in the actual order, from the Harris KS4 scheme of work — so this app always matches what your teacher is teaching. Tap a unit to see what you must be able to do and the trap examiners report every year. Switch tier above.</p>
+  <div id="unitlist"></div>
+</section>
+
+<!-- ================= FORMULAE ================= -->
+<section class="tab" id="tab-formulae">
+  <h2>Given on your formulae sheet</h2>
+  <p class="sub">A clean copy comes with every paper (confirmed for 2027 and beyond). Practise <i>finding and using</i> these fast — questions will never be pure copy-outs.</p>
+  <div class="card">
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Circumference <span class="fx">C = πd = 2πr</span> · Area of a circle <span class="fx">A = πr²</span></div>
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Pythagoras <span class="fx">a² + b² = c²</span> · Trig ratios <span class="fx">sin θ = opp/hyp</span> <span class="fx">cos θ = adj/hyp</span> <span class="fx">tan θ = opp/adj</span></div>
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Area of a trapezium <span class="fx">½(a+b)h</span> · Volume of a prism <span class="fx">area of cross-section × length</span></div>
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Compound interest <span class="fx">P(1 + r/100)ⁿ</span> · Relative frequency ≈ probability over n trials</div>
+    <div class="fgroup"><span class="bH">HIGHER ONLY</span> &nbsp;Quadratic formula <span class="fx">x = (−b ± √(b²−4ac)) / 2a</span></div>
+    <div class="fgroup"><span class="bH">HIGHER ONLY</span> &nbsp;Sine rule <span class="fx">a/sin A = b/sin B</span> · Cosine rule <span class="fx">a² = b² + c² − 2bc cos A</span> · Area <span class="fx">½ab sin C</span></div>
+    <div class="fgroup"><span class="bH">HIGHER ONLY</span> &nbsp;Probability <span class="fx">P(A or B) = P(A) + P(B) − P(A and B)</span> · <span class="fx">P(A and B) = P(A given B) × P(B)</span></div>
+  </div>
+
+  <h2>Given inside the question, when needed</h2>
+  <div class="card">
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Volume of a sphere <span class="fx">4⁄3 πr³</span> · Volume of a cone <span class="fx">⅓ πr²h</span> · Volume of a pyramid <span class="fx">⅓ × base area × h</span></div>
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Surface area of a sphere <span class="fx">4πr²</span> · Curved surface of a cone <span class="fx">πrl</span></div>
+    <div style="font-size:13px;color:var(--mut)">These appear printed in the question itself — but you must know how to rearrange and combine them.</div>
+  </div>
+
+  <h2>NOT given — memorise cold</h2>
+  <p class="sub">This list is longer than the sheet. These score marks only if they're in your head on the day.</p>
+  <div class="card">
+    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Area: triangle <span class="fx">½bh</span> · parallelogram <span class="fx">b×h</span> · Speed <span class="fx">S = D/T</span> · Density <span class="fx">D = M/V</span> · Pressure <span class="fx">P = F/A</span></div>
+    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Straight line <span class="fx">y = mx + c</span> · Gradient <span class="fx">Δy/Δx</span> · Percentage multipliers (+8% → <span class="fx">×1.08</span>, −8% → <span class="fx">×0.92</span>)</div>
+    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Index laws <span class="fx">aᵐ×aⁿ=aᵐ⁺ⁿ</span> <span class="fx">aᵐ÷aⁿ=aᵐ⁻ⁿ</span> <span class="fx">(aᵐ)ⁿ=aᵐⁿ</span> <span class="fx">a⁰=1</span> · Angle facts &amp; polygon rules (exterior angles sum to 360°)</div>
+    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Exact trig values: <span class="fx">sin 30° = ½</span> <span class="fx">cos 60° = ½</span> <span class="fx">sin 45° = cos 45° = √2⁄2</span> <span class="fx">tan 45° = 1</span> <span class="fx">sin 60° = cos 30° = √3⁄2</span> <span class="fx">tan 30° = √3⁄3</span> <span class="fx">tan 60° = √3</span> — yes, Foundation too.</div>
+    <div class="fgroup"><span class="bH">HIGHER</span> &nbsp;Circle theorems (all seven, with exact wording) · <span class="fx">a⁻ⁿ = 1/aⁿ</span> · <span class="fx">a^(m/n) = (ⁿ√a)ᵐ</span> · Completing the square · Direct/inverse proportion forms <span class="fx">y = kx</span>, <span class="fx">y = k/x</span>, <span class="fx">y = kx²</span></div>
+  </div>
+  <div class="callout"><b>Sheet discipline:</b> in practice papers, use a printed copy of the real AQA sheet — nothing more. Training with a full formula booklet teaches you to rely on formulae that won't be there.</div>
+</section>
+<!-- ================= FLASHCARDS ================= -->
+<section class="tab" id="tab-cards">
+  <h2>Flashcards</h2>
+  <p class="sub">Tap to flip. Be honest with the buttons — "Again" cards come back until they don't need to. Decks marked <span class="bH">H</span> are Higher-only.</p>
+  <div class="deckrow" id="deckrow"></div>
+  <div class="fcwrap"><div class="fcard" id="fcard">
+    <div class="fface front"><div class="fq" id="fq"></div><div class="fhint">tap to flip</div></div>
+    <div class="fface back"><div class="fa" id="fa"></div><div class="fhint">tap to flip back</div></div>
+  </div></div>
+  <div class="fbtns">
+    <button class="again" id="fAgain">Again ↺</button>
+    <button class="shuf" id="fShuf">Shuffle</button>
+    <button class="got" id="fGot">Got it ✓</button>
+  </div>
+  <div class="fmeta" id="fmeta"></div>
+</section>
+
+<!-- ================= PRACTICE ================= -->
+<section class="tab" id="tab-practice">
+  <h2>Quick-fire multiple choice</h2>
+  <p class="sub">Ten questions per topic area at your tier. Pick an answer to see the explanation — wrong options are chosen because they're the classic mistakes.</p>
+  <div class="pillrow" id="mcqpills"></div>
+  <div class="score" id="mcqscore"></div>
+  <div id="mcqlist"></div>
+
+  <h2>The worked-solution gym</h2>
+  <p class="sub">Real exam-shaped questions. Attempt each one in your book first, then reveal the solution line by line — every step is annotated in red with the mark it earns, exactly as an examiner would tick your script.</p>
+  <div id="gymlist"></div>
+</section>
+</main>
+<footer>GCSE Maths = 8300 · AQA revision companion · Harris Federation Mathematics · Unit order follows the Federation KS4 scheme of work — always check against YOUR class. Not affiliated with AQA. v1 · Summer 2026.</footer>
+<script>
+/* ============ DATA: Federation units ============ */
+const UNITS={
+F:{
+ y10:[
+  {n:1,t:"Algebraic expressions",d:"Algebra",spec:"A1–A4, A6",can:["Simplify by collecting like terms","Multiply single terms and expand a single bracket","Expand double brackets, e.g. (x+3)(x+2)","Factorise into a single bracket","Use index laws with algebraic terms"],trap:"'Simplify fully' and 'factorise fully' mean exactly that — 2(2x+6) still has a common factor. Check inside the bracket before moving on."},
+  {n:2,t:"Number properties",d:"Number",spec:"N4–N6",can:["Recognise multiples, factors, primes, squares and cubes","Write a number as a product of prime factors in index form","Find the HCF and LCM of two numbers","Use factor trees and Venn diagrams for HCF/LCM"],trap:"HCF and LCM get swapped under pressure. HCF is never bigger than the smaller number; LCM is never smaller than the bigger one — sanity-check every answer."},
+  {n:3,t:"FDP and calculations with percentages",d:"Number / Ratio",spec:"N2, N10, N12, R9",can:["Convert between fractions, decimals and percentages","Order mixed FDP lists","Find a percentage of an amount with and without a calculator","Increase and decrease by a percentage using multipliers","Calculate percentage change"],trap:"Percentage change is always divided by the ORIGINAL value. Dividing by the new value is the single most common percentage error on Foundation papers."},
+  {n:4,t:"Statistical diagrams and averages",d:"Statistics",spec:"S2–S4",can:["Draw and read bar charts, pictograms and pie charts","Find mean, median, mode and range","Find averages from a frequency table","Choose which average best represents a data set"],trap:"Mean from a frequency table: multiply each value by its frequency, then divide by TOTAL FREQUENCY — not by the number of rows."},
+  {n:5,t:"Rounding, accuracy and use of a calculator",d:"Number",spec:"N14–N16",can:["Round to decimal places and significant figures","Estimate by rounding every number to 1 s.f.","Use a calculator efficiently (fractions, powers, roots, brackets)","Give answers to an appropriate degree of accuracy"],trap:"'Estimate' means round FIRST, then calculate. Working out the exact answer and rounding it at the end scores zero method marks."},
+  {n:6,t:"Standard form",d:"Number",spec:"N9",can:["Write large and small numbers in standard form","Convert standard form to ordinary numbers","Order numbers in standard form","Calculate with standard form, with and without a calculator"],trap:"The front number must be 1 ≤ a < 10. An answer like 34 × 10⁵ loses the accuracy mark — convert it to 3.4 × 10⁶."},
+  {n:7,t:"Ratio and proportion",d:"Ratio",spec:"R3–R8",can:["Simplify ratios and write them as 1:n","Share an amount in a given ratio","Solve problems where one part or a difference is given","Use the unitary method for recipes and best buys","Convert between currencies and units"],trap:"Read carefully whether you're given the TOTAL, ONE PART, or the DIFFERENCE between parts. Each starts differently — the ratio 3:5 with 'difference £24' means 2 parts = £24."},
+  {n:8,t:"Probability",d:"Probability",spec:"P1–P7",can:["Use the 0–1 probability scale","Find probabilities from equally likely outcomes","Use P(not A) = 1 − P(A)","List outcomes systematically; use sample space diagrams","Estimate probability from relative frequency and find expected results"],trap:"Probabilities must be fractions, decimals or percentages. Writing '3 in 8' or '3:8' loses the mark — write 3/8."},
+  {n:9,t:"Substitution, linear equations and inequalities",d:"Algebra",spec:"A2, A17, A21–A22",can:["Substitute values into expressions and formulae","Solve linear equations, including with brackets and unknowns on both sides","Solve linear inequalities and show solutions on a number line","Represent solution sets with the correct circle notation"],trap:"On a number line, an open circle means < or >, a filled circle means ≤ or ≥. Examiners specifically check the circle."},
+  {n:10,t:"Shape and angles",d:"Geometry",spec:"G1–G4, G11",can:["Use angle facts: point, straight line, vertically opposite","Use angles in parallel lines: alternate, corresponding, co-interior","Use angle sums of triangles and quadrilaterals","Find interior and exterior angles of polygons","Give reasons using the correct full names"],trap:"'Give a reason' needs the proper vocabulary: 'alternate angles are equal', not 'Z angles'. Informal names score nothing."},
+  {n:11,t:"Transformations and column vectors",d:"Geometry",spec:"G7, G24",can:["Translate shapes using column vectors","Reflect in given mirror lines including y = x","Rotate about a centre through 90° or 180°","Enlarge from a centre by a positive scale factor","Fully DESCRIBE a single transformation"],trap:"Describing a transformation needs EVERY detail: rotation = angle + direction + centre. Miss one and the mark is gone. And 'single transformation' means naming two scores zero."},
+  {n:12,t:"Loci",d:"Geometry",spec:"G2",can:["Construct perpendicular bisectors and angle bisectors with compasses","Draw the locus of points a fixed distance from a point or line","Combine loci to shade regions satisfying conditions"],trap:"Leave your construction arcs visible — the arcs ARE the method marks. Rubbing them out deletes your evidence."}
+ ],
+ y11:[
+  {n:13,t:"Further statistics",d:"Statistics",spec:"S1, S5–S6",can:["Draw and interpret scatter graphs; describe correlation","Draw a line of best fit and use it to estimate","Understand interpolation vs extrapolation","Interpret time series and compare distributions"],trap:"Correlation is not causation — and describing a scatter graph needs the context: 'as height increases, mass increases', not just 'positive'."},
+  {n:14,t:"Perimeter, area and volume",d:"Geometry",spec:"G16–G18",can:["Find areas of triangles, parallelograms, trapezia and compound shapes","Find circumference and area of circles; give answers in terms of π","Find volume and surface area of cuboids, prisms and cylinders","Work backwards from a given area or volume"],trap:"Compound shapes: write the shapes you split into and their separate areas. One arithmetic slip with visible method keeps most of the marks."},
+  {n:15,t:"Sequences",d:"Algebra",spec:"A23–A25",can:["Continue sequences and find term-to-term rules","Find and use the nth term of an arithmetic sequence","Decide (with working) whether a number is in a sequence","Recognise square, cube, triangular, Fibonacci and geometric sequences"],trap:"'Is 150 a term?' — set nth term = 150 and solve. If n isn't a whole number, it's not in the sequence. Say so in words to close the argument."},
+  {n:16,t:"Right-angled triangles",d:"Geometry",spec:"G20–G21, R12",can:["Use Pythagoras' theorem to find any side","Use sin, cos and tan to find sides and angles","Choose correctly between Pythagoras and trigonometry","Recall exact trig values for 0°, 30°, 45°, 60°, 90°"],trap:"Finding a shorter side with Pythagoras means SUBTRACT before square-rooting. If your 'shorter side' comes out longer than the hypotenuse, you added."},
+  {n:17,t:"Number recap and combined events",d:"Number / Probability",spec:"N1–N16, P8–P9",can:["Secure all Year 10 number skills under exam conditions","Use frequency trees and two-way tables","Draw and use tree diagrams for independent events","Multiply along branches, add between branches"],trap:"On a tree diagram the branches from any point must sum to 1. Check this before calculating anything."},
+  {n:18,t:"Real-life applications",d:"Ratio / Number",spec:"R1, R9–R11, N13",can:["Solve money problems: bills, wages, tax, VAT, exchange rates","Use simple and compound interest","Read timetables and plan schedules","Solve best-buy and unit-pricing problems with conclusions"],trap:"Best-buy questions need a comparison AND a stated conclusion in context: 'Shop A is better value because each pen costs less.' No conclusion, no final mark."},
+  {n:19,t:"Coordinates, graphs and simultaneous equations",d:"Algebra",spec:"A8–A12, A19",can:["Plot straight lines from tables of values","Find gradient and y-intercept from y = mx + c","Match equations to graphs","Solve linear simultaneous equations algebraically and graphically"],trap:"Simultaneous equations: to eliminate, the matched coefficients need OPPOSITE signs to add, SAME signs to subtract. Write A/S/S — Add when Signs are different, Subtract when the Same."},
+  {n:20,t:"Quadratics and real-life graphs",d:"Algebra",spec:"A18, A14",can:["Plot quadratic graphs from tables","Use a quadratic graph to solve equations and find turning points","Interpret distance–time and rate graphs","Read and interpret real-life graphs including containers filling"],trap:"Quadratic curves are smooth — a ruler anywhere on the curve, or a flat 'bucket' bottom, costs the drawing mark. One smooth freehand stroke."}
+ ],
+ extra:"Year 11 continues past Unit 20 — send the remaining unit folders and they'll be added here."
+},
+H:{
+ y10:[
+  {n:1,t:"Algebraic methods",d:"Algebra",spec:"A1–A7",can:["Manipulate expressions confidently: expand double and triple brackets","Factorise, including quadratics and difference of two squares","Rearrange formulae, including where the subject appears twice","Set up and use algebraic proofs with 2n, 2n+1"],trap:"Proof questions must be GENERAL: testing n = 1, 2, 3 proves nothing. Set up with letters, expand, factorise, and finish with a written conclusion."},
+  {n:2,t:"Powers, roots and accuracy",d:"Number",spec:"N6–N8, N15–N16",can:["Use negative and fractional indices","Calculate with standard form","Round to significant figures and estimate","Find upper and lower bounds and write error intervals","Calculate with bounds for a required degree of accuracy"],trap:"Bounds: a maximum answer for a÷b needs UB(a) ÷ LB(b) — biggest top, smallest bottom. Writing the rule down first earns the method mark even if arithmetic slips."},
+  {n:3,t:"Ratio and proportion",d:"Ratio",spec:"R4–R8, R10, R16",can:["Solve multi-step ratio problems, including combining a:b and b:c","Link ratios to fractions and to algebra","Use direct and inverse proportion, including finding k","Set up proportion equations y = kx², y = k/x"],trap:"Combining a:b = 2:3 with b:c = 4:5 means scaling both so b matches (b = 12): 8:12 and 12:15 → a:c = 8:15. Multiplying across without matching b is the classic error."},
+  {n:4,t:"Statistics",d:"Statistics",spec:"S1–S6",can:["Construct and interpret cumulative frequency diagrams and box plots","Find median, quartiles and interquartile range","Draw and interpret histograms with unequal class widths","Compare distributions using an average AND a measure of spread","Understand sampling, including capture–recapture"],trap:"Histograms plot FREQUENCY DENSITY, not frequency: FD = frequency ÷ class width. Reading the y-axis as frequency is the most-reported histogram error every series."},
+  {n:5,t:"Angles and right-angled triangles",d:"Geometry",spec:"G1–G6, G20–G21",can:["Use all angle facts and polygon rules with formal reasons","Apply Pythagoras' theorem, including in 3D and on coordinates","Use trigonometry to find sides and angles","Solve multi-step problems mixing angle facts, Pythagoras and trig"],trap:"Multi-step geometry: each intermediate value you find should be written on the diagram. Examiners follow your diagram annotations for method marks."},
+  {n:6,t:"Surds and exact values trigonometry",d:"Number / Geometry",spec:"N8, G21",can:["Simplify surds: √48 = 4√3","Expand brackets containing surds","Rationalise denominators","Recall and use exact trig values for 0°, 30°, 45°, 60°, 90°"],trap:"√a + √b is NOT √(a+b). Surds only combine through multiplication: √a × √b = √(ab). Adding under the root loses everything."},
+  {n:7,t:"Equations of straight lines",d:"Algebra",spec:"A9–A10, A16",can:["Find the equation of a line through two points","Use y − y₁ = m(x − x₁) or y = mx + c","Find equations of parallel and perpendicular lines","Recognise and use the equation of a circle x² + y² = r² and its tangent"],trap:"Perpendicular gradient = negative reciprocal: m and −1/m. Just flipping, or just negating, are the two half-answers examiners see constantly."},
+  {n:8,t:"Quadratics: factorising and simplifying",d:"Algebra",spec:"A4, A18",can:["Factorise quadratics including where a ≠ 1","Use the difference of two squares","Simplify algebraic fractions by factorising first","Add, subtract, multiply and divide algebraic fractions"],trap:"Algebraic fractions: you can only cancel FACTORS, never terms. (x² − 4)/(x + 2) needs factorising to (x+2)(x−2)/(x+2) before anything cancels."},
+  {n:9,t:"Quadratics: solving, graphs and algebraic fractions",d:"Algebra",spec:"A11, A18",can:["Solve quadratics by factorising, the formula, and completing the square","Sketch quadratics showing roots, intercept and turning point","Read the turning point straight from completed-square form","Solve equations involving algebraic fractions"],trap:"y = (x − 3)² + 5 has its turning point at (3, 5) — the sign of the x-coordinate flips. Reading (−3, 5) is the most common completed-square error."},
+  {n:10,t:"Simultaneous equations",d:"Algebra",spec:"A19, A21–A22",can:["Solve linear simultaneous equations by elimination and substitution","Solve one linear + one quadratic (including circles) by substitution","Solve quadratic inequalities","Interpret solutions as intersection points of graphs"],trap:"Linear + quadratic: expect TWO pairs of solutions, and keep the pairs together — x = 1 goes with its own y, not the other one."},
+  {n:11,t:"Transformations and vectors",d:"Geometry",spec:"G7–G8, G24–G25",can:["Perform and describe all four transformations, including fractional and negative enlargements","Combine transformations and describe the single equivalent","Calculate with column vectors","Prove points are collinear or lines parallel using vector arguments"],trap:"Vector proof: parallel means one vector is a SCALAR MULTIPLE of the other — and you must say so in words. Collinear additionally needs a shared point stated."},
+  {n:12,t:"Functions, sketching graphs and graph transformations",d:"Algebra",spec:"A7, A12–A13",can:["Use function notation; find composite fg(x) and inverse f⁻¹(x)","Sketch cubic, reciprocal and exponential graphs","Recognise and sketch sin, cos and tan graphs","Apply translations y = f(x) + a, y = f(x + a) and reflections y = −f(x), y = f(−x)"],trap:"y = f(x + 3) moves the graph 3 to the LEFT — inside the bracket works backwards. fg(x) means do g first: work inside-out."},
+  {n:13,t:"Loci",d:"Geometry",spec:"G2",can:["Construct bisectors and standard loci with ruler and compasses","Combine loci and shade regions satisfying multiple conditions","Solve contextual loci problems (e.g. coverage, boundaries, paths)"],trap:"Leave every construction arc visible — the arcs are the marks. A perfect line with no arcs scores as a guess."}
+ ],
+ y11:[
+  {n:14,t:"2D shapes: perimeter, area and circles",d:"Geometry",spec:"G16–G18",can:["Find areas of all standard 2D shapes and compound shapes","Calculate arc length and sector area","Give exact answers in terms of π","Work backwards from perimeter, area or arc length"],trap:"Arc length and sector area both start with the fraction θ/360 — write that fraction down first for the method mark, then multiply by 2πr or πr²."},
+  {n:15,t:"Probability",d:"Probability",spec:"P1–P9",can:["Use tree diagrams with and WITHOUT replacement","Calculate conditional probabilities","Use Venn diagrams and set notation: A ∪ B, A ∩ B, A′","Use the addition and multiplication laws"],trap:"'Without replacement' changes BOTH numbers of the second fraction: 3 red from 8 becomes 2 red from 7. Forgetting the denominator drop is the classic slip."},
+  {n:16,t:"Similar shapes: area and volume",d:"Geometry / Ratio",spec:"G19, R12",can:["Identify similar shapes and find missing lengths","Use length, area and volume scale factors: k, k², k³","Move between area SF and length SF via square roots","Prove two triangles are similar"],trap:"Area scale factor is (length SF)² and volume SF is (length SF)³. Given an AREA ratio of 9:25, the length ratio is 3:5 — square-root first, don't cube directly."},
+  {n:17,t:"Compound units and rates of change",d:"Ratio",spec:"R1, R11, R13–R15",can:["Use speed, density and pressure confidently, with unit conversions","Convert compound units, e.g. km/h ↔ m/s","Solve growth and decay problems with repeated multipliers","Interpret gradients as rates of change; estimate gradient of a curve"],trap:"km/h → m/s: ×1000 then ÷3600 (i.e. ÷3.6). Track the units through the working — writing units at each line catches direction errors instantly."},
+  {n:18,t:"3D shapes",d:"Geometry",spec:"G12–G14, G17",can:["Find volume and surface area of prisms, cylinders, cones, spheres and pyramids","Combine solids (hemisphere on cylinder, frustum problems)","Use plans and elevations","Apply Pythagoras and trig inside 3D solids"],trap:"Surface area of combined solids: hidden faces where solids join must be REMOVED. A hemisphere sitting on a cylinder covers one circle of each."},
+  {n:19,t:"Sequences, iteration and proof",d:"Algebra",spec:"A23–A25, A6",can:["Find the nth term of quadratic sequences","Work with geometric sequences including surd ratios","Use iteration xₙ₊₁ = f(xₙ) from a starting value","Construct algebraic proofs about odd, even and consecutive numbers"],trap:"Quadratic nth term: halve the SECOND difference to get the n² coefficient, then subtract that squared sequence and find what's left."}
+ ],
+ extra:"Year 11 Higher continues past Unit 19 (expect circle theorems, sine/cosine rule and vectors territory) — send the remaining unit folders and they'll slot in here."
+}
+};
+/* ============ DATA: flashcards ============ */
+const DECKS=[
+{name:"Number facts",tier:"B",cards:[
+ {q:"First ten prime numbers?",a:"2, 3, 5, 7, 11, 13, 17, 19, 23, 29. (1 is NOT prime; 2 is the only even prime.)"},
+ {q:"Square numbers to 15²?",a:"1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225."},
+ {q:"Cube numbers you must know?",a:"1, 8, 27, 64, 125 … and 1000. (1³–5³ and 10³.)"},
+ {q:"What does 'estimate' tell you to do?",a:"Round EVERY number to 1 significant figure FIRST, then calculate. Never work exactly and round at the end."},
+ {q:"Multiplier for a 12% increase? A 12% decrease?",a:"×1.12 for the increase, ×0.88 for the decrease."},
+ {q:"Percentage change formula?",a:"(change ÷ ORIGINAL) × 100. Always divide by the original value."},
+ {q:"Rule for the front number in standard form?",a:"1 ≤ a < 10. So 34 × 10⁵ must be rewritten as 3.4 × 10⁶."},
+ {q:"a⁰ = ?  and  a⁻ⁿ = ?",a:"a⁰ = 1 (for any non-zero a).  a⁻ⁿ = 1/aⁿ — negative index means reciprocal, NOT negative number."},
+ {q:"Error interval for x = 5.3 rounded to 1 d.p.?",a:"5.25 ≤ x < 5.35. Closed (≤) at the bottom, open (<) at the top."},
+ {q:"HCF vs LCM sanity check?",a:"HCF ≤ the smaller number. LCM ≥ the larger number. If your answers break this, they're swapped."}
+]},
+{name:"Algebra methods",tier:"B",cards:[
+ {q:"Expand (x + 5)(x − 3)",a:"x² − 3x + 5x − 15 = x² + 2x − 15. Four terms first (FOIL), then collect."},
+ {q:"nth term of 7, 11, 15, 19, …?",a:"Common difference 4 → starts 4n. Check n=1: 4(1)=4, need 7, so +3. nth term = 4n + 3."},
+ {q:"Solve 3(x − 2) = x + 8",a:"3x − 6 = x + 8 → 2x = 14 → x = 7."},
+ {q:"Gradient between (1, 3) and (5, 11)?",a:"m = Δy/Δx = (11 − 3)/(5 − 1) = 8/4 = 2."},
+ {q:"What does 'is 200 a term of the sequence 3n + 2?' require?",a:"Solve 3n + 2 = 200 → n = 66. Whole number → YES, it's the 66th term. If n isn't whole, write 'not a term' with the working shown."},
+ {q:"Factorise x² − 49",a:"(x + 7)(x − 7) — difference of two squares: a² − b² = (a+b)(a−b)."},
+ {q:"Inequality symbols on a number line?",a:"Open circle ○ for < or >. Filled circle ● for ≤ or ≥. Examiners check the circle."},
+ {q:"y = mx + c — what are m and c?",a:"m is the gradient (steepness), c is the y-intercept (where the line crosses the y-axis)."}
+]},
+{name:"Geometry facts",tier:"B",cards:[
+ {q:"Angles: point, straight line, triangle, quadrilateral?",a:"360°, 180°, 180°, 360°."},
+ {q:"Exterior angles of ANY polygon sum to…?",a:"360°. So each exterior angle of a regular n-gon = 360/n, and interior = 180 − exterior."},
+ {q:"The three parallel-line angle facts (full names)?",a:"Alternate angles are equal · Corresponding angles are equal · Co-interior (allied) angles sum to 180°. Full names required for reason marks."},
+ {q:"When do you use Pythagoras vs trigonometry?",a:"No angle involved (except the right angle) → Pythagoras. An angle given or asked for → trigonometry (SOH CAH TOA)."},
+ {q:"Fully describe a rotation — what's needed?",a:"THREE things: angle, direction, centre. E.g. 'rotation 90° clockwise about (0, 0)'. Miss one, lose the mark."},
+ {q:"Area of triangle, parallelogram, trapezium?",a:"Triangle ½bh · Parallelogram b×h · Trapezium ½(a+b)h — trapezium is on your formulae sheet, the others are not."},
+ {q:"Translation by vector (3 over −2) means?",a:"3 right, 2 down. Top number = x (right +), bottom = y (up +)."}
+]},
+{name:"Exact trig values",tier:"B",cards:[
+ {q:"sin 30° and cos 60°?",a:"Both = ½. They pair up: sin θ = cos (90° − θ)."},
+ {q:"sin 45° and cos 45°?",a:"Both = √2⁄2 (equivalently 1/√2)."},
+ {q:"sin 60° and cos 30°?",a:"Both = √3⁄2."},
+ {q:"tan 30°, tan 45°, tan 60°?",a:"tan 30° = √3⁄3 (=1/√3) · tan 45° = 1 · tan 60° = √3."},
+ {q:"sin 0°, sin 90°, cos 0°, cos 90°?",a:"sin 0° = 0, sin 90° = 1, cos 0° = 1, cos 90° = 0."},
+ {q:"Why do exact values matter most on Paper 1?",a:"It's non-calculator — a question like 'find x when sin x = ½' can ONLY be done from memory. Both tiers need them."}
+]},
+{name:"Ratio & proportion",tier:"B",cards:[
+ {q:"Share £120 in the ratio 3 : 5 — method?",a:"3 + 5 = 8 parts → £120 ÷ 8 = £15 per part → £45 and £75. Check: 45 + 75 = 120 ✓"},
+ {q:"Ratio 3 : 5 and the DIFFERENCE is £24 — method?",a:"Difference = 5 − 3 = 2 parts → 1 part = £12 → £36 and £60."},
+ {q:"Speed, density, pressure triangles?",a:"S = D/T · D = M/V · P = F/A. Cover the one you want; the layout gives the formula."},
+ {q:"Reverse percentage: sale price £64 after 20% off — original?",a:"£64 is 80% → ÷0.8 → £80. NEVER add 20% back on to the sale price."},
+ {q:"km/h to m/s?",a:"Divide by 3.6 (×1000 for metres, ÷3600 for seconds). 72 km/h = 20 m/s."},
+ {q:"Two successive 10% increases — total increase?",a:"×1.1 × 1.1 = ×1.21 → 21%, not 20%. Percentage changes multiply, never add."}
+]},
+{name:"Higher: must-knows",tier:"H",cards:[
+ {q:"Simplify √72",a:"√72 = √36 × √2 = 6√2. Hunt the largest square factor."},
+ {q:"Rationalise 5/√5",a:"Multiply top and bottom by √5: 5√5/5 = √5."},
+ {q:"8^(2/3) = ?",a:"Root first, then power: cube root of 8 = 2, then 2² = 4."},
+ {q:"Turning point of y = (x + 4)² − 3?",a:"(−4, −3). Completed-square form y = (x − a)² + b has turning point (a, b) — the x-sign flips."},
+ {q:"Perpendicular gradient to m = ⅔?",a:"Negative reciprocal: −3/2. Flip AND negate — doing only one is the classic half-answer."},
+ {q:"Circle theorem: angle at the centre?",a:"The angle at the centre is TWICE the angle at the circumference subtended by the same arc."},
+ {q:"Circle theorem: cyclic quadrilateral?",a:"Opposite angles of a cyclic quadrilateral sum to 180°."},
+ {q:"Circle theorem: tangent and radius?",a:"A tangent meets the radius at 90° at the point of contact. Also: tangents from an external point are equal in length."},
+ {q:"fg(x) — which function first?",a:"g first, then f: fg(x) = f(g(x)). Work inside-out."},
+ {q:"How do you prove two vectors are parallel?",a:"Show one is a scalar multiple of the other, e.g. b = 3a — and SAY so in words. For collinear, also state the shared point."},
+ {q:"Histogram y-axis shows…?",a:"Frequency DENSITY = frequency ÷ class width. Frequency is the AREA of the bar."},
+ {q:"Without replacement: 3 red in a bag of 8, P(2nd red | 1st red)?",a:"2/7 — BOTH numbers drop: one fewer red, one fewer total."}
+]}
+];
+/* ============ DATA: MCQs (10 per domain per tier) ============ */
+const MCQ={
+F:{
+num:[
+ {q:"What is the HCF of 24 and 36?",o:["6","12","18","72"],a:1,e:"24 = 2³×3, 36 = 2²×3². Shared: 2²×3 = 12. (72 is the LCM — the classic swap.)"},
+ {q:"Write ¾ as a percentage.",o:["34%","43%","70%","75%"],a:3,e:"¾ = 3 ÷ 4 = 0.75 = 75%."},
+ {q:"Write 60 as a product of prime factors.",o:["2² × 3 × 5","2 × 3 × 10","2³ × 5","4 × 15"],a:0,e:"60 = 2×30 = 2×2×15 = 2×2×3×5 = 2² × 3 × 5. Options with 10, 4 or 15 aren't fully prime."},
+ {q:"Estimate 41.2 × 2.9 ÷ 0.52 by rounding to 1 s.f.",o:["about 24","about 120","about 240","about 2400"],a:2,e:"→ 40 × 3 ÷ 0.5 = 120 ÷ 0.5 = 240. Dividing by 0.5 doubles."},
+ {q:"Work out 0.07 × 0.3",o:["0.21","0.021","2.1","0.0021"],a:1,e:"7 × 3 = 21, and there are 3 decimal places in total → 0.021."},
+ {q:"What is 2⁵?",o:["10","16","25","32"],a:3,e:"2×2×2×2×2 = 32. (2⁵ ≠ 2×5.)"},
+ {q:"Write 4.5 × 10⁻³ as an ordinary number.",o:["4500","0.045","0.0045","0.00045"],a:2,e:"Negative power → small number: move the point 3 places left → 0.0045."},
+ {q:"Increase £80 by 15%.",o:["£92","£95","£12","£68"],a:0,e:"×1.15 → 80 × 1.15 = £92. (£12 is only the increase; £68 is a decrease.)"},
+ {q:"Work out −5 − (−8)",o:["−13","−3","3","13"],a:2,e:"Subtracting a negative is adding: −5 + 8 = 3."},
+ {q:"What is the LCM of 6 and 8?",o:["2","14","24","48"],a:2,e:"Multiples of 8: 8, 16, 24 ✓ (24 is also a multiple of 6). 48 works but isn't LOWEST; 2 is the HCF."}
+],
+alg:[
+ {q:"Simplify 3a + 2b − a + 5b",o:["2a + 7b","4a + 7b","2a + 3b","9ab"],a:0,e:"a-terms: 3a − a = 2a. b-terms: 2b + 5b = 7b. Unlike terms never merge into 'ab'."},
+ {q:"Expand 4(2x − 3)",o:["8x − 3","8x − 12","6x − 12","8x + 12"],a:1,e:"Multiply BOTH terms: 4×2x = 8x and 4×(−3) = −12."},
+ {q:"Solve 3x + 5 = 20",o:["x = 5","x = 8⅓","x = 15","x = 75"],a:0,e:"3x = 15 → x = 5."},
+ {q:"The nth term of 5, 8, 11, 14, … is",o:["n + 3","3n + 2","3n − 2","5n + 3"],a:1,e:"Difference 3 → 3n. Check n = 1: 3(1) = 3, need 5, so + 2."},
+ {q:"Factorise 6x + 9",o:["3(2x + 3)","3(2x + 9)","6(x + 3)","3x(2 + 3)"],a:0,e:"HCF of 6x and 9 is 3: 3(2x + 3). Check by expanding."},
+ {q:"If y = 3x − 2, find y when x = 4",o:["10","12","14","5"],a:0,e:"y = 3(4) − 2 = 12 − 2 = 10."},
+ {q:"Solve x⁄4 = 6",o:["x = 1.5","x = 2","x = 10","x = 24"],a:3,e:"Multiply both sides by 4: x = 24. (Dividing gives 1.5 — the inverse error.)"},
+ {q:"Simplify m × m × m",o:["3m","m³","m + 3","3m³"],a:1,e:"Repeated multiplication is a power: m³. (3m means m + m + m.)"},
+ {q:"What is the gradient of y = 2x + 7?",o:["7","2","2x","9"],a:1,e:"In y = mx + c the gradient is m, the coefficient of x → 2. The 7 is the y-intercept."},
+ {q:"Expand and simplify (x + 3)(x + 2)",o:["x² + 5x + 6","x² + 6x + 5","x² + 6","2x + 5"],a:0,e:"x² + 2x + 3x + 6 = x² + 5x + 6. Four terms first, then collect."}
+],
+rat:[
+ {q:"Share £60 in the ratio 2 : 3.",o:["£20 and £40","£24 and £36","£30 and £30","£12 and £48"],a:1,e:"5 parts → £12 each → 2 parts = £24, 3 parts = £36."},
+ {q:"Simplify the ratio 15 : 25",o:["3 : 5","5 : 3","1 : 10","15 : 25"],a:0,e:"Divide both by 5 → 3 : 5. Keep the order."},
+ {q:"A recipe for 4 people uses 300 g of flour. How much for 10 people?",o:["600 g","750 g","900 g","1200 g"],a:1,e:"300 ÷ 4 = 75 g per person → 75 × 10 = 750 g (unitary method)."},
+ {q:"On a 1 : 25 000 map, 4 cm represents…",o:["1 km","10 km","4 km","250 m"],a:0,e:"4 × 25 000 = 100 000 cm = 1000 m = 1 km."},
+ {q:"Best buy: 5 pens for £2.00 or 8 pens for £3.00?",o:["5 for £2.00","8 for £3.00","Same value","Impossible to tell"],a:1,e:"40p each vs 37.5p each → the 8-pack. Always compare cost per item (or items per £)."},
+ {q:"£1 = €1.15. Convert £200 to euros.",o:["€215","€230","€174","€2300"],a:1,e:"200 × 1.15 = €230. (÷1.15 is the wrong direction.)"},
+ {q:"Two numbers are in the ratio 5 : 2. The larger is 35. The smaller is…",o:["10","14","25","70"],a:1,e:"5 parts = 35 → 1 part = 7 → 2 parts = 14."},
+ {q:"A car travels 150 miles in 3 hours. Average speed?",o:["45 mph","50 mph","453 mph","0.02 mph"],a:1,e:"S = D ÷ T = 150 ÷ 3 = 50 mph."},
+ {q:"What is 20 out of 80 as a percentage?",o:["20%","25%","40%","60%"],a:1,e:"20/80 = ¼ = 25%."},
+ {q:"y is directly proportional to x, and y = 12 when x = 3. What is k in y = kx?",o:["4","9","36","15"],a:0,e:"k = y ÷ x = 12 ÷ 3 = 4."}
+],
+geo:[
+ {q:"The angles in any triangle sum to…",o:["90°","180°","270°","360°"],a:1,e:"180°. Quadrilaterals sum to 360°."},
+ {q:"Each interior angle of a regular hexagon is…",o:["60°","108°","120°","135°"],a:2,e:"Exterior = 360 ÷ 6 = 60° → interior = 180 − 60 = 120°."},
+ {q:"Area of a triangle with base 8 cm and height 5 cm?",o:["13 cm²","20 cm²","40 cm²","26 cm²"],a:1,e:"½ × 8 × 5 = 20 cm². Forgetting the ½ gives 40."},
+ {q:"Circumference of a circle with diameter 10 cm (1 d.p.)?",o:["15.7 cm","31.4 cm","62.8 cm","78.5 cm"],a:1,e:"C = πd = π × 10 ≈ 31.4 cm. (62.8 doubles it by using 2πd; 78.5 is the area.)"},
+ {q:"Volume of a 3 cm × 4 cm × 5 cm cuboid?",o:["12 cm³","60 cm³","94 cm³","120 cm³"],a:1,e:"3 × 4 × 5 = 60 cm³. (94 is the surface area.)"},
+ {q:"Two angles on a straight line: one is 115°. The other is…",o:["55°","65°","75°","245°"],a:1,e:"180 − 115 = 65°."},
+ {q:"A right-angled triangle has shorter sides 6 and 8. The hypotenuse is…",o:["10","14","28","100"],a:0,e:"√(6² + 8²) = √100 = 10 — the classic 3-4-5 triple scaled ×2."},
+ {q:"Translation by the vector (3 over −2) moves a shape…",o:["3 left, 2 up","3 right, 2 down","2 right, 3 down","3 right, 2 up"],a:1,e:"Top = x: +3 right. Bottom = y: −2 down."},
+ {q:"The order of rotational symmetry of a square is…",o:["1","2","4","8"],a:2,e:"It maps onto itself 4 times in a full turn (every 90°)."},
+ {q:"The exterior angles of ANY polygon always sum to…",o:["180°","360°","540°","depends on the polygon"],a:1,e:"Always 360° — that's why exterior angle of a regular n-gon = 360/n."}
+],
+prob:[
+ {q:"A fair dice is rolled. P(prime number)?",o:["1/6","1/3","1/2","2/3"],a:2,e:"Primes on a dice: 2, 3, 5 → 3/6 = ½. (1 is not prime.)"},
+ {q:"P(rain) = 0.3. What is P(no rain)?",o:["0.3","0.7","0.4","1.3"],a:1,e:"P(not A) = 1 − P(A) = 0.7."},
+ {q:"A coin lands heads 12 times in 40 flips. Relative frequency of heads?",o:["0.12","0.3","0.4","12"],a:1,e:"12 ÷ 40 = 0.3."},
+ {q:"Two fair coins are flipped. How many equally likely outcomes?",o:["2","3","4","8"],a:2,e:"HH, HT, TH, TT — 4. (Thinking '3' misses that HT and TH are different.)"},
+ {q:"A bag has 3 red and 5 blue counters. P(red)?",o:["3/5","3/8","5/8","1/3"],a:1,e:"3 red out of 8 total → 3/8. The denominator is the TOTAL."},
+ {q:"P(win) = 0.2. In 50 games, the expected number of wins is…",o:["10","20","25","0.2"],a:0,e:"0.2 × 50 = 10."},
+ {q:"The probabilities of ALL possible outcomes of an event sum to…",o:["0","0.5","1","100"],a:2,e:"Always 1 (or 100%). Use this to find missing probabilities."},
+ {q:"Two fair dice: P(six on the first AND six on the second)?",o:["1/6","2/6","1/12","1/36"],a:3,e:"Independent events multiply: 1/6 × 1/6 = 1/36."},
+ {q:"A fair spinner has sections 1–5. P(even)?",o:["1/2","2/5","3/5","2/4"],a:1,e:"Evens: 2 and 4 → 2 out of 5 = 2/5."},
+ {q:"Which is NOT a valid way to write a probability?",o:["3/8","0.375","37.5%","3 : 8"],a:3,e:"Ratios are never accepted as probabilities — use a fraction, decimal or percentage."}
+],
+stat:[
+ {q:"Mean of 4, 7, 9, 12?",o:["7","8","9","32"],a:1,e:"(4+7+9+12) ÷ 4 = 32 ÷ 4 = 8."},
+ {q:"Median of 3, 8, 5, 9, 4?",o:["5","8","4","5.8"],a:0,e:"ORDER first: 3, 4, 5, 8, 9 → middle value 5. (Picking 5 from the unordered list only works by luck.)"},
+ {q:"Mode of 2, 5, 5, 7, 9, 9, 9?",o:["5","7","9","6.6"],a:2,e:"Most frequent value: 9 appears three times."},
+ {q:"Range of 3, 11, 7, 15, 6?",o:["12","15","3","8.4"],a:0,e:"15 − 3 = 12. Range is a SPREAD, not an average."},
+ {q:"In a pie chart of 60 people, a 90° sector represents…",o:["90 people","15 people","20 people","30 people"],a:1,e:"90/360 = ¼ → ¼ × 60 = 15."},
+ {q:"Estimating a mean from grouped data uses…",o:["the class midpoints","the class widths","the smallest value in each class","the modal class only"],a:0,e:"Midpoint × frequency, summed, ÷ total frequency. It's an estimate because exact values are unknown."},
+ {q:"Which average is most affected by one extreme value?",o:["Mean","Median","Mode","Range isn't an average"],a:0,e:"The mean uses every value, so one outlier drags it. The median resists outliers."},
+ {q:"A scatter graph shows that as x increases, y decreases. The correlation is…",o:["positive","negative","zero","impossible to tell"],a:1,e:"Falling pattern → negative correlation."},
+ {q:"30 students: 12 walk, 7 cycle, the rest take the bus. How many take the bus?",o:["11","19","23","18"],a:0,e:"30 − 12 − 7 = 11 — two-way table logic: rows and columns must total."},
+ {q:"The 'line of best fit' should…",o:["join the first and last points","pass through the origin always","follow the trend with points balanced either side","connect every point"],a:2,e:"It summarises the trend — roughly equal points each side. It needn't hit (0,0) or any actual point."}
+]},
+H:{
+num:[
+ {q:"Simplify √48",o:["4√3","2√12","3√4","16√3"],a:0,e:"√48 = √16 × √3 = 4√3. Always extract the LARGEST square factor."},
+ {q:"Rationalise 6/√3",o:["2√3","6√3","2","3√2"],a:0,e:"6/√3 × √3/√3 = 6√3/3 = 2√3."},
+ {q:"27^(2/3) = ?",o:["9","18","3","81"],a:0,e:"Cube root of 27 = 3, then 3² = 9. Root first keeps numbers small."},
+ {q:"Write 0.363636… as a fraction.",o:["36/100","4/11","36/99 is not simplifiable","9/25"],a:1,e:"x = 0.36̄, 100x = 36.36̄ → 99x = 36 → x = 36/99 = 4/11."},
+ {q:"The upper bound of 5.6 measured to 1 d.p. is…",o:["5.64","5.65","5.7","5.649"],a:1,e:"Half of 0.1 above: 5.65. (5.649 is a common wrong habit — bounds use the exact half-way value.)"},
+ {q:"(3 × 10⁴) × (2 × 10⁻⁷) = ?",o:["6 × 10⁻³","6 × 10³","5 × 10⁻³","6 × 10⁻¹¹"],a:0,e:"3×2 = 6; 10⁴ × 10⁻⁷ = 10⁻³ (add powers)."},
+ {q:"360 as a product of prime factors is…",o:["2³ × 3² × 5","2² × 3³ × 5","2³ × 3 × 5²","2⁴ × 3 × 5"],a:0,e:"360 = 8 × 45 = 2³ × 9 × 5 = 2³ × 3² × 5."},
+ {q:"5⁰ + 5⁻¹ = ?",o:["0.2","1.2","5.2","6"],a:1,e:"5⁰ = 1 and 5⁻¹ = 1/5 = 0.2 → 1.2."},
+ {q:"Simplify (2√3)²",o:["6","12","4√3","36"],a:1,e:"2² × (√3)² = 4 × 3 = 12. Square BOTH parts."},
+ {q:"x = 4.7 correct to 1 d.p. The error interval is…",o:["4.65 ≤ x < 4.75","4.65 < x ≤ 4.75","4.6 ≤ x < 4.8","4.699 ≤ x ≤ 4.749"],a:0,e:"≤ at the lower bound, strict < at the upper: 4.65 ≤ x < 4.75."}
+],
+alg:[
+ {q:"Factorise x² − 9",o:["(x − 3)²","(x + 3)(x − 3)","x(x − 9)","(x + 9)(x − 1)"],a:1,e:"Difference of two squares: a² − b² = (a+b)(a−b)."},
+ {q:"Solve x² − 5x + 6 = 0",o:["x = 2 or 3","x = −2 or −3","x = 1 or 6","x = 5 or 6"],a:0,e:"(x − 2)(x − 3) = 0 → x = 2 or 3. Factors of +6 summing to −5: −2 and −3."},
+ {q:"Write x² + 6x + 2 in completed-square form.",o:["(x + 3)² − 7","(x + 3)² + 2","(x + 6)² − 34","(x + 3)² − 2"],a:0,e:"(x + 3)² = x² + 6x + 9, so subtract 7: (x + 3)² − 7."},
+ {q:"Simplify (x² − 4)/(x + 2)",o:["x − 2","x − 4","x + 2","cannot be simplified"],a:0,e:"Factorise first: (x+2)(x−2)/(x+2) = x − 2. Never cancel terms, only factors."},
+ {q:"f(x) = 2x + 1, g(x) = x². Find fg(x).",o:["2x² + 1","(2x + 1)²","4x² + 4x + 1","2x² + 2x"],a:0,e:"g first: x². Then f: 2(x²) + 1 = 2x² + 1. ((2x+1)² is gf.)"},
+ {q:"The inverse of f(x) = (x − 3)/2 is…",o:["2x + 3","(x + 3)/2","2x − 3","2/(x − 3)"],a:0,e:"y = (x−3)/2 → swap and rearrange: x = (y−3)/2 → y = 2x + 3."},
+ {q:"nth term of the quadratic sequence 2, 6, 12, 20, …",o:["n² + n","2n²","n² + 1","n² + 2n"],a:0,e:"Second difference 2 → n². Subtract 1,4,9,16 leaving 1,2,3,4 = n. So n² + n. Check n=3: 9+3=12 ✓"},
+ {q:"Turning point of y = (x − 2)² + 5?",o:["(2, 5)","(−2, 5)","(2, −5)","(5, 2)"],a:0,e:"(x − a)² + b turns at (a, b): the x-sign flips → (2, 5)."},
+ {q:"Solve 2x + y = 7 and x − y = 2.",o:["x = 3, y = 1","x = 1, y = 3","x = 2, y = 3","x = 5, y = −3"],a:0,e:"Add the equations: 3x = 9 → x = 3, then y = 1. Check in both ✓"},
+ {q:"Which expression is odd for EVERY integer n?",o:["2n + 1","n + 1","n² + 1","3n"],a:0,e:"2n is always even, so 2n + 1 is always odd — the standard proof setup."}
+],
+rat:[
+ {q:"y is inversely proportional to x; y = 8 when x = 3. Find y when x = 6.",o:["4","16","2","24"],a:0,e:"y = k/x → k = 24 → y = 24/6 = 4. Doubling x halves y."},
+ {q:"£2000 at 3% compound interest for 2 years is worth…",o:["£2121.80","£2120.00","£2060.00","£2180.00"],a:0,e:"2000 × 1.03² = £2121.80. (£2120 is simple interest — the trap option.)"},
+ {q:"A price is £64 AFTER a 20% reduction. The original price was…",o:["£80","£76.80","£84","£51.20"],a:0,e:"64 = 80% of original → 64 ÷ 0.8 = £80. Adding 20% to £64 gives 76.80 — wrong."},
+ {q:"Mass 150 g, volume 20 cm³. Density?",o:["7.5 g/cm³","0.13 g/cm³","3000 g/cm³","130 g/cm³"],a:0,e:"D = M/V = 150 ÷ 20 = 7.5 g/cm³."},
+ {q:"a : b = 2 : 3 and b : c = 4 : 5. Then a : c = ?",o:["8 : 15","2 : 5","6 : 20 in lowest terms","3 : 4"],a:0,e:"Match b: 8:12 and 12:15 → a:c = 8:15."},
+ {q:"A £12 000 car loses 15% of its value each year. Value after 2 years?",o:["£8670","£8400","£10 200","£9180"],a:0,e:"12000 × 0.85² = £8670. (£8400 subtracts 15% of the original twice — simple depreciation, wrong.)"},
+ {q:"y ∝ x² and y = 18 when x = 3. Find y when x = 5.",o:["50","30","45","75"],a:0,e:"k = 18/9 = 2 → y = 2 × 25 = 50."},
+ {q:"A force of 60 N acts on 0.5 m². Pressure?",o:["120 N/m²","30 N/m²","60.5 N/m²","0.008 N/m²"],a:0,e:"P = F/A = 60 ÷ 0.5 = 120 N/m². Dividing by a number less than 1 makes it bigger."},
+ {q:"Two successive 10% increases give a total increase of…",o:["21%","20%","110%","10%"],a:0,e:"×1.1 × 1.1 = ×1.21 → 21%. Percentage changes multiply."},
+ {q:"Convert 72 km/h to m/s.",o:["20 m/s","7.2 m/s","259.2 m/s","36 m/s"],a:0,e:"72 000 m ÷ 3600 s = 20 m/s (÷3.6)."}
+],
+geo:[
+ {q:"The angle in a semicircle is always…",o:["90°","180°","45°","60°"],a:0,e:"Angle subtended by a diameter at the circumference = 90° — one of the seven circle theorems."},
+ {q:"sin 30° = ?",o:["½","√3⁄2","√2⁄2","1"],a:0,e:"Exact value, needed without a calculator: sin 30° = ½."},
+ {q:"You know two sides and the INCLUDED angle of a non-right triangle and want the third side. Use…",o:["the cosine rule","the sine rule","Pythagoras","½ab sin C"],a:0,e:"a² = b² + c² − 2bc cos A fits exactly this information. Sine rule needs an opposite pair."},
+ {q:"Two similar shapes have length scale factor 3. The area scale factor is…",o:["9","3","6","27"],a:0,e:"Area SF = (length SF)² = 9. Volume SF would be 27."},
+ {q:"Arc length of a 60° sector, radius 6 cm (in terms of π)?",o:["2π cm","6π cm","π cm","12π cm"],a:0,e:"(60/360) × 2π × 6 = ⅙ × 12π = 2π cm."},
+ {q:"In a cyclic quadrilateral, opposite angles…",o:["sum to 180°","are equal","sum to 360°","sum to 90°"],a:0,e:"Opposite angles of a cyclic quadrilateral sum to 180°."},
+ {q:"Length scale factor 2 → volume scale factor…",o:["8","4","2","6"],a:0,e:"Volume SF = 2³ = 8."},
+ {q:"a = (1 over 3), b = (2 over −1). What is a + 2b?",o:["(5 over 1)","(3 over 2)","(5 over −2)","(4 over 1)"],a:0,e:"a + 2b = (1+4, 3−2) = (5, 1)."},
+ {q:"tan 45° = ?",o:["1","½","√3","√2⁄2"],a:0,e:"tan 45° = 1 — a 45° right-angled triangle is isosceles, so opp = adj."},
+ {q:"Hypotenuse 10, angle 30°. The side OPPOSITE the angle is…",o:["5","8.66","10","5√3"],a:0,e:"opp = hyp × sin 30° = 10 × ½ = 5."}
+],
+prob:[
+ {q:"3 red, 2 blue counters; two taken WITHOUT replacement. P(both red)?",o:["3/10","9/25","6/25","3/5"],a:0,e:"3/5 × 2/4 = 6/20 = 3/10. Both numbers drop after the first pick. (9/25 is the WITH-replacement error.)"},
+ {q:"P(A | B) equals…",o:["P(A ∩ B) ÷ P(B)","P(A) × P(B)","P(A ∪ B) ÷ P(B)","P(B) ÷ P(A ∩ B)"],a:0,e:"Conditional probability: restrict the world to B, then ask how much of it is also A."},
+ {q:"For INDEPENDENT events A and B, P(A and B) = ?",o:["P(A) × P(B)","P(A) + P(B)","P(A) − P(B)","P(A) ÷ P(B)"],a:0,e:"Independence means multiply. Adding is for mutually exclusive 'or'."},
+ {q:"The fastest route to P(at least one six) in several rolls is…",o:["1 − P(no sixes)","adding P(six) each roll","P(six) × number of rolls","a two-way table"],a:0,e:"'At least one' = 1 − P(none) — one calculation instead of many."},
+ {q:"P(A) = 0.5, P(B) = 0.4, P(A ∩ B) = 0.2. P(A ∪ B) = ?",o:["0.7","0.9","0.1","0.3"],a:0,e:"0.5 + 0.4 − 0.2 = 0.7 (subtract the overlap once — it's on your formulae sheet)."},
+ {q:"The set A ∩ B′ contains elements that are…",o:["in A but not in B","in both A and B","in neither A nor B","in B but not in A"],a:0,e:"∩ = and, B′ = not B → in A AND not in B."},
+ {q:"A bag has 4 white, 3 black. Two picked without replacement. P(exactly one white)?",o:["4/7","24/49","12/42","2/7"],a:0,e:"WB + BW = (4/7 × 3/6) + (3/7 × 4/6) = 12/42 + 12/42 = 24/42 = 4/7. TWO orders — forgetting one halves the answer."},
+ {q:"Events A and B are independent exactly when…",o:["P(A ∩ B) = P(A) × P(B)","P(A ∪ B) = 1","P(A) = P(B)","P(A ∩ B) = 0"],a:0,e:"That's the definition. P(A ∩ B) = 0 is mutual exclusivity — a different idea."},
+ {q:"Two fair dice are rolled. P(total = 7)?",o:["1/6","1/12","7/36","1/36"],a:0,e:"Six ways (1,6)…(6,1) out of 36 → 6/36 = 1/6 — the most likely total."},
+ {q:"P(A) = 0.3. Over 200 independent trials, expected occurrences of A?",o:["60","30","70","0.3"],a:0,e:"0.3 × 200 = 60."}
+],
+stat:[
+ {q:"On a cumulative frequency diagram with n = 80, the median is read at…",o:["the 40th value","the 41st value","the 20th value","cumulative frequency 80"],a:0,e:"Read across from n/2 = 40 to the curve, then down."},
+ {q:"On a histogram, the FREQUENCY of a bar equals…",o:["frequency density × class width","the bar height","frequency density ÷ class width","the bar height × the number of bars"],a:0,e:"Frequency = area of the bar = FD × width. Height alone is only frequency density."},
+ {q:"The interquartile range is…",o:["UQ − LQ","max − min","UQ − median","the middle value"],a:0,e:"IQR = upper quartile − lower quartile: the spread of the middle 50%."},
+ {q:"A box plot does NOT directly show…",o:["the mean","the median","the quartiles","the range"],a:0,e:"Box plots show min, LQ, median, UQ, max — the mean isn't marked."},
+ {q:"600 students: 300 in Year 10. A stratified sample of 50 should include how many Year 10s?",o:["25","30","50","15"],a:0,e:"300/600 × 50 = 25 — same proportion as the population."},
+ {q:"20 fish are tagged and released. A later sample of 30 contains 5 tagged. Estimated population?",o:["120","150","100","3000"],a:0,e:"5/30 = 20/N → N = 20 × 30/5 = 120 (capture–recapture)."},
+ {q:"A full comparison of two distributions needs…",o:["an average AND a measure of spread, in context","just the two means","just the two ranges","the two modes"],a:0,e:"Compare a measure of centre and a measure of spread, interpreted in the context — both, or the comparison mark is lost."},
+ {q:"Frequency 15 in a class of width 5. Frequency density?",o:["3","75","20","0.33"],a:0,e:"FD = 15 ÷ 5 = 3."},
+ {q:"Moving averages are used on a time series to…",o:["smooth fluctuations and show the trend","predict individual values exactly","remove the need for a graph","calculate the mode"],a:0,e:"They iron out seasonal ups and downs so the underlying trend is visible."},
+ {q:"Compared to the range, the IQR is…",o:["less affected by extreme values","more affected by extreme values","always larger","always equal"],a:0,e:"IQR ignores the top and bottom quarters, so outliers barely touch it."}
+]}
+};
+/* ============ DATA: exam-style figures ============ */
+const SV={
+pl:`<svg viewBox='0 0 320 210' width='320' role='img' aria-label='Two parallel lines crossed by a transversal'>
+<g stroke='#0F1B2D' stroke-width='2' fill='none'>
+<line x1='20' y1='60' x2='300' y2='60'/><line x1='20' y1='150' x2='300' y2='150'/>
+<line x1='62' y1='16' x2='238' y2='192'/></g>
+<g stroke='#0F1B2D' stroke-width='1.6' fill='none'>
+<path d='M150 55 l10 5 l-10 5'/><path d='M150 145 l10 5 l-10 5'/>
+<path d='M106 60 a18 18 0 0 1 18 14'/><path d='M196 150 a20 20 0 0 0 -6 -20'/></g>
+<g font-family='IBM Plex Sans,sans-serif' font-size='14' fill='#0F1B2D'>
+<text x='130' y='86'>68°</text><text x='176' y='141' font-style='italic'>x</text></g>
+<text x='315' y='205' text-anchor='end' font-family='IBM Plex Sans,sans-serif' font-size='11' font-style='italic' fill='#5A6B80'>Not drawn accurately</text></svg>`,
+lshape:`<svg viewBox='0 0 320 220' width='320' role='img' aria-label='L-shaped compound shape'>
+<path d='M40 190 L40 14 L260 14 L260 80 L128 80 L128 190 Z' fill='#F0F3F8' stroke='#0F1B2D' stroke-width='2'/>
+<g font-family='IBM Plex Sans,sans-serif' font-size='14' fill='#0F1B2D'>
+<text x='150' y='10' text-anchor='middle'>10 cm</text>
+<text x='34' y='106' text-anchor='end'>8 cm</text>
+<text x='84' y='208' text-anchor='middle'>4 cm</text>
+<text x='266' y='51'>3 cm</text></g>
+<text x='315' y='216' text-anchor='end' font-family='IBM Plex Sans,sans-serif' font-size='11' font-style='italic' fill='#5A6B80'>Not drawn accurately</text></svg>`,
+ladder:`<svg viewBox='0 0 320 220' width='320' role='img' aria-label='Ladder leaning against a wall'>
+<g stroke='#0F1B2D' stroke-width='2' fill='none'>
+<line x1='70' y1='20' x2='70' y2='190'/><line x1='30' y1='190' x2='290' y2='190'/>
+<line x1='70' y1='40' x2='210' y2='190'/>
+<path d='M70 176 h14 v14' fill='none'/></g>
+<g font-family='IBM Plex Sans,sans-serif' font-size='14' fill='#0F1B2D'>
+<text x='158' y='104'>5 m</text>
+<text x='140' y='210' text-anchor='middle'>1.4 m</text>
+<text x='56' y='115' text-anchor='end' font-style='italic'>x</text></g>
+<text x='315' y='216' text-anchor='end' font-family='IBM Plex Sans,sans-serif' font-size='11' font-style='italic' fill='#5A6B80'>Not drawn accurately</text></svg>`,
+circle:`<svg viewBox='0 0 340 230' width='320' role='img' aria-label='Circle with centre O and points A, B, C on the circumference'>
+<circle cx='170' cy='115' r='85' fill='none' stroke='#0F1B2D' stroke-width='2'/>
+<g stroke='#0F1B2D' stroke-width='1.8' fill='none'>
+<line x1='170' y1='115' x2='96' y2='158'/><line x1='170' y1='115' x2='240' y2='163'/>
+<line x1='170' y1='30' x2='96' y2='158'/><line x1='170' y1='30' x2='240' y2='163'/>
+<path d='M152 128 a24 24 0 0 0 38 3'/>
+<path d='M160 51 a16 16 0 0 1 19 2'/></g>
+<circle cx='170' cy='115' r='2.6' fill='#0F1B2D'/>
+<g font-family='IBM Plex Sans,sans-serif' font-size='14' fill='#0F1B2D'>
+<text x='170' y='106' text-anchor='middle' font-style='italic'>O</text>
+<text x='82' y='172' font-style='italic'>A</text><text x='248' y='176' font-style='italic'>B</text>
+<text x='170' y='22' text-anchor='middle' font-style='italic'>C</text>
+<text x='170' y='156' text-anchor='middle'>116°</text>
+<text x='170' y='78' text-anchor='middle' font-style='italic'>x</text></g>
+<text x='335' y='226' text-anchor='end' font-family='IBM Plex Sans,sans-serif' font-size='11' font-style='italic' fill='#5A6B80'>Not drawn accurately</text></svg>`,
+sine:`<svg viewBox='0 0 340 220' width='320' role='img' aria-label='Triangle ABC'>
+<path d='M50 185 L300 185 L210 40 Z' fill='none' stroke='#0F1B2D' stroke-width='2'/>
+<g stroke='#0F1B2D' stroke-width='1.6' fill='none'>
+<path d='M78 185 a28 28 0 0 1 24 -14'/>
+<path d='M272 185 a28 28 0 0 0 -18 -22'/></g>
+<g font-family='IBM Plex Sans,sans-serif' font-size='14' fill='#0F1B2D'>
+<text x='40' y='200' font-style='italic'>A</text><text x='306' y='200' font-style='italic'>B</text><text x='210' y='30' text-anchor='middle' font-style='italic'>C</text>
+<text x='92' y='178'>41°</text><text x='236' y='176'>67°</text>
+<text x='266' y='108'>8.2 cm</text>
+<text x='114' y='104' font-style='italic'>x</text></g>
+<text x='335' y='216' text-anchor='end' font-family='IBM Plex Sans,sans-serif' font-size='11' font-style='italic' fill='#5A6B80'>Not drawn accurately</text></svg>`,
+cone:`<svg viewBox='0 0 340 230' width='300' role='img' aria-label='A cone on top of a hemisphere'>
+<g stroke='#0F1B2D' stroke-width='2' fill='none'>
+<line x1='110' y1='125' x2='170' y2='22'/><line x1='230' y1='125' x2='170' y2='22'/>
+<ellipse cx='170' cy='125' rx='60' ry='14'/>
+<path d='M110 125 a60 60 0 0 0 120 0'/></g>
+<g stroke='#0F1B2D' stroke-width='1.4' stroke-dasharray='5 4' fill='none'>
+<line x1='170' y1='22' x2='170' y2='125'/><line x1='170' y1='125' x2='230' y2='125'/></g>
+<g font-family='IBM Plex Sans,sans-serif' font-size='14' fill='#0F1B2D'>
+<text x='162' y='84' text-anchor='end'>8 cm</text>
+<text x='192' y='118'>3 cm</text></g>
+<text x='335' y='226' text-anchor='end' font-family='IBM Plex Sans,sans-serif' font-size='11' font-style='italic' fill='#5A6B80'>Not drawn accurately</text></svg>`
+};
+/* ============ DATA: worked gym ============ */
+const GYM={
+F:[
+{d:"Number",t:"Best value",m:3,q:"Box A holds 6 eggs and costs £1.68. Box B holds 10 eggs and costs £2.90. Which box is better value for money? <span class='qnote'>You must show your working.</span>",steps:[
+ {w:"Box A: 168p ÷ 6 = 28p per egg",k:"M1",n:"Cost per single item for one box"},
+ {w:"Box B: 290p ÷ 10 = 29p per egg",k:"M1",n:"Same comparison for the other box, same units"},
+ {w:"Box A is better value — each egg costs 1p less (28p &lt; 29p)",k:"A1",n:"Comparison AND a conclusion in context. No conclusion, no final mark.",f:1}]},
+{d:"Number",t:"Standard form calculation",m:3,q:"Work out (4 × 10⁶) × (3 × 10³). Give your answer in standard form.",steps:[
+ {w:"4 × 3 = 12  and  10⁶ × 10³ = 10⁹",k:"M1",n:"Numbers together, powers together (add the indices)"},
+ {w:"= 12 × 10⁹ — but 12 is not between 1 and 10",k:"M1",n:"Spotting the adjustment is where the next mark lives"},
+ {w:"= 1.2 × 10¹⁰",k:"A1",n:"Leaving 12 × 10⁹ loses this mark every time",f:1}]},
+{d:"Number",t:"Estimation",m:3,q:"Estimate the value of (58.3 × 4.72) ÷ 0.191. <span class='qnote'>You must show your working.</span>",steps:[
+ {w:"Round every value to 1 s.f.:   60 × 5 ÷ 0.2",k:"B1",n:"'Estimate' = round FIRST. Exact-then-round scores zero"},
+ {w:"60 × 5 = 300",k:"M1",n:""},
+ {w:"300 ÷ 0.2 = 1500",k:"A1",n:"Dividing by 0.2 is the same as multiplying by 5",f:1}]},
+{d:"Algebra",t:"Equation with brackets",m:3,q:"Solve 5(x − 2) = 3x + 7",steps:[
+ {w:"5x − 10 = 3x + 7",k:"M1",n:"Expand the bracket — both terms"},
+ {w:"2x = 17",k:"M1",n:"x-terms one side, numbers the other"},
+ {w:"x = 8.5",k:"A1",n:"x = 17/2 is equally correct",f:1}]},
+{d:"Algebra",t:"nth term — and is 150 a term?",m:4,q:"A sequence begins 7, 11, 15, 19, …  (a) Find the nth term.  (b) Is 150 a term of the sequence? <span class='qnote'>You must show how you decide.</span>",steps:[
+ {w:"Common difference 4 → nth term starts 4n",k:"M1",n:""},
+ {w:"Check n = 1: 4(1) = 4, first term is 7 → nth term = 4n + 3",k:"A1",n:""},
+ {w:"Set 4n + 3 = 150 → 4n = 147 → n = 36.75",k:"M1",n:"Force the sequence to equal 150 and solve for n"},
+ {w:"n is not a whole number, so 150 is NOT a term",k:"A1",n:"The decision must be stated in words",f:1}]},
+{d:"Algebra",t:"Point on a line",m:2,q:"The point (4, k) lies on the line y = 3x − 5. Find the value of k.",steps:[
+ {w:"Substitute x = 4:   k = 3(4) − 5",k:"M1",n:"'Lies on the line' means the coordinates satisfy the equation"},
+ {w:"k = 7",k:"A1",n:"",f:1}]},
+{d:"Ratio",t:"Ratio with a difference",m:3,q:"Amina and Ben share some money in the ratio 3 : 5. Ben receives £24 more than Amina. How much money did they share altogether?",steps:[
+ {w:"Difference in parts = 5 − 3 = 2 parts = £24",k:"M1",n:"The £24 is the DIFFERENCE, not the total — this line is the whole question"},
+ {w:"1 part = £24 ÷ 2 = £12",k:"M1",n:""},
+ {w:"Total = 8 parts = 8 × £12 = £96",k:"A1",n:"Check: £36 and £60 differ by £24 ✓",f:1}]},
+{d:"Ratio",t:"Recipe scaling",m:3,q:"A recipe for 12 cookies uses 180 g of flour. How much flour is needed for 30 cookies?",steps:[
+ {w:"180 ÷ 12 = 15 g per cookie",k:"M1",n:"Unitary method: find ONE first"},
+ {w:"15 × 30",k:"M1",n:""},
+ {w:"= 450 g",k:"A1",n:"",f:1}]},
+{d:"Ratio",t:"Average speed",m:3,q:"A train leaves at 09:40 and arrives at 11:10, travelling 120 km. Work out its average speed in km/h.",steps:[
+ {w:"09:40 → 11:10 is 1 hour 30 minutes = 1.5 hours",k:"B1",n:"Time must be in HOURS as a decimal — writing 1.3 is the classic error"},
+ {w:"Speed = distance ÷ time = 120 ÷ 1.5",k:"M1",n:""},
+ {w:"= 80 km/h",k:"A1",n:"",f:1}]},
+{d:"Geometry",t:"Angles in parallel lines",m:3,svg:"pl",q:"Find the size of angle x. Give a reason for your answer.",steps:[
+ {w:"x + 68° = 180°",k:"M1",n:"The two marked angles sit between the parallels on the same side of the transversal"},
+ {w:"x = 112°",k:"A1",n:""},
+ {w:"Reason: co-interior angles sum to 180°",k:"B1",n:"Full name required — 'C angles' scores nothing",f:1}]},
+{d:"Geometry",t:"Compound area",m:4,svg:"lshape",q:"Work out the area of the shape.",steps:[
+ {w:"Split into two rectangles: a top strip and a left column",k:"M1",n:"Draw the split on the diagram — it's evidence"},
+ {w:"Top strip: 10 × 3 = 30 cm²",k:"M1",n:"The 3 cm is the labelled right-hand edge"},
+ {w:"Left column: 4 × 5 = 20 cm²   (height = 8 − 3 = 5 cm)",k:"M1",n:"Missing lengths come from subtracting labelled ones"},
+ {w:"Total area = 30 + 20 = 50 cm²",k:"A1",n:"Units included",f:1}]},
+{d:"Geometry",t:"Pythagoras — a shorter side",m:3,svg:"ladder",q:"A 5 m ladder leans against a vertical wall. Its foot is 1.4 m from the base of the wall. How far up the wall does the ladder reach? Give your answer to 1 decimal place.",steps:[
+ {w:"x² = 5² − 1.4² = 25 − 1.96",k:"M1",n:"Finding a SHORTER side → subtract. The ladder is the hypotenuse"},
+ {w:"x² = 23.04",k:"A1",n:""},
+ {w:"x = √23.04 = 4.8 m",k:"A1",n:"Sanity check: 4.8 &lt; 5, shorter than the hypotenuse ✓",f:1}]},
+{d:"Probability",t:"Independent events",m:3,q:"The probability that Dev's bus is late on any day is 0.2.  (a) Find the probability the bus is late on both Monday and Tuesday.  (b) Find the probability it is late on neither day.",steps:[
+ {w:"(a) P(late AND late) = 0.2 × 0.2 = 0.04",k:"M1 A1",n:"Independent events multiply"},
+ {w:"(b) P(not late) = 1 − 0.2 = 0.8, so 0.8 × 0.8 = 0.64",k:"A1",n:"'Neither' = not-late twice",f:1}]},
+{d:"Probability",t:"Missing probability + expectation",m:4,q:"A spinner lands on red, blue or green. P(red) = 0.35 and P(blue) = 0.4.  (a) Find P(green).  (b) The spinner is spun 200 times. Estimate the number of times it lands on green.",steps:[
+ {w:"(a) P(green) = 1 − (0.35 + 0.4)",k:"M1",n:"All probabilities sum to 1"},
+ {w:"P(green) = 0.25",k:"A1",n:""},
+ {w:"(b) 0.25 × 200",k:"M1",n:"Expected number = probability × trials"},
+ {w:"= 50 times",k:"A1",n:"",f:1}]},
+{d:"Probability",t:"Two dice — sample space",m:3,q:"Two fair six-sided dice are rolled and their scores are added. Work out the probability that the total is 10.",steps:[
+ {w:"There are 6 × 6 = 36 equally likely outcomes",k:"M1",n:"State the size of the sample space"},
+ {w:"Totals of 10:  (4,6), (5,5), (6,4) — 3 ways",k:"A1",n:"(4,6) and (6,4) are DIFFERENT outcomes"},
+ {w:"P(total 10) = 3/36 = 1/12",k:"A1",n:"",f:1}]},
+{d:"Statistics",t:"Mean from a frequency table",m:3,q:"Goals scored per match this season:  0 goals × 4 matches,  1 goal × 8,  2 goals × 6,  3 goals × 2.  Work out the mean number of goals per match.",steps:[
+ {w:"Total goals = (0×4) + (1×8) + (2×6) + (3×2) = 26",k:"M1",n:"Value × frequency for every row"},
+ {w:"Total matches = 4 + 8 + 6 + 2 = 20",k:"M1",n:"Divide by total FREQUENCY, never by the number of rows"},
+ {w:"Mean = 26 ÷ 20 = 1.3 goals",k:"A1",n:"",f:1}]},
+{d:"Statistics",t:"Pie chart",m:3,q:"72 students were asked how they travel to school. The 'walk' sector of the pie chart has an angle of 135°. How many students walk?",steps:[
+ {w:"Fraction who walk = 135⁄360",k:"M1",n:"Sector angle out of the full turn"},
+ {w:"135⁄360 × 72",k:"M1",n:""},
+ {w:"= 27 students",k:"A1",n:"Check: 135/360 = 3/8, and 3/8 of 72 = 27 ✓",f:1}]},
+{d:"Statistics",t:"Choosing the right average",m:3,q:"Five salaries at a firm: £18k, £19k, £20k, £21k, £95k. Which average best represents a typical salary? <span class='qnote'>Support your answer with calculations.</span>",steps:[
+ {w:"Mean = 173 ÷ 5 = £34.6k — higher than four of the five salaries",k:"M1",n:"Calculate it to show WHY it misleads"},
+ {w:"Median = £20k (middle of the ordered list)",k:"B1",n:""},
+ {w:"The median — the £95k outlier drags the mean upwards, so the mean doesn't represent a typical worker",k:"A1",n:"Name the average AND give the reason in context",f:1}]}
+],
+H:[
+{d:"Number",t:"Upper and lower bounds",m:3,q:"a = 5.4 and b = 2.1, each correct to 1 decimal place. Calculate the maximum possible value of a ÷ b. Give your answer to 3 significant figures.",steps:[
+ {w:"Maximum of a ÷ b needs the biggest top and the smallest bottom:  UB(a) = 5.45,  LB(b) = 2.05",k:"B2",n:"Writing this rule down IS the method"},
+ {w:"5.45 ÷ 2.05 = 2.6585…",k:"M1",n:""},
+ {w:"= 2.66 (3 s.f.)",k:"A1",n:"",f:1}]},
+{d:"Number",t:"Expanding brackets with surds",m:3,q:"Expand and simplify (3 + √2)(4 − √2).",steps:[
+ {w:"= 12 − 3√2 + 4√2 − (√2 × √2)",k:"M1",n:"Four terms, exactly like (x + 3)(x + 2)"},
+ {w:"√2 × √2 = 2, so:  12 − 3√2 + 4√2 − 2",k:"A1",n:"(√2)² = 2 — not 4, not √4"},
+ {w:"= 10 + √2",k:"A1",n:"Rationals together, surds together",f:1}]},
+{d:"Number",t:"Recurring decimal proof",m:3,q:"Prove that 0.454545… = 5⁄11. <span class='qnote'>'Prove' — every step must be shown.</span>",steps:[
+ {w:"Let x = 0.454545…   then 100x = 45.454545…",k:"M1",n:"Multiply by 10ⁿ where n = length of the repeating block"},
+ {w:"100x − x = 45.4545… − 0.4545…   →   99x = 45",k:"M1",n:"Subtracting kills the recurring tail — the heart of the proof"},
+ {w:"x = 45⁄99 = 5⁄11   ∎",k:"A1",n:"Simplify fully and close the proof",f:1}]},
+{d:"Algebra",t:"Quadratic formula",m:3,q:"Solve 2x² + 5x − 1 = 0. Give your solutions to 2 decimal places. <span class='qnote'>2 d.p. requested = use the formula, it won't factorise.</span>",steps:[
+ {w:"a = 2, b = 5, c = −1:   x = (−5 ± √(5² − 4×2×(−1))) ⁄ (2×2)",k:"M1",n:"Substitute into the formula — it's ON your sheet, so this mark is a gift"},
+ {w:"Discriminant: 25 + 8 = 33, so  x = (−5 ± √33) ⁄ 4",k:"A1",n:"Watch the double negative: −4×2×(−1) = +8"},
+ {w:"x = 0.19  or  x = −2.69  (2 d.p.)",k:"A1",n:"Both roots needed",f:1}]},
+{d:"Algebra",t:"Linear meets quadratic",m:5,q:"Solve the simultaneous equations   y = x² − 3x + 1   and   y = x − 2.",steps:[
+ {w:"Both equal y, so:   x² − 3x + 1 = x − 2",k:"M1",n:"Substitution — set the expressions equal"},
+ {w:"x² − 4x + 3 = 0",k:"A1",n:"Everything to one side, simplified"},
+ {w:"(x − 1)(x − 3) = 0",k:"M1",n:""},
+ {w:"x = 1 → y = −1;    x = 3 → y = 1",k:"A2",n:"TWO pairs, kept together. Substitute back into the LINEAR equation — fewer slips",f:1}]},
+{d:"Algebra",t:"Algebraic proof",m:3,q:"Prove that (n + 3)² − (n − 3)² is a multiple of 12 for every integer n.",steps:[
+ {w:"(n² + 6n + 9) − (n² − 6n + 9)",k:"M1",n:"Expand both — the second bracket's signs are where errors live"},
+ {w:"= 12n",k:"A1",n:"Everything else cancels"},
+ {w:"12n = 12 × n, so the expression is always a multiple of 12   ∎",k:"A1",n:"The written conclusion earns the final mark — never skip it",f:1}]},
+{d:"Ratio",t:"Reverse percentage, then compound",m:4,q:"After a 15% price rise, a season ticket costs £943.  (a) Find the price before the rise.  (b) The new price then rises by 3% per year for 2 years. Find the price after those 2 years.",steps:[
+ {w:"(a) £943 is 115% of the original → 943 ÷ 1.15",k:"M1",n:"Reverse percentage means DIVIDE by the multiplier — never subtract 15% of £943"},
+ {w:"Original price = £820",k:"A1",n:""},
+ {w:"(b) 943 × 1.03²",k:"M1",n:"Repeated percentage change: one multiplier, powered"},
+ {w:"= £1000.43 (nearest penny)",k:"A1",n:"",f:1}]},
+{d:"Ratio",t:"Inverse proportion",m:4,q:"t is inversely proportional to the square of d. When d = 2, t = 5. Find the value of t when d = 5.",steps:[
+ {w:"t = k ⁄ d²",k:"M1",n:"Write the general equation FIRST — this mark exists even if you go no further"},
+ {w:"5 = k ⁄ 4  →  k = 20",k:"A1",n:""},
+ {w:"t = 20 ⁄ 5² = 20 ⁄ 25",k:"M1",n:""},
+ {w:"t = 0.8",k:"A1",n:"",f:1}]},
+{d:"Ratio",t:"Combining two ratios",m:3,q:"In a school, gold : silver awards = 3 : 4 and silver : bronze awards = 6 : 7. Find gold : bronze in its simplest form.",steps:[
+ {w:"Silver appears in both — scale each ratio so silver matches: LCM(4, 6) = 12",k:"M1",n:"The linking quantity must be made equal first"},
+ {w:"gold : silver = 9 : 12   and   silver : bronze = 12 : 14",k:"M1",n:""},
+ {w:"gold : bronze = 9 : 14",k:"A1",n:"No common factor — already simplest form",f:1}]},
+{d:"Geometry",t:"Circle theorem",m:3,svg:"circle",q:"A, B and C lie on a circle, centre O. Angle AOB = 116°. Find angle ACB (marked x). Give a reason for your answer.",steps:[
+ {w:"x = 116° ÷ 2",k:"M1",n:"The centre angle and angle ACB stand on the same arc AB"},
+ {w:"x = 58°",k:"A1",n:""},
+ {w:"Reason: the angle at the centre is twice the angle at the circumference",k:"B1",n:"Exact theorem wording — a paraphrase risks the mark",f:1}]},
+{d:"Geometry",t:"Sine rule",m:3,svg:"sine",q:"In triangle ABC, angle A = 41°, angle B = 67° and BC = 8.2 cm. Calculate the length x of side AC. Give your answer to 3 significant figures.",steps:[
+ {w:"Sine rule:   x ⁄ sin B = BC ⁄ sin A",k:"M1",n:"Pair each side with its OPPOSITE angle: BC faces A, AC faces B. The rule is on your sheet"},
+ {w:"x = 8.2 × sin 67° ⁄ sin 41°",k:"M1",n:"Calculator in DEGREE mode — check before pressing anything"},
+ {w:"x = 11.5 cm (3 s.f.)",k:"A1",n:"Sanity check: the bigger angle (67°) faces the longer side ✓",f:1}]},
+{d:"Geometry",t:"Volume of a composite solid",m:4,svg:"cone",q:"A toy is a cone of radius 3 cm and height 8 cm fixed on top of a hemisphere of radius 3 cm. Work out the total volume of the toy. Give your answer to 3 significant figures. <span class='qnote'>Volume of a cone = ⅓πr²h · Volume of a sphere = 4⁄3πr³ (given in the question, as in the real exam).</span>",steps:[
+ {w:"Cone:  ⅓ × π × 3² × 8 = 24π",k:"M1",n:"Keep it in terms of π until the very end"},
+ {w:"Hemisphere:  ½ × 4⁄3 × π × 3³ = 18π",k:"M1",n:"HALF the sphere — forgetting the ½ is the top error here"},
+ {w:"Total = 24π + 18π = 42π",k:"A1",n:""},
+ {w:"= 131.946… = 132 cm³ (3 s.f.)",k:"A1",n:"",f:1}]},
+{d:"Probability",t:"Without replacement",m:4,q:"A bag contains 5 red and 3 blue counters. Two counters are taken at random without replacement. Work out the probability that the counters are different colours.",steps:[
+ {w:"Two orders give different colours: red-then-blue OR blue-then-red",k:"M1",n:"Forgetting one order halves the answer"},
+ {w:"P(RB) = 5⁄8 × 3⁄7 = 15⁄56",k:"M1",n:"Both numbers drop for the second pick — without replacement"},
+ {w:"P(BR) = 3⁄8 × 5⁄7 = 15⁄56",k:"M1",n:""},
+ {w:"P(different) = 15⁄56 + 15⁄56 = 30⁄56 = 15⁄28",k:"A1",n:"Multiply along branches, ADD between branches",f:1}]},
+{d:"Probability",t:"Independence",m:4,q:"A and B are independent events. P(A) = 0.6 and P(A and B) = 0.24.  (a) Find P(B).  (b) Find P(A or B).",steps:[
+ {w:"(a) Independence: P(A and B) = P(A) × P(B), so 0.24 = 0.6 × P(B)",k:"M1",n:"State the definition — that's the method mark"},
+ {w:"P(B) = 0.4",k:"A1",n:""},
+ {w:"(b) P(A or B) = 0.6 + 0.4 − 0.24",k:"M1",n:"Addition law (on your formulae sheet): subtract the overlap once"},
+ {w:"= 0.76",k:"A1",n:"",f:1}]},
+{d:"Probability",t:"At least one",m:3,q:"A fair dice is rolled three times. Work out the probability of getting at least one six.",steps:[
+ {w:"P(at least one six) = 1 − P(no sixes)",k:"M1",n:"'At least one' → go through the complement, always"},
+ {w:"P(no sixes) = (5⁄6)³ = 125⁄216",k:"M1",n:""},
+ {w:"P(at least one six) = 1 − 125⁄216 = 91⁄216",k:"A1",n:"",f:1}]},
+{d:"Statistics",t:"Histogram frequencies",m:4,q:"Times (t min): 0 &lt; t ≤ 10 has frequency 20;  10 &lt; t ≤ 15 has frequency 30.  (a) Find the frequency density of each class.  (b) The bar for 15 &lt; t ≤ 25 has frequency density 1.5. Find its frequency.",steps:[
+ {w:"(a) FD = frequency ÷ class width:  20 ÷ 10 = 2",k:"M1",n:"The definition IS the method"},
+ {w:"30 ÷ 5 = 6",k:"A1",n:"The narrower class has the taller bar — that's the whole point of histograms"},
+ {w:"(b) frequency = FD × width = 1.5 × 10",k:"M1",n:"Reverse the formula"},
+ {w:"= 15",k:"A1",n:"",f:1}]},
+{d:"Statistics",t:"Capture–recapture",m:3,q:"A biologist catches, tags and releases 40 fish in a lake. Later she catches 50 fish; 8 of them are tagged. Estimate the number of fish in the lake.",steps:[
+ {w:"Assume the proportion tagged is the same in the sample and the lake:  8⁄50 = 40⁄N",k:"M1",n:"Write the proportion statement — the method mark"},
+ {w:"N = 40 × 50 ⁄ 8",k:"M1",n:""},
+ {w:"N = 250 fish",k:"A1",n:"",f:1}]},
+{d:"Statistics",t:"Comparing distributions",m:2,q:"Class A test scores: median 62, IQR 18.  Class B: median 55, IQR 30.  Compare the two distributions. <span class='qnote'>Two comparison marks — one for average, one for spread, both in context.</span>",steps:[
+ {w:"Class A's median (62) is higher than Class B's (55), so Class A scored better on average",k:"B1",n:"Comparative word + context. 'A is 62' alone is a description, not a comparison"},
+ {w:"Class A's IQR (18) is smaller than Class B's (30), so Class A's scores were more consistent",k:"B1",n:"Spread must be interpreted: smaller IQR = more consistent",f:1}]}
+]};
+/* ============ LOGIC ============ */
+const $=s=>document.querySelector(s);
+let TIER="F";
+/* ---- countdown ---- */
+const EXAMS=[
+ {l:"Paper 1 · non-calc",d:new Date(2027,4,14,9,0),w:"Fri 14 May 2027"},
+ {l:"Paper 2 · calc",d:new Date(2027,4,27,9,0),w:"Thu 27 May 2027"},
+ {l:"Paper 3 · calc",d:new Date(2027,5,14,9,0),w:"Mon 14 Jun 2027"}
+];
+function renderCount(){
+ const now=new Date();let marked=false;
+ $("#countrow").innerHTML=EXAMS.map(e=>{
+  const days=Math.ceil((e.d-now)/86400000);
+  let cls="count",body;
+  if(days<0){body="<div class='cd'>sat ✓</div>";}
+  else{ if(!marked){cls+=" next";marked=true;}
+   body="<div class='cd'>"+days+" <span>days</span></div>";}
+  return "<div class='"+cls+"'><div class='cl'>"+e.l+"</div>"+body+"<div class='cw'>"+e.w+"</div></div>";
+ }).join("");
+}
+renderCount();
+/* ---- tabs ---- */
+const TIERTABS=["topics","cards","practice","formulae"];
+document.querySelectorAll("nav.tabs button").forEach(b=>{
+ b.addEventListener("click",()=>{
+  document.querySelectorAll("nav.tabs button").forEach(x=>x.classList.remove("on"));
+  b.classList.add("on");
+  document.querySelectorAll("section.tab").forEach(s=>s.classList.remove("on"));
+  $("#tab-"+b.dataset.tab).classList.add("on");
+  $("#tierbar").classList.toggle("show",TIERTABS.includes(b.dataset.tab));
+  window.scrollTo({top:0});
+ });
+});
+/* ---- tier toggle ---- */
+function setTier(t){
+ TIER=t;
+ $("#segF").className=t==="F"?"onF":"";
+ $("#segH").className=t==="H"?"onH":"";
+ $("#tiernote").textContent=t==="F"?"Foundation · grades 1–5 · check your tier with your teacher":"Higher · grades 4–9 · check your tier with your teacher";
+ renderUnits();buildDecks();renderMCQ();renderGym();
+}
+$("#segF").addEventListener("click",()=>setTier("F"));
+$("#segH").addEventListener("click",()=>setTier("H"));
+/* ---- units ---- */
+function unitHTML(u,t){
+ return "<div class='unit t"+t+"'>"+
+  "<div class='uhead' role='button' tabindex='0'>"+
+  "<span class='unum'>U"+String(u.n).padStart(2,"0")+"</span>"+
+  "<span class='utitle'>"+u.t+"</span>"+
+  "<span class='udom'>"+u.d+"</span>"+
+  "<span class='uchev'>▸</span></div>"+
+  "<div class='ubody'><div class='uspec'>AQA spec: "+u.spec+"</div>"+
+  "<ul>"+u.can.map(c=>"<li>"+c+"</li>").join("")+"</ul>"+
+  "<div class='trap'><b>The trap:</b> "+u.trap+"</div></div></div>";
+}
+function renderUnits(){
+ const D=UNITS[TIER];
+ $("#unitlist").innerHTML=
+  "<div class='yearhead'><h3>Year 10 · "+(TIER==="F"?"Foundation":"Higher")+"</h3><span class='yh-note'>Units "+D.y10[0].n+"–"+D.y10[D.y10.length-1].n+" · the content build</span></div>"+
+  D.y10.map(u=>unitHTML(u,TIER)).join("")+
+  "<div class='yearhead'><h3>Year 11 · "+(TIER==="F"?"Foundation":"Higher")+"</h3><span class='yh-note'>Units "+D.y11[0].n+"+ · finish, interleave, master the papers</span></div>"+
+  D.y11.map(u=>unitHTML(u,TIER)).join("")+
+  "<div class='placeholder'>"+D.extra+"</div>";
+ document.querySelectorAll(".unit .uhead").forEach(h=>{
+  const tog=()=>h.parentElement.classList.toggle("open");
+  h.addEventListener("click",tog);
+  h.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();tog();}});
+ });
+}
+/* ---- flashcards ---- */
+let deckIdx=0,cardQ=[],cardPos=0,gotCount=0;
+function availDecks(){return DECKS.filter(d=>d.tier==="B"||d.tier===TIER);}
+function buildDecks(){
+ const ds=availDecks();
+ if(deckIdx>=ds.length)deckIdx=0;
+ $("#deckrow").innerHTML=ds.map((d,i)=>"<button class='"+(i===deckIdx?"on":"")+"'>"+d.name+(d.tier==="H"?" <span class='bH'>H</span>":"")+"</button>").join("");
+ document.querySelectorAll("#deckrow button").forEach((b,i)=>b.addEventListener("click",()=>{deckIdx=i;startDeck();buildDecks();}));
+ startDeck();
+}
+function startDeck(){
+ const d=availDecks()[deckIdx];
+ cardQ=d.cards.map((c,i)=>i);gotCount=0;cardPos=0;showCard(false);
+}
+function showCard(flip){
+ const d=availDecks()[deckIdx];
+ if(cardQ.length===0){$("#fq").textContent="Deck complete! ✓";$("#fa").textContent="Shuffle to go again.";$("#fmeta").textContent=d.cards.length+" of "+d.cards.length+" mastered";$("#fcard").classList.remove("flip");return;}
+ const c=d.cards[cardQ[cardPos%cardQ.length]];
+ $("#fq").textContent=c.q;$("#fa").textContent=c.a;
+ $("#fcard").classList.toggle("flip",!!flip);
+ $("#fmeta").textContent=d.name+" · card "+((cardPos%cardQ.length)+1)+" of "+cardQ.length+" remaining · "+gotCount+" mastered";
+}
+$("#fcard").addEventListener("click",()=>{if(cardQ.length)$("#fcard").classList.toggle("flip");});
+$("#fAgain").addEventListener("click",()=>{if(!cardQ.length)return;cardPos++;showCard(false);});
+$("#fGot").addEventListener("click",()=>{if(!cardQ.length)return;cardQ.splice(cardPos%cardQ.length,1);gotCount++;showCard(false);});
+$("#fShuf").addEventListener("click",()=>{startDeck();for(let i=cardQ.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cardQ[i],cardQ[j]]=[cardQ[j],cardQ[i]];}showCard(false);});
+/* ---- MCQ ---- */
+const DOMS=[["num","Number"],["alg","Algebra"],["rat","Ratio"],["geo","Geometry"],["prob","Probability"],["stat","Statistics"]];
+let domKey="num",right=0,attempted=0;
+function renderPills(){
+ $("#mcqpills").innerHTML=DOMS.map(d=>"<button class='"+(d[0]===domKey?"on":"")+"' data-k='"+d[0]+"'>"+d[1]+"</button>").join("");
+ document.querySelectorAll("#mcqpills button").forEach(b=>b.addEventListener("click",()=>{domKey=b.dataset.k;renderPills();renderMCQ();}));
+}
+function renderMCQ(){
+ right=0;attempted=0;updScore();
+ const qs=MCQ[TIER][domKey];
+ $("#mcqlist").innerHTML=qs.map((q,qi)=>{
+  const order=q.o.map((_,i)=>i);
+  for(let i=order.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[order[i],order[j]]=[order[j],order[i]];}
+  return "<div class='mcq' data-a='"+order.indexOf(q.a)+"'>"+
+   "<div class='mtop'><span>"+(TIER==="F"?"FOUNDATION":"HIGHER")+" · "+DOMS.find(d=>d[0]===domKey)[1].toUpperCase()+"</span><span>Q"+(qi+1)+"/"+qs.length+"</span></div>"+
+   "<div class='mq'>"+q.q+"</div>"+
+   order.map((oi,pos)=>"<button class='opt' data-p='"+pos+"'>"+q.o[oi]+"</button>").join("")+
+   "<div class='mexp'>"+q.e+"</div></div>";
+ }).join("");
+ document.querySelectorAll("#mcqlist .mcq").forEach(box=>{
+  const correct=+box.dataset.a;
+  box.querySelectorAll(".opt").forEach(btn=>{
+   btn.addEventListener("click",()=>{
+    if(box.dataset.done)return;box.dataset.done="1";attempted++;
+    const pick=+btn.dataset.p;
+    box.querySelectorAll(".opt").forEach(o=>{o.disabled=true;if(+o.dataset.p===correct)o.classList.add("right");});
+    if(pick===correct){right++;}else{btn.classList.add("wrong");}
+    box.querySelector(".mexp").classList.add("show");updScore();
+   });
+  });
+ });
+}
+function updScore(){$("#mcqscore").textContent=attempted?("Score: "+right+"/"+attempted+" answered"):"Score: 0/0 — pick a topic and go";}
+/* ---- gym ---- */
+function renderGym(){
+ $("#gymlist").innerHTML=GYM[TIER].map((g,gi)=>{
+  return "<div class='gym'><div class='gtop'><div class='gt'>"+g.d+" · "+g.t+"</div><div class='gm'>["+g.m+" marks]</div></div>"+
+   "<div class='gq'>"+g.q+"</div>"+
+   (g.svg?"<div class='gfig'>"+SV[g.svg]+"</div>":"")+
+   g.steps.map(s=>"<div class='step"+(s.f?" final":"")+"'><span class='sw'>"+s.w+(s.n?"<span class='sn'>"+s.n+"</span>":"")+"</span><span class='sm'>"+s.k+" ✓</span></div>").join("")+
+   "<button class='gbtn'>Reveal next step</button></div>";
+ }).join("");
+ document.querySelectorAll("#gymlist .gym").forEach(box=>{
+  const steps=box.querySelectorAll(".step"),btn=box.querySelector(".gbtn");
+  let i=0;
+  btn.addEventListener("click",()=>{
+   if(i<steps.length){steps[i].classList.add("show");i++;}
+   if(i===steps.length){btn.textContent="Solution complete — mark yourself honestly";btn.classList.add("done");}
+   else if(i===steps.length-1){btn.textContent="Reveal final answer";}
+  });
+ });
+}
+/* ---- boot ---- */
+renderPills();renderUnits();buildDecks();renderMCQ();renderGym();
+</script>
+</body>
+</html>
