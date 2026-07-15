@@ -44,6 +44,12 @@ header::before{content:"";position:absolute;inset:0;
 .count.next .cl,.count.next .cw{color:#FBD3D6}
 .hflogo{position:absolute;top:18px;right:16px;background:#fff;border-radius:8px;padding:6px 10px;box-shadow:0 2px 8px rgba(0,0,0,.25)}
 .hflogo img{display:block;height:24px;width:auto}
+.fr{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 3px;line-height:1.12;font-size:.92em;text-align:center}
+.fr .nu{padding:0 5px}
+.fr .dn{border-top:1.5px solid currentColor;padding:0 5px}
+.rt{white-space:nowrap}
+.rt .vinc{border-top:1.6px solid currentColor;padding-top:1px}
+sup .fr{font-size:.85em;line-height:1.05}
 /* ---------- tabs ---------- */
 nav.tabs{position:sticky;top:0;z-index:50;background:var(--blue);box-shadow:0 2px 8px rgba(15,27,45,.25)}
 nav.tabs .in{max-width:1000px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none}
@@ -220,7 +226,7 @@ footer{border-top:1px solid var(--line);padding:22px 18px 40px;text-align:center
         <li>No calculator — arithmetic is being tested on purpose</li>
         <li>Fractions often beat decimals here: ⅓ is exact, 0.333… is not</li>
         <li>Know your times tables, squares to 15², cubes of 1–5 and 10</li>
-        <li>Exact trig values (sin&nbsp;30° = ½ etc.) love this paper</li>
+        <li>Exact trig values (sin&nbsp;30° = <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span> etc.) love this paper</li>
       </ul>
       <div class="tip"><b>Golden rule:</b> show working for every mark. A wrong answer with correct method still earns method marks — a bare wrong answer earns nothing.</div>
     </div>
@@ -319,17 +325,17 @@ footer{border-top:1px solid var(--line);padding:22px 18px 40px;text-align:center
   <p class="sub">A clean copy comes with every paper (confirmed for 2027 and beyond). Practise <i>finding and using</i> these fast — questions will never be pure copy-outs.</p>
   <div class="card">
     <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Circumference <span class="fx">C = πd = 2πr</span> · Area of a circle <span class="fx">A = πr²</span></div>
-    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Pythagoras <span class="fx">a² + b² = c²</span> · Trig ratios <span class="fx">sin θ = opp/hyp</span> <span class="fx">cos θ = adj/hyp</span> <span class="fx">tan θ = opp/adj</span></div>
-    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Area of a trapezium <span class="fx">½(a+b)h</span> · Volume of a prism <span class="fx">area of cross-section × length</span></div>
-    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Compound interest <span class="fx">P(1 + r/100)ⁿ</span> · Relative frequency ≈ probability over n trials</div>
-    <div class="fgroup"><span class="bH">HIGHER ONLY</span> &nbsp;Quadratic formula <span class="fx">x = (−b ± √(b²−4ac)) / 2a</span></div>
-    <div class="fgroup"><span class="bH">HIGHER ONLY</span> &nbsp;Sine rule <span class="fx">a/sin A = b/sin B</span> · Cosine rule <span class="fx">a² = b² + c² − 2bc cos A</span> · Area <span class="fx">½ab sin C</span></div>
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Pythagoras <span class="fx">a² + b² = c²</span> · Trig ratios <span class="fx">sin θ = <span class='fr'><span class='nu'>opp</span><span class='dn'>hyp</span></span></span> <span class="fx">cos θ = <span class='fr'><span class='nu'>adj</span><span class='dn'>hyp</span></span></span> <span class="fx">tan θ = <span class='fr'><span class='nu'>opp</span><span class='dn'>adj</span></span></span></div>
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Area of a trapezium <span class="fx"><span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>(a + b)h</span> · Volume of a prism <span class="fx">area of cross-section × length</span></div>
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Compound interest <span class="fx">P(1 + <span class='fr'><span class='nu'>r</span><span class='dn'>100</span></span>)ⁿ</span> · Relative frequency ≈ probability over n trials</div>
+    <div class="fgroup"><span class="bH">HIGHER ONLY</span> &nbsp;Quadratic formula <span class="fx">x = <span class='fr'><span class='nu'>−b ± <span class='rt'>√<span class='vinc'>b² − 4ac</span></span></span><span class='dn'>2a</span></span></span></div>
+    <div class="fgroup"><span class="bH">HIGHER ONLY</span> &nbsp;Sine rule <span class="fx"><span class='fr'><span class='nu'>a</span><span class='dn'>sin A</span></span> = <span class='fr'><span class='nu'>b</span><span class='dn'>sin B</span></span></span> · Cosine rule <span class="fx">a² = b² + c² − 2bc cos A</span> · Area <span class="fx"><span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>ab sin C</span></div>
     <div class="fgroup"><span class="bH">HIGHER ONLY</span> &nbsp;Probability <span class="fx">P(A or B) = P(A) + P(B) − P(A and B)</span> · <span class="fx">P(A and B) = P(A given B) × P(B)</span></div>
   </div>
 
   <h2>Given inside the question, when needed</h2>
   <div class="card">
-    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Volume of a sphere <span class="fx">4⁄3 πr³</span> · Volume of a cone <span class="fx">⅓ πr²h</span> · Volume of a pyramid <span class="fx">⅓ × base area × h</span></div>
+    <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Volume of a sphere <span class="fx"><span class='fr'><span class='nu'>4</span><span class='dn'>3</span></span>πr³</span> · Volume of a cone <span class="fx"><span class='fr'><span class='nu'>1</span><span class='dn'>3</span></span>πr²h</span> · Volume of a pyramid <span class="fx"><span class='fr'><span class='nu'>1</span><span class='dn'>3</span></span> × base area × h</span></div>
     <div class="fgroup"><span class="bB">BOTH TIERS</span> &nbsp;Surface area of a sphere <span class="fx">4πr²</span> · Curved surface of a cone <span class="fx">πrl</span></div>
     <div style="font-size:13px;color:var(--mut)">These appear printed in the question itself — but you must know how to rearrange and combine them.</div>
   </div>
@@ -337,11 +343,11 @@ footer{border-top:1px solid var(--line);padding:22px 18px 40px;text-align:center
   <h2>NOT given — memorise cold</h2>
   <p class="sub">This list is longer than the sheet. These score marks only if they're in your head on the day.</p>
   <div class="card">
-    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Area: triangle <span class="fx">½bh</span> · parallelogram <span class="fx">b×h</span> · Speed <span class="fx">S = D/T</span> · Density <span class="fx">D = M/V</span> · Pressure <span class="fx">P = F/A</span></div>
-    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Straight line <span class="fx">y = mx + c</span> · Gradient <span class="fx">Δy/Δx</span> · Percentage multipliers (+8% → <span class="fx">×1.08</span>, −8% → <span class="fx">×0.92</span>)</div>
-    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Index laws <span class="fx">aᵐ×aⁿ=aᵐ⁺ⁿ</span> <span class="fx">aᵐ÷aⁿ=aᵐ⁻ⁿ</span> <span class="fx">(aᵐ)ⁿ=aᵐⁿ</span> <span class="fx">a⁰=1</span> · Angle facts &amp; polygon rules (exterior angles sum to 360°)</div>
-    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Exact trig values: <span class="fx">sin 30° = ½</span> <span class="fx">cos 60° = ½</span> <span class="fx">sin 45° = cos 45° = √2⁄2</span> <span class="fx">tan 45° = 1</span> <span class="fx">sin 60° = cos 30° = √3⁄2</span> <span class="fx">tan 30° = √3⁄3</span> <span class="fx">tan 60° = √3</span> — yes, Foundation too.</div>
-    <div class="fgroup"><span class="bH">HIGHER</span> &nbsp;Circle theorems (all seven, with exact wording) · <span class="fx">a⁻ⁿ = 1/aⁿ</span> · <span class="fx">a^(m/n) = (ⁿ√a)ᵐ</span> · Completing the square · Direct/inverse proportion forms <span class="fx">y = kx</span>, <span class="fx">y = k/x</span>, <span class="fx">y = kx²</span></div>
+    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Area: triangle <span class="fx"><span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>bh</span> · parallelogram <span class="fx">b×h</span> · Speed <span class="fx">S = <span class='fr'><span class='nu'>D</span><span class='dn'>T</span></span></span> · Density <span class="fx">D = <span class='fr'><span class='nu'>M</span><span class='dn'>V</span></span></span> · Pressure <span class="fx">P = <span class='fr'><span class='nu'>F</span><span class='dn'>A</span></span></span></div>
+    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Straight line <span class="fx">y = mx + c</span> · Gradient <span class="fx"><span class='fr'><span class='nu'>Δy</span><span class='dn'>Δx</span></span></span> · Percentage multipliers (+8% → <span class="fx">×1.08</span>, −8% → <span class="fx">×0.92</span>)</div>
+    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Index laws <span class="fx">aᵐ×aⁿ=aᵐ⁺ⁿ</span> <span class="fx"><span class='fr'><span class='nu'>aᵐ</span><span class='dn'>aⁿ</span></span> = aᵐ⁻ⁿ</span> <span class="fx">(aᵐ)ⁿ=aᵐⁿ</span> <span class="fx">a⁰=1</span> · Angle facts &amp; polygon rules (exterior angles sum to 360°)</div>
+    <div class="fgroup"><span class="bB">BOTH</span> &nbsp;Exact trig values: <span class="fx">sin 30° = <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span></span> <span class="fx">cos 60° = <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span></span> <span class="fx">sin 45° = cos 45° = <span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>2</span></span></span><span class='dn'>2</span></span></span> <span class="fx">tan 45° = 1</span> <span class="fx">sin 60° = cos 30° = <span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>3</span></span></span><span class='dn'>2</span></span></span> <span class="fx">tan 30° = <span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>3</span></span></span><span class='dn'>3</span></span></span> <span class="fx">tan 60° = <span class='rt'>√<span class='vinc'>3</span></span></span> — yes, Foundation too.</div>
+    <div class="fgroup"><span class="bH">HIGHER</span> &nbsp;Circle theorems (all seven, with exact wording) · <span class="fx">a⁻ⁿ = <span class='fr'><span class='nu'>1</span><span class='dn'>aⁿ</span></span></span> · <span class="fx">a<sup><span class='fr'><span class='nu'>m</span><span class='dn'>n</span></span></sup> = (ⁿ√a)ᵐ</span> · Completing the square · Direct/inverse proportion forms <span class="fx">y = kx</span>, <span class="fx">y = <span class='fr'><span class='nu'>k</span><span class='dn'>x</span></span></span>, <span class="fx">y = kx²</span></div>
   </div>
   <div class="callout"><b>Sheet discipline:</b> in practice papers, use a printed copy of the real AQA sheet — nothing more. Training with a full formula booklet teaches you to rely on formulae that won't be there.</div>
 </section>
@@ -388,7 +394,7 @@ F:{
   {n:5,t:"Rounding, accuracy and use of a calculator",d:"Number",spec:"N14–N16",can:["Round to decimal places and significant figures","Estimate by rounding every number to 1 s.f.","Use a calculator efficiently (fractions, powers, roots, brackets)","Give answers to an appropriate degree of accuracy"],trap:"'Estimate' means round FIRST, then calculate. Working out the exact answer and rounding it at the end scores zero method marks."},
   {n:6,t:"Standard form",d:"Number",spec:"N9",can:["Write large and small numbers in standard form","Convert standard form to ordinary numbers","Order numbers in standard form","Calculate with standard form, with and without a calculator"],trap:"The front number must be 1 ≤ a < 10. An answer like 34 × 10⁵ loses the accuracy mark — convert it to 3.4 × 10⁶."},
   {n:7,t:"Ratio and proportion",d:"Ratio",spec:"R3–R8",can:["Simplify ratios and write them as 1:n","Share an amount in a given ratio","Solve problems where one part or a difference is given","Use the unitary method for recipes and best buys","Convert between currencies and units"],trap:"Read carefully whether you're given the TOTAL, ONE PART, or the DIFFERENCE between parts. Each starts differently — the ratio 3:5 with 'difference £24' means 2 parts = £24."},
-  {n:8,t:"Probability",d:"Probability",spec:"P1–P7",can:["Use the 0–1 probability scale","Find probabilities from equally likely outcomes","Use P(not A) = 1 − P(A)","List outcomes systematically; use sample space diagrams","Estimate probability from relative frequency and find expected results"],trap:"Probabilities must be fractions, decimals or percentages. Writing '3 in 8' or '3:8' loses the mark — write 3/8."},
+  {n:8,t:"Probability",d:"Probability",spec:"P1–P7",can:["Use the 0–1 probability scale","Find probabilities from equally likely outcomes","Use P(not A) = 1 − P(A)","List outcomes systematically; use sample space diagrams","Estimate probability from relative frequency and find expected results"],trap:"Probabilities must be fractions, decimals or percentages. Writing '3 in 8' or '3:8' loses the mark — write <span class='fr'><span class='nu'>3</span><span class='dn'>8</span></span>."},
   {n:9,t:"Substitution, linear equations and inequalities",d:"Algebra",spec:"A2, A17, A21–A22",can:["Substitute values into expressions and formulae","Solve linear equations, including with brackets and unknowns on both sides","Solve linear inequalities and show solutions on a number line","Represent solution sets with the correct circle notation"],trap:"On a number line, an open circle means < or >, a filled circle means ≤ or ≥. Examiners specifically check the circle."},
   {n:10,t:"Shape and angles",d:"Geometry",spec:"G1–G4, G11",can:["Use angle facts: point, straight line, vertically opposite","Use angles in parallel lines: alternate, corresponding, co-interior","Use angle sums of triangles and quadrilaterals","Find interior and exterior angles of polygons","Give reasons using the correct full names"],trap:"'Give a reason' needs the proper vocabulary: 'alternate angles are equal', not 'Z angles'. Informal names score nothing."},
   {n:11,t:"Transformations and column vectors",d:"Geometry",spec:"G7, G24",can:["Translate shapes using column vectors","Reflect in given mirror lines including y = x","Rotate about a centre through 90° or 180°","Enlarge from a centre by a positive scale factor","Fully DESCRIBE a single transformation"],trap:"Describing a transformation needs EVERY detail: rotation = angle + direction + centre. Miss one and the mark is gone. And 'single transformation' means naming two scores zero."},
@@ -410,12 +416,12 @@ H:{
  y10:[
   {n:1,t:"Algebraic methods",d:"Algebra",spec:"A1–A7",can:["Manipulate expressions confidently: expand double and triple brackets","Factorise, including quadratics and difference of two squares","Rearrange formulae, including where the subject appears twice","Set up and use algebraic proofs with 2n, 2n+1"],trap:"Proof questions must be GENERAL: testing n = 1, 2, 3 proves nothing. Set up with letters, expand, factorise, and finish with a written conclusion."},
   {n:2,t:"Powers, roots and accuracy",d:"Number",spec:"N6–N8, N15–N16",can:["Use negative and fractional indices","Calculate with standard form","Round to significant figures and estimate","Find upper and lower bounds and write error intervals","Calculate with bounds for a required degree of accuracy"],trap:"Bounds: a maximum answer for a÷b needs UB(a) ÷ LB(b) — biggest top, smallest bottom. Writing the rule down first earns the method mark even if arithmetic slips."},
-  {n:3,t:"Ratio and proportion",d:"Ratio",spec:"R4–R8, R10, R16",can:["Solve multi-step ratio problems, including combining a:b and b:c","Link ratios to fractions and to algebra","Use direct and inverse proportion, including finding k","Set up proportion equations y = kx², y = k/x"],trap:"Combining a:b = 2:3 with b:c = 4:5 means scaling both so b matches (b = 12): 8:12 and 12:15 → a:c = 8:15. Multiplying across without matching b is the classic error."},
+  {n:3,t:"Ratio and proportion",d:"Ratio",spec:"R4–R8, R10, R16",can:["Solve multi-step ratio problems, including combining a:b and b:c","Link ratios to fractions and to algebra","Use direct and inverse proportion, including finding k","Set up proportion equations y = kx², y = <span class='fr'><span class='nu'>k</span><span class='dn'>x</span></span>"],trap:"Combining a:b = 2:3 with b:c = 4:5 means scaling both so b matches (b = 12): 8:12 and 12:15 → a:c = 8:15. Multiplying across without matching b is the classic error."},
   {n:4,t:"Statistics",d:"Statistics",spec:"S1–S6",can:["Construct and interpret cumulative frequency diagrams and box plots","Find median, quartiles and interquartile range","Draw and interpret histograms with unequal class widths","Compare distributions using an average AND a measure of spread","Understand sampling, including capture–recapture"],trap:"Histograms plot FREQUENCY DENSITY, not frequency: FD = frequency ÷ class width. Reading the y-axis as frequency is the most-reported histogram error every series."},
   {n:5,t:"Angles and right-angled triangles",d:"Geometry",spec:"G1–G6, G20–G21",can:["Use all angle facts and polygon rules with formal reasons","Apply Pythagoras' theorem, including in 3D and on coordinates","Use trigonometry to find sides and angles","Solve multi-step problems mixing angle facts, Pythagoras and trig"],trap:"Multi-step geometry: each intermediate value you find should be written on the diagram. Examiners follow your diagram annotations for method marks."},
-  {n:6,t:"Surds and exact values trigonometry",d:"Number / Geometry",spec:"N8, G21",can:["Simplify surds: √48 = 4√3","Expand brackets containing surds","Rationalise denominators","Recall and use exact trig values for 0°, 30°, 45°, 60°, 90°"],trap:"√a + √b is NOT √(a+b). Surds only combine through multiplication: √a × √b = √(ab). Adding under the root loses everything."},
-  {n:7,t:"Equations of straight lines",d:"Algebra",spec:"A9–A10, A16",can:["Find the equation of a line through two points","Use y − y₁ = m(x − x₁) or y = mx + c","Find equations of parallel and perpendicular lines","Recognise and use the equation of a circle x² + y² = r² and its tangent"],trap:"Perpendicular gradient = negative reciprocal: m and −1/m. Just flipping, or just negating, are the two half-answers examiners see constantly."},
-  {n:8,t:"Quadratics: factorising and simplifying",d:"Algebra",spec:"A4, A18",can:["Factorise quadratics including where a ≠ 1","Use the difference of two squares","Simplify algebraic fractions by factorising first","Add, subtract, multiply and divide algebraic fractions"],trap:"Algebraic fractions: you can only cancel FACTORS, never terms. (x² − 4)/(x + 2) needs factorising to (x+2)(x−2)/(x+2) before anything cancels."},
+  {n:6,t:"Surds and exact values trigonometry",d:"Number / Geometry",spec:"N8, G21",can:["Simplify surds: <span class='rt'>√<span class='vinc'>48</span></span> = 4<span class='rt'>√<span class='vinc'>3</span></span>","Expand brackets containing surds","Rationalise denominators","Recall and use exact trig values for 0°, 30°, 45°, 60°, 90°"],trap:"<span class='rt'>√<span class='vinc'>a</span></span> + <span class='rt'>√<span class='vinc'>b</span></span> is NOT <span class='rt'>√<span class='vinc'>a + b</span></span>. Surds only combine through multiplication: <span class='rt'>√<span class='vinc'>a</span></span> × <span class='rt'>√<span class='vinc'>b</span></span> = <span class='rt'>√<span class='vinc'>ab</span></span>. Adding under the root loses everything."},
+  {n:7,t:"Equations of straight lines",d:"Algebra",spec:"A9–A10, A16",can:["Find the equation of a line through two points","Use y − y₁ = m(x − x₁) or y = mx + c","Find equations of parallel and perpendicular lines","Recognise and use the equation of a circle x² + y² = r² and its tangent"],trap:"Perpendicular gradient = negative reciprocal: m and −<span class='fr'><span class='nu'>1</span><span class='dn'>m</span></span>. Just flipping, or just negating, are the two half-answers examiners see constantly."},
+  {n:8,t:"Quadratics: factorising and simplifying",d:"Algebra",spec:"A4, A18",can:["Factorise quadratics including where a ≠ 1","Use the difference of two squares","Simplify algebraic fractions by factorising first","Add, subtract, multiply and divide algebraic fractions"],trap:"Algebraic fractions: you can only cancel FACTORS, never terms. <span class='fr'><span class='nu'>x² − 4</span><span class='dn'>x + 2</span></span> needs factorising to <span class='fr'><span class='nu'>(x + 2)(x − 2)</span><span class='dn'>x + 2</span></span> before anything cancels."},
   {n:9,t:"Quadratics: solving, graphs and algebraic fractions",d:"Algebra",spec:"A11, A18",can:["Solve quadratics by factorising, the formula, and completing the square","Sketch quadratics showing roots, intercept and turning point","Read the turning point straight from completed-square form","Solve equations involving algebraic fractions"],trap:"y = (x − 3)² + 5 has its turning point at (3, 5) — the sign of the x-coordinate flips. Reading (−3, 5) is the most common completed-square error."},
   {n:10,t:"Simultaneous equations",d:"Algebra",spec:"A19, A21–A22",can:["Solve linear simultaneous equations by elimination and substitution","Solve one linear + one quadratic (including circles) by substitution","Solve quadratic inequalities","Interpret solutions as intersection points of graphs"],trap:"Linear + quadratic: expect TWO pairs of solutions, and keep the pairs together — x = 1 goes with its own y, not the other one."},
   {n:11,t:"Transformations and vectors",d:"Geometry",spec:"G7–G8, G24–G25",can:["Perform and describe all four transformations, including fractional and negative enlargements","Combine transformations and describe the single equivalent","Calculate with column vectors","Prove points are collinear or lines parallel using vector arguments"],trap:"Vector proof: parallel means one vector is a SCALAR MULTIPLE of the other — and you must say so in words. Collinear additionally needs a shared point stated."},
@@ -423,7 +429,7 @@ H:{
   {n:13,t:"Loci",d:"Geometry",spec:"G2",can:["Construct bisectors and standard loci with ruler and compasses","Combine loci and shade regions satisfying multiple conditions","Solve contextual loci problems (e.g. coverage, boundaries, paths)"],trap:"Leave every construction arc visible — the arcs are the marks. A perfect line with no arcs scores as a guess."}
  ],
  y11:[
-  {n:14,t:"2D shapes: perimeter, area and circles",d:"Geometry",spec:"G16–G18",can:["Find areas of all standard 2D shapes and compound shapes","Calculate arc length and sector area","Give exact answers in terms of π","Work backwards from perimeter, area or arc length"],trap:"Arc length and sector area both start with the fraction θ/360 — write that fraction down first for the method mark, then multiply by 2πr or πr²."},
+  {n:14,t:"2D shapes: perimeter, area and circles",d:"Geometry",spec:"G16–G18",can:["Find areas of all standard 2D shapes and compound shapes","Calculate arc length and sector area","Give exact answers in terms of π","Work backwards from perimeter, area or arc length"],trap:"Arc length and sector area both start with the fraction <span class='fr'><span class='nu'>θ</span><span class='dn'>360</span></span> — write that fraction down first for the method mark, then multiply by 2πr or πr²."},
   {n:15,t:"Probability",d:"Probability",spec:"P1–P9",can:["Use tree diagrams with and WITHOUT replacement","Calculate conditional probabilities","Use Venn diagrams and set notation: A ∪ B, A ∩ B, A′","Use the addition and multiplication laws"],trap:"'Without replacement' changes BOTH numbers of the second fraction: 3 red from 8 becomes 2 red from 7. Forgetting the denominator drop is the classic slip."},
   {n:16,t:"Similar shapes: area and volume",d:"Geometry / Ratio",spec:"G19, R12",can:["Identify similar shapes and find missing lengths","Use length, area and volume scale factors: k, k², k³","Move between area SF and length SF via square roots","Prove two triangles are similar"],trap:"Area scale factor is (length SF)² and volume SF is (length SF)³. Given an AREA ratio of 9:25, the length ratio is 3:5 — square-root first, don't cube directly."},
   {n:17,t:"Compound units and rates of change",d:"Ratio",spec:"R1, R11, R13–R15",can:["Use speed, density and pressure confidently, with unit conversions","Convert compound units, e.g. km/h ↔ m/s","Solve growth and decay problems with repeated multipliers","Interpret gradients as rates of change; estimate gradient of a curve"],trap:"km/h → m/s: ×1000 then ÷3600 (i.e. ÷3.6). Track the units through the working — writing units at each line catches direction errors instantly."},
@@ -443,7 +449,7 @@ const DECKS=[
  {q:"Multiplier for a 12% increase? A 12% decrease?",a:"×1.12 for the increase, ×0.88 for the decrease."},
  {q:"Percentage change formula?",a:"(change ÷ ORIGINAL) × 100. Always divide by the original value."},
  {q:"Rule for the front number in standard form?",a:"1 ≤ a < 10. So 34 × 10⁵ must be rewritten as 3.4 × 10⁶."},
- {q:"a⁰ = ?  and  a⁻ⁿ = ?",a:"a⁰ = 1 (for any non-zero a).  a⁻ⁿ = 1/aⁿ — negative index means reciprocal, NOT negative number."},
+ {q:"a⁰ = ?  and  a⁻ⁿ = ?",a:"a⁰ = 1 (for any non-zero a).  a⁻ⁿ = <span class='fr'><span class='nu'>1</span><span class='dn'>aⁿ</span></span> — negative index means reciprocal, NOT negative number."},
  {q:"Error interval for x = 5.3 rounded to 1 d.p.?",a:"5.25 ≤ x < 5.35. Closed (≤) at the bottom, open (<) at the top."},
  {q:"HCF vs LCM sanity check?",a:"HCF ≤ the smaller number. LCM ≥ the larger number. If your answers break this, they're swapped."}
 ]},
@@ -451,7 +457,7 @@ const DECKS=[
  {q:"Expand (x + 5)(x − 3)",a:"x² − 3x + 5x − 15 = x² + 2x − 15. Four terms first (FOIL), then collect."},
  {q:"nth term of 7, 11, 15, 19, …?",a:"Common difference 4 → starts 4n. Check n=1: 4(1)=4, need 7, so +3. nth term = 4n + 3."},
  {q:"Solve 3(x − 2) = x + 8",a:"3x − 6 = x + 8 → 2x = 14 → x = 7."},
- {q:"Gradient between (1, 3) and (5, 11)?",a:"m = Δy/Δx = (11 − 3)/(5 − 1) = 8/4 = 2."},
+ {q:"Gradient between (1, 3) and (5, 11)?",a:"m = <span class='fr'><span class='nu'>Δy</span><span class='dn'>Δx</span></span> = <span class='fr'><span class='nu'>11 − 3</span><span class='dn'>5 − 1</span></span> = <span class='fr'><span class='nu'>8</span><span class='dn'>4</span></span> = 2."},
  {q:"What does 'is 200 a term of the sequence 3n + 2?' require?",a:"Solve 3n + 2 = 200 → n = 66. Whole number → YES, it's the 66th term. If n isn't whole, write 'not a term' with the working shown."},
  {q:"Factorise x² − 49",a:"(x + 7)(x − 7) — difference of two squares: a² − b² = (a+b)(a−b)."},
  {q:"Inequality symbols on a number line?",a:"Open circle ○ for < or >. Filled circle ● for ≤ or ≥. Examiners check the circle."},
@@ -459,42 +465,42 @@ const DECKS=[
 ]},
 {name:"Geometry facts",tier:"B",cards:[
  {q:"Angles: point, straight line, triangle, quadrilateral?",a:"360°, 180°, 180°, 360°."},
- {q:"Exterior angles of ANY polygon sum to…?",a:"360°. So each exterior angle of a regular n-gon = 360/n, and interior = 180 − exterior."},
+ {q:"Exterior angles of ANY polygon sum to…?",a:"360°. So each exterior angle of a regular n-gon = <span class='fr'><span class='nu'>360</span><span class='dn'>n</span></span>, and interior = 180 − exterior."},
  {q:"The three parallel-line angle facts (full names)?",a:"Alternate angles are equal · Corresponding angles are equal · Co-interior (allied) angles sum to 180°. Full names required for reason marks."},
  {q:"When do you use Pythagoras vs trigonometry?",a:"No angle involved (except the right angle) → Pythagoras. An angle given or asked for → trigonometry (SOH CAH TOA)."},
  {q:"Fully describe a rotation — what's needed?",a:"THREE things: angle, direction, centre. E.g. 'rotation 90° clockwise about (0, 0)'. Miss one, lose the mark."},
- {q:"Area of triangle, parallelogram, trapezium?",a:"Triangle ½bh · Parallelogram b×h · Trapezium ½(a+b)h — trapezium is on your formulae sheet, the others are not."},
+ {q:"Area of triangle, parallelogram, trapezium?",a:"Triangle <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>bh · Parallelogram b × h · Trapezium <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>(a + b)h — trapezium is on your formulae sheet, the others are not."},
  {q:"Translation by vector (3 over −2) means?",a:"3 right, 2 down. Top number = x (right +), bottom = y (up +)."}
 ]},
 {name:"Exact trig values",tier:"B",cards:[
- {q:"sin 30° and cos 60°?",a:"Both = ½. They pair up: sin θ = cos (90° − θ)."},
- {q:"sin 45° and cos 45°?",a:"Both = √2⁄2 (equivalently 1/√2)."},
- {q:"sin 60° and cos 30°?",a:"Both = √3⁄2."},
- {q:"tan 30°, tan 45°, tan 60°?",a:"tan 30° = √3⁄3 (=1/√3) · tan 45° = 1 · tan 60° = √3."},
+ {q:"sin 30° and cos 60°?",a:"Both = <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>. They pair up: sin θ = cos (90° − θ)."},
+ {q:"sin 45° and cos 45°?",a:"Both = <span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>2</span></span></span><span class='dn'>2</span></span> (equivalently <span class='fr'><span class='nu'>1</span><span class='dn'><span class='rt'>√<span class='vinc'>2</span></span></span></span>)."},
+ {q:"sin 60° and cos 30°?",a:"Both = <span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>3</span></span></span><span class='dn'>2</span></span>."},
+ {q:"tan 30°, tan 45°, tan 60°?",a:"tan 30° = <span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>3</span></span></span><span class='dn'>3</span></span> (= <span class='fr'><span class='nu'>1</span><span class='dn'><span class='rt'>√<span class='vinc'>3</span></span></span></span>) · tan 45° = 1 · tan 60° = <span class='rt'>√<span class='vinc'>3</span></span>."},
  {q:"sin 0°, sin 90°, cos 0°, cos 90°?",a:"sin 0° = 0, sin 90° = 1, cos 0° = 1, cos 90° = 0."},
- {q:"Why do exact values matter most on Paper 1?",a:"It's non-calculator — a question like 'find x when sin x = ½' can ONLY be done from memory. Both tiers need them."}
+ {q:"Why do exact values matter most on Paper 1?",a:"It's non-calculator — a question like 'find x when sin x = <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>' can ONLY be done from memory. Both tiers need them."}
 ]},
 {name:"Ratio & proportion",tier:"B",cards:[
  {q:"Share £120 in the ratio 3 : 5 — method?",a:"3 + 5 = 8 parts → £120 ÷ 8 = £15 per part → £45 and £75. Check: 45 + 75 = 120 ✓"},
  {q:"Ratio 3 : 5 and the DIFFERENCE is £24 — method?",a:"Difference = 5 − 3 = 2 parts → 1 part = £12 → £36 and £60."},
- {q:"Speed, density, pressure triangles?",a:"S = D/T · D = M/V · P = F/A. Cover the one you want; the layout gives the formula."},
+ {q:"Speed, density, pressure triangles?",a:"S = <span class='fr'><span class='nu'>D</span><span class='dn'>T</span></span> · D = <span class='fr'><span class='nu'>M</span><span class='dn'>V</span></span> · P = <span class='fr'><span class='nu'>F</span><span class='dn'>A</span></span>. Cover the one you want; the layout gives the formula."},
  {q:"Reverse percentage: sale price £64 after 20% off — original?",a:"£64 is 80% → ÷0.8 → £80. NEVER add 20% back on to the sale price."},
  {q:"km/h to m/s?",a:"Divide by 3.6 (×1000 for metres, ÷3600 for seconds). 72 km/h = 20 m/s."},
  {q:"Two successive 10% increases — total increase?",a:"×1.1 × 1.1 = ×1.21 → 21%, not 20%. Percentage changes multiply, never add."}
 ]},
 {name:"Higher: must-knows",tier:"H",cards:[
- {q:"Simplify √72",a:"√72 = √36 × √2 = 6√2. Hunt the largest square factor."},
- {q:"Rationalise 5/√5",a:"Multiply top and bottom by √5: 5√5/5 = √5."},
- {q:"8^(2/3) = ?",a:"Root first, then power: cube root of 8 = 2, then 2² = 4."},
+ {q:"Simplify <span class='rt'>√<span class='vinc'>72</span></span>",a:"<span class='rt'>√<span class='vinc'>72</span></span> = <span class='rt'>√<span class='vinc'>36</span></span> × <span class='rt'>√<span class='vinc'>2</span></span> = 6<span class='rt'>√<span class='vinc'>2</span></span>. Hunt the largest square factor."},
+ {q:"Rationalise <span class='fr'><span class='nu'>5</span><span class='dn'><span class='rt'>√<span class='vinc'>5</span></span></span></span>",a:"Multiply top and bottom by <span class='rt'>√<span class='vinc'>5</span></span>:  <span class='fr'><span class='nu'>5<span class='rt'>√<span class='vinc'>5</span></span></span><span class='dn'>5</span></span> = <span class='rt'>√<span class='vinc'>5</span></span>."},
+ {q:"8<sup><span class='fr'><span class='nu'>2</span><span class='dn'>3</span></span></sup> = ?",a:"Root first, then power: cube root of 8 = 2, then 2² = 4."},
  {q:"Turning point of y = (x + 4)² − 3?",a:"(−4, −3). Completed-square form y = (x − a)² + b has turning point (a, b) — the x-sign flips."},
- {q:"Perpendicular gradient to m = ⅔?",a:"Negative reciprocal: −3/2. Flip AND negate — doing only one is the classic half-answer."},
+ {q:"Perpendicular gradient to m = <span class='fr'><span class='nu'>2</span><span class='dn'>3</span></span>?",a:"Negative reciprocal: −<span class='fr'><span class='nu'>3</span><span class='dn'>2</span></span>. Flip AND negate — doing only one is the classic half-answer."},
  {q:"Circle theorem: angle at the centre?",a:"The angle at the centre is TWICE the angle at the circumference subtended by the same arc."},
  {q:"Circle theorem: cyclic quadrilateral?",a:"Opposite angles of a cyclic quadrilateral sum to 180°."},
  {q:"Circle theorem: tangent and radius?",a:"A tangent meets the radius at 90° at the point of contact. Also: tangents from an external point are equal in length."},
  {q:"fg(x) — which function first?",a:"g first, then f: fg(x) = f(g(x)). Work inside-out."},
  {q:"How do you prove two vectors are parallel?",a:"Show one is a scalar multiple of the other, e.g. b = 3a — and SAY so in words. For collinear, also state the shared point."},
  {q:"Histogram y-axis shows…?",a:"Frequency DENSITY = frequency ÷ class width. Frequency is the AREA of the bar."},
- {q:"Without replacement: 3 red in a bag of 8, P(2nd red | 1st red)?",a:"2/7 — BOTH numbers drop: one fewer red, one fewer total."}
+ {q:"Without replacement: 3 red in a bag of 8, P(2nd red | 1st red)?",a:"<span class='fr'><span class='nu'>2</span><span class='dn'>7</span></span> — BOTH numbers drop: one fewer red, one fewer total."}
 ]}
 ];
 /* ============ DATA: MCQs (10 per domain per tier) ============ */
@@ -502,7 +508,7 @@ const MCQ={
 F:{
 num:[
  {q:"What is the HCF of 24 and 36?",o:["6","12","18","72"],a:1,e:"24 = 2³×3, 36 = 2²×3². Shared: 2²×3 = 12. (72 is the LCM — the classic swap.)"},
- {q:"Write ¾ as a percentage.",o:["34%","43%","70%","75%"],a:3,e:"¾ = 3 ÷ 4 = 0.75 = 75%."},
+ {q:"Write <span class='fr'><span class='nu'>3</span><span class='dn'>4</span></span> as a percentage.",o:["34%","43%","70%","75%"],a:3,e:"<span class='fr'><span class='nu'>3</span><span class='dn'>4</span></span> = 3 ÷ 4 = 0.75 = 75%."},
  {q:"Write 60 as a product of prime factors.",o:["2² × 3 × 5","2 × 3 × 10","2³ × 5","4 × 15"],a:0,e:"60 = 2×30 = 2×2×15 = 2×2×3×5 = 2² × 3 × 5. Options with 10, 4 or 15 aren't fully prime."},
  {q:"Estimate 41.2 × 2.9 ÷ 0.52 by rounding to 1 s.f.",o:["about 24","about 120","about 240","about 2400"],a:2,e:"→ 40 × 3 ÷ 0.5 = 120 ÷ 0.5 = 240. Dividing by 0.5 doubles."},
  {q:"Work out 0.07 × 0.3",o:["0.21","0.021","2.1","0.0021"],a:1,e:"7 × 3 = 21, and there are 3 decimal places in total → 0.021."},
@@ -515,11 +521,11 @@ num:[
 alg:[
  {q:"Simplify 3a + 2b − a + 5b",o:["2a + 7b","4a + 7b","2a + 3b","9ab"],a:0,e:"a-terms: 3a − a = 2a. b-terms: 2b + 5b = 7b. Unlike terms never merge into 'ab'."},
  {q:"Expand 4(2x − 3)",o:["8x − 3","8x − 12","6x − 12","8x + 12"],a:1,e:"Multiply BOTH terms: 4×2x = 8x and 4×(−3) = −12."},
- {q:"Solve 3x + 5 = 20",o:["x = 5","x = 8⅓","x = 15","x = 75"],a:0,e:"3x = 15 → x = 5."},
+ {q:"Solve 3x + 5 = 20",o:["x = 5","x = 8<span class='fr'><span class='nu'>1</span><span class='dn'>3</span></span>","x = 15","x = 75"],a:0,e:"3x = 15 → x = 5."},
  {q:"The nth term of 5, 8, 11, 14, … is",o:["n + 3","3n + 2","3n − 2","5n + 3"],a:1,e:"Difference 3 → 3n. Check n = 1: 3(1) = 3, need 5, so + 2."},
  {q:"Factorise 6x + 9",o:["3(2x + 3)","3(2x + 9)","6(x + 3)","3x(2 + 3)"],a:0,e:"HCF of 6x and 9 is 3: 3(2x + 3). Check by expanding."},
  {q:"If y = 3x − 2, find y when x = 4",o:["10","12","14","5"],a:0,e:"y = 3(4) − 2 = 12 − 2 = 10."},
- {q:"Solve x⁄4 = 6",o:["x = 1.5","x = 2","x = 10","x = 24"],a:3,e:"Multiply both sides by 4: x = 24. (Dividing gives 1.5 — the inverse error.)"},
+ {q:"Solve <span class='fr'><span class='nu'>x</span><span class='dn'>4</span></span> = 6",o:["x = 1.5","x = 2","x = 10","x = 24"],a:3,e:"Multiply both sides by 4: x = 24. (Dividing gives 1.5 — the inverse error.)"},
  {q:"Simplify m × m × m",o:["3m","m³","m + 3","3m³"],a:1,e:"Repeated multiplication is a power: m³. (3m means m + m + m.)"},
  {q:"What is the gradient of y = 2x + 7?",o:["7","2","2x","9"],a:1,e:"In y = mx + c the gradient is m, the coefficient of x → 2. The 7 is the y-intercept."},
  {q:"Expand and simplify (x + 3)(x + 2)",o:["x² + 5x + 6","x² + 6x + 5","x² + 6","2x + 5"],a:0,e:"x² + 2x + 3x + 6 = x² + 5x + 6. Four terms first, then collect."}
@@ -533,39 +539,39 @@ rat:[
  {q:"£1 = €1.15. Convert £200 to euros.",o:["€215","€230","€174","€2300"],a:1,e:"200 × 1.15 = €230. (÷1.15 is the wrong direction.)"},
  {q:"Two numbers are in the ratio 5 : 2. The larger is 35. The smaller is…",o:["10","14","25","70"],a:1,e:"5 parts = 35 → 1 part = 7 → 2 parts = 14."},
  {q:"A car travels 150 miles in 3 hours. Average speed?",o:["45 mph","50 mph","453 mph","0.02 mph"],a:1,e:"S = D ÷ T = 150 ÷ 3 = 50 mph."},
- {q:"What is 20 out of 80 as a percentage?",o:["20%","25%","40%","60%"],a:1,e:"20/80 = ¼ = 25%."},
+ {q:"What is 20 out of 80 as a percentage?",o:["20%","25%","40%","60%"],a:1,e:"<span class='fr'><span class='nu'>20</span><span class='dn'>80</span></span> = <span class='fr'><span class='nu'>1</span><span class='dn'>4</span></span> = 25%."},
  {q:"y is directly proportional to x, and y = 12 when x = 3. What is k in y = kx?",o:["4","9","36","15"],a:0,e:"k = y ÷ x = 12 ÷ 3 = 4."}
 ],
 geo:[
  {q:"The angles in any triangle sum to…",o:["90°","180°","270°","360°"],a:1,e:"180°. Quadrilaterals sum to 360°."},
  {q:"Each interior angle of a regular hexagon is…",o:["60°","108°","120°","135°"],a:2,e:"Exterior = 360 ÷ 6 = 60° → interior = 180 − 60 = 120°."},
- {q:"Area of a triangle with base 8 cm and height 5 cm?",o:["13 cm²","20 cm²","40 cm²","26 cm²"],a:1,e:"½ × 8 × 5 = 20 cm². Forgetting the ½ gives 40."},
+ {q:"Area of a triangle with base 8 cm and height 5 cm?",o:["13 cm²","20 cm²","40 cm²","26 cm²"],a:1,e:"<span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span> × 8 × 5 = 20 cm². Forgetting the <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span> gives 40."},
  {q:"Circumference of a circle with diameter 10 cm (1 d.p.)?",o:["15.7 cm","31.4 cm","62.8 cm","78.5 cm"],a:1,e:"C = πd = π × 10 ≈ 31.4 cm. (62.8 doubles it by using 2πd; 78.5 is the area.)"},
  {q:"Volume of a 3 cm × 4 cm × 5 cm cuboid?",o:["12 cm³","60 cm³","94 cm³","120 cm³"],a:1,e:"3 × 4 × 5 = 60 cm³. (94 is the surface area.)"},
  {q:"Two angles on a straight line: one is 115°. The other is…",o:["55°","65°","75°","245°"],a:1,e:"180 − 115 = 65°."},
- {q:"A right-angled triangle has shorter sides 6 and 8. The hypotenuse is…",o:["10","14","28","100"],a:0,e:"√(6² + 8²) = √100 = 10 — the classic 3-4-5 triple scaled ×2."},
+ {q:"A right-angled triangle has shorter sides 6 and 8. The hypotenuse is…",o:["10","14","28","100"],a:0,e:"<span class='rt'>√<span class='vinc'>6² + 8²</span></span> = <span class='rt'>√<span class='vinc'>100</span></span> = 10 — the classic 3-4-5 triple scaled ×2."},
  {q:"Translation by the vector (3 over −2) moves a shape…",o:["3 left, 2 up","3 right, 2 down","2 right, 3 down","3 right, 2 up"],a:1,e:"Top = x: +3 right. Bottom = y: −2 down."},
  {q:"The order of rotational symmetry of a square is…",o:["1","2","4","8"],a:2,e:"It maps onto itself 4 times in a full turn (every 90°)."},
- {q:"The exterior angles of ANY polygon always sum to…",o:["180°","360°","540°","depends on the polygon"],a:1,e:"Always 360° — that's why exterior angle of a regular n-gon = 360/n."}
+ {q:"The exterior angles of ANY polygon always sum to…",o:["180°","360°","540°","depends on the polygon"],a:1,e:"Always 360° — that's why exterior angle of a regular n-gon = <span class='fr'><span class='nu'>360</span><span class='dn'>n</span></span>."}
 ],
 prob:[
- {q:"A fair dice is rolled. P(prime number)?",o:["1/6","1/3","1/2","2/3"],a:2,e:"Primes on a dice: 2, 3, 5 → 3/6 = ½. (1 is not prime.)"},
+ {q:"A fair dice is rolled. P(prime number)?",o:["<span class='fr'><span class='nu'>1</span><span class='dn'>6</span></span>","<span class='fr'><span class='nu'>1</span><span class='dn'>3</span></span>","<span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>","<span class='fr'><span class='nu'>2</span><span class='dn'>3</span></span>"],a:2,e:"Primes on a dice: 2, 3, 5 → <span class='fr'><span class='nu'>3</span><span class='dn'>6</span></span> = <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>. (1 is not prime.)"},
  {q:"P(rain) = 0.3. What is P(no rain)?",o:["0.3","0.7","0.4","1.3"],a:1,e:"P(not A) = 1 − P(A) = 0.7."},
  {q:"A coin lands heads 12 times in 40 flips. Relative frequency of heads?",o:["0.12","0.3","0.4","12"],a:1,e:"12 ÷ 40 = 0.3."},
  {q:"Two fair coins are flipped. How many equally likely outcomes?",o:["2","3","4","8"],a:2,e:"HH, HT, TH, TT — 4. (Thinking '3' misses that HT and TH are different.)"},
- {q:"A bag has 3 red and 5 blue counters. P(red)?",o:["3/5","3/8","5/8","1/3"],a:1,e:"3 red out of 8 total → 3/8. The denominator is the TOTAL."},
+ {q:"A bag has 3 red and 5 blue counters. P(red)?",o:["<span class='fr'><span class='nu'>3</span><span class='dn'>5</span></span>","<span class='fr'><span class='nu'>3</span><span class='dn'>8</span></span>","<span class='fr'><span class='nu'>5</span><span class='dn'>8</span></span>","<span class='fr'><span class='nu'>1</span><span class='dn'>3</span></span>"],a:1,e:"3 red out of 8 total → <span class='fr'><span class='nu'>3</span><span class='dn'>8</span></span>. The denominator is the TOTAL."},
  {q:"P(win) = 0.2. In 50 games, the expected number of wins is…",o:["10","20","25","0.2"],a:0,e:"0.2 × 50 = 10."},
  {q:"The probabilities of ALL possible outcomes of an event sum to…",o:["0","0.5","1","100"],a:2,e:"Always 1 (or 100%). Use this to find missing probabilities."},
- {q:"Two fair dice: P(six on the first AND six on the second)?",o:["1/6","2/6","1/12","1/36"],a:3,e:"Independent events multiply: 1/6 × 1/6 = 1/36."},
- {q:"A fair spinner has sections 1–5. P(even)?",o:["1/2","2/5","3/5","2/4"],a:1,e:"Evens: 2 and 4 → 2 out of 5 = 2/5."},
- {q:"Which is NOT a valid way to write a probability?",o:["3/8","0.375","37.5%","3 : 8"],a:3,e:"Ratios are never accepted as probabilities — use a fraction, decimal or percentage."}
+ {q:"Two fair dice: P(six on the first AND six on the second)?",o:["<span class='fr'><span class='nu'>1</span><span class='dn'>6</span></span>","<span class='fr'><span class='nu'>2</span><span class='dn'>6</span></span>","<span class='fr'><span class='nu'>1</span><span class='dn'>12</span></span>","<span class='fr'><span class='nu'>1</span><span class='dn'>36</span></span>"],a:3,e:"Independent events multiply: <span class='fr'><span class='nu'>1</span><span class='dn'>6</span></span> × <span class='fr'><span class='nu'>1</span><span class='dn'>6</span></span> = <span class='fr'><span class='nu'>1</span><span class='dn'>36</span></span>."},
+ {q:"A fair spinner has sections 1–5. P(even)?",o:["<span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>","<span class='fr'><span class='nu'>2</span><span class='dn'>5</span></span>","<span class='fr'><span class='nu'>3</span><span class='dn'>5</span></span>","<span class='fr'><span class='nu'>2</span><span class='dn'>4</span></span>"],a:1,e:"Evens: 2 and 4 → 2 out of 5 = <span class='fr'><span class='nu'>2</span><span class='dn'>5</span></span>."},
+ {q:"Which is NOT a valid way to write a probability?",o:["<span class='fr'><span class='nu'>3</span><span class='dn'>8</span></span>","0.375","37.5%","3 : 8"],a:3,e:"Ratios are never accepted as probabilities — use a fraction, decimal or percentage."}
 ],
 stat:[
  {q:"Mean of 4, 7, 9, 12?",o:["7","8","9","32"],a:1,e:"(4+7+9+12) ÷ 4 = 32 ÷ 4 = 8."},
  {q:"Median of 3, 8, 5, 9, 4?",o:["5","8","4","5.8"],a:0,e:"ORDER first: 3, 4, 5, 8, 9 → middle value 5. (Picking 5 from the unordered list only works by luck.)"},
  {q:"Mode of 2, 5, 5, 7, 9, 9, 9?",o:["5","7","9","6.6"],a:2,e:"Most frequent value: 9 appears three times."},
  {q:"Range of 3, 11, 7, 15, 6?",o:["12","15","3","8.4"],a:0,e:"15 − 3 = 12. Range is a SPREAD, not an average."},
- {q:"In a pie chart of 60 people, a 90° sector represents…",o:["90 people","15 people","20 people","30 people"],a:1,e:"90/360 = ¼ → ¼ × 60 = 15."},
+ {q:"In a pie chart of 60 people, a 90° sector represents…",o:["90 people","15 people","20 people","30 people"],a:1,e:"<span class='fr'><span class='nu'>90</span><span class='dn'>360</span></span> = <span class='fr'><span class='nu'>1</span><span class='dn'>4</span></span> → <span class='fr'><span class='nu'>1</span><span class='dn'>4</span></span> × 60 = 15."},
  {q:"Estimating a mean from grouped data uses…",o:["the class midpoints","the class widths","the smallest value in each class","the modal class only"],a:0,e:"Midpoint × frequency, summed, ÷ total frequency. It's an estimate because exact values are unknown."},
  {q:"Which average is most affected by one extreme value?",o:["Mean","Median","Mode","Range isn't an average"],a:0,e:"The mean uses every value, so one outlier drags it. The median resists outliers."},
  {q:"A scatter graph shows that as x increases, y decreases. The correlation is…",o:["positive","negative","zero","impossible to tell"],a:1,e:"Falling pattern → negative correlation."},
@@ -574,72 +580,72 @@ stat:[
 ]},
 H:{
 num:[
- {q:"Simplify √48",o:["4√3","2√12","3√4","16√3"],a:0,e:"√48 = √16 × √3 = 4√3. Always extract the LARGEST square factor."},
- {q:"Rationalise 6/√3",o:["2√3","6√3","2","3√2"],a:0,e:"6/√3 × √3/√3 = 6√3/3 = 2√3."},
- {q:"27^(2/3) = ?",o:["9","18","3","81"],a:0,e:"Cube root of 27 = 3, then 3² = 9. Root first keeps numbers small."},
- {q:"Write 0.363636… as a fraction.",o:["36/100","4/11","36/99 is not simplifiable","9/25"],a:1,e:"x = 0.36̄, 100x = 36.36̄ → 99x = 36 → x = 36/99 = 4/11."},
+ {q:"Simplify <span class='rt'>√<span class='vinc'>48</span></span>",o:["4<span class='rt'>√<span class='vinc'>3</span></span>","2<span class='rt'>√<span class='vinc'>12</span></span>","3<span class='rt'>√<span class='vinc'>4</span></span>","16<span class='rt'>√<span class='vinc'>3</span></span>"],a:0,e:"<span class='rt'>√<span class='vinc'>48</span></span> = <span class='rt'>√<span class='vinc'>16</span></span> × <span class='rt'>√<span class='vinc'>3</span></span> = 4<span class='rt'>√<span class='vinc'>3</span></span>. Always extract the LARGEST square factor."},
+ {q:"Rationalise <span class='fr'><span class='nu'>6</span><span class='dn'><span class='rt'>√<span class='vinc'>3</span></span></span></span>",o:["2<span class='rt'>√<span class='vinc'>3</span></span>","6<span class='rt'>√<span class='vinc'>3</span></span>","2","3<span class='rt'>√<span class='vinc'>2</span></span>"],a:0,e:"<span class='fr'><span class='nu'>6</span><span class='dn'><span class='rt'>√<span class='vinc'>3</span></span></span></span> × <span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>3</span></span></span><span class='dn'><span class='rt'>√<span class='vinc'>3</span></span></span></span> = <span class='fr'><span class='nu'>6<span class='rt'>√<span class='vinc'>3</span></span></span><span class='dn'>3</span></span> = 2<span class='rt'>√<span class='vinc'>3</span></span>."},
+ {q:"27<sup><span class='fr'><span class='nu'>2</span><span class='dn'>3</span></span></sup> = ?",o:["9","18","3","81"],a:0,e:"Cube root of 27 = 3, then 3² = 9. Root first keeps numbers small."},
+ {q:"Write 0.363636… as a fraction.",o:["<span class='fr'><span class='nu'>36</span><span class='dn'>100</span></span>","<span class='fr'><span class='nu'>4</span><span class='dn'>11</span></span>","<span class='fr'><span class='nu'>36</span><span class='dn'>99</span></span> is not simplifiable","<span class='fr'><span class='nu'>9</span><span class='dn'>25</span></span>"],a:1,e:"x = 0.3636…, 100x = 36.3636… → 99x = 36 → x = <span class='fr'><span class='nu'>36</span><span class='dn'>99</span></span> = <span class='fr'><span class='nu'>4</span><span class='dn'>11</span></span>."},
  {q:"The upper bound of 5.6 measured to 1 d.p. is…",o:["5.64","5.65","5.7","5.649"],a:1,e:"Half of 0.1 above: 5.65. (5.649 is a common wrong habit — bounds use the exact half-way value.)"},
  {q:"(3 × 10⁴) × (2 × 10⁻⁷) = ?",o:["6 × 10⁻³","6 × 10³","5 × 10⁻³","6 × 10⁻¹¹"],a:0,e:"3×2 = 6; 10⁴ × 10⁻⁷ = 10⁻³ (add powers)."},
  {q:"360 as a product of prime factors is…",o:["2³ × 3² × 5","2² × 3³ × 5","2³ × 3 × 5²","2⁴ × 3 × 5"],a:0,e:"360 = 8 × 45 = 2³ × 9 × 5 = 2³ × 3² × 5."},
- {q:"5⁰ + 5⁻¹ = ?",o:["0.2","1.2","5.2","6"],a:1,e:"5⁰ = 1 and 5⁻¹ = 1/5 = 0.2 → 1.2."},
- {q:"Simplify (2√3)²",o:["6","12","4√3","36"],a:1,e:"2² × (√3)² = 4 × 3 = 12. Square BOTH parts."},
+ {q:"5⁰ + 5⁻¹ = ?",o:["0.2","1.2","5.2","6"],a:1,e:"5⁰ = 1 and 5⁻¹ = <span class='fr'><span class='nu'>1</span><span class='dn'>5</span></span> = 0.2 → 1.2."},
+ {q:"Simplify (2<span class='rt'>√<span class='vinc'>3</span></span>)²",o:["6","12","4<span class='rt'>√<span class='vinc'>3</span></span>","36"],a:1,e:"2² × (<span class='rt'>√<span class='vinc'>3</span></span>)² = 4 × 3 = 12. Square BOTH parts."},
  {q:"x = 4.7 correct to 1 d.p. The error interval is…",o:["4.65 ≤ x < 4.75","4.65 < x ≤ 4.75","4.6 ≤ x < 4.8","4.699 ≤ x ≤ 4.749"],a:0,e:"≤ at the lower bound, strict < at the upper: 4.65 ≤ x < 4.75."}
 ],
 alg:[
  {q:"Factorise x² − 9",o:["(x − 3)²","(x + 3)(x − 3)","x(x − 9)","(x + 9)(x − 1)"],a:1,e:"Difference of two squares: a² − b² = (a+b)(a−b)."},
  {q:"Solve x² − 5x + 6 = 0",o:["x = 2 or 3","x = −2 or −3","x = 1 or 6","x = 5 or 6"],a:0,e:"(x − 2)(x − 3) = 0 → x = 2 or 3. Factors of +6 summing to −5: −2 and −3."},
  {q:"Write x² + 6x + 2 in completed-square form.",o:["(x + 3)² − 7","(x + 3)² + 2","(x + 6)² − 34","(x + 3)² − 2"],a:0,e:"(x + 3)² = x² + 6x + 9, so subtract 7: (x + 3)² − 7."},
- {q:"Simplify (x² − 4)/(x + 2)",o:["x − 2","x − 4","x + 2","cannot be simplified"],a:0,e:"Factorise first: (x+2)(x−2)/(x+2) = x − 2. Never cancel terms, only factors."},
+ {q:"Simplify <span class='fr'><span class='nu'>x² − 4</span><span class='dn'>x + 2</span></span>",o:["x − 2","x − 4","x + 2","cannot be simplified"],a:0,e:"Factorise first: <span class='fr'><span class='nu'>(x + 2)(x − 2)</span><span class='dn'>x + 2</span></span> = x − 2. Never cancel terms, only factors."},
  {q:"f(x) = 2x + 1, g(x) = x². Find fg(x).",o:["2x² + 1","(2x + 1)²","4x² + 4x + 1","2x² + 2x"],a:0,e:"g first: x². Then f: 2(x²) + 1 = 2x² + 1. ((2x+1)² is gf.)"},
- {q:"The inverse of f(x) = (x − 3)/2 is…",o:["2x + 3","(x + 3)/2","2x − 3","2/(x − 3)"],a:0,e:"y = (x−3)/2 → swap and rearrange: x = (y−3)/2 → y = 2x + 3."},
+ {q:"The inverse of f(x) = <span class='fr'><span class='nu'>x − 3</span><span class='dn'>2</span></span> is…",o:["2x + 3","<span class='fr'><span class='nu'>x + 3</span><span class='dn'>2</span></span>","2x − 3","<span class='fr'><span class='nu'>2</span><span class='dn'>x − 3</span></span>"],a:0,e:"y = <span class='fr'><span class='nu'>x − 3</span><span class='dn'>2</span></span> → swap and rearrange: x = <span class='fr'><span class='nu'>y − 3</span><span class='dn'>2</span></span> → y = 2x + 3."},
  {q:"nth term of the quadratic sequence 2, 6, 12, 20, …",o:["n² + n","2n²","n² + 1","n² + 2n"],a:0,e:"Second difference 2 → n². Subtract 1,4,9,16 leaving 1,2,3,4 = n. So n² + n. Check n=3: 9+3=12 ✓"},
  {q:"Turning point of y = (x − 2)² + 5?",o:["(2, 5)","(−2, 5)","(2, −5)","(5, 2)"],a:0,e:"(x − a)² + b turns at (a, b): the x-sign flips → (2, 5)."},
  {q:"Solve 2x + y = 7 and x − y = 2.",o:["x = 3, y = 1","x = 1, y = 3","x = 2, y = 3","x = 5, y = −3"],a:0,e:"Add the equations: 3x = 9 → x = 3, then y = 1. Check in both ✓"},
  {q:"Which expression is odd for EVERY integer n?",o:["2n + 1","n + 1","n² + 1","3n"],a:0,e:"2n is always even, so 2n + 1 is always odd — the standard proof setup."}
 ],
 rat:[
- {q:"y is inversely proportional to x; y = 8 when x = 3. Find y when x = 6.",o:["4","16","2","24"],a:0,e:"y = k/x → k = 24 → y = 24/6 = 4. Doubling x halves y."},
+ {q:"y is inversely proportional to x; y = 8 when x = 3. Find y when x = 6.",o:["4","16","2","24"],a:0,e:"y = <span class='fr'><span class='nu'>k</span><span class='dn'>x</span></span> → k = 24 → y = <span class='fr'><span class='nu'>24</span><span class='dn'>6</span></span> = 4. Doubling x halves y."},
  {q:"£2000 at 3% compound interest for 2 years is worth…",o:["£2121.80","£2120.00","£2060.00","£2180.00"],a:0,e:"2000 × 1.03² = £2121.80. (£2120 is simple interest — the trap option.)"},
  {q:"A price is £64 AFTER a 20% reduction. The original price was…",o:["£80","£76.80","£84","£51.20"],a:0,e:"64 = 80% of original → 64 ÷ 0.8 = £80. Adding 20% to £64 gives 76.80 — wrong."},
- {q:"Mass 150 g, volume 20 cm³. Density?",o:["7.5 g/cm³","0.13 g/cm³","3000 g/cm³","130 g/cm³"],a:0,e:"D = M/V = 150 ÷ 20 = 7.5 g/cm³."},
+ {q:"Mass 150 g, volume 20 cm³. Density?",o:["7.5 g/cm³","0.13 g/cm³","3000 g/cm³","130 g/cm³"],a:0,e:"D = <span class='fr'><span class='nu'>M</span><span class='dn'>V</span></span> = 150 ÷ 20 = 7.5 g/cm³."},
  {q:"a : b = 2 : 3 and b : c = 4 : 5. Then a : c = ?",o:["8 : 15","2 : 5","6 : 20 in lowest terms","3 : 4"],a:0,e:"Match b: 8:12 and 12:15 → a:c = 8:15."},
  {q:"A £12 000 car loses 15% of its value each year. Value after 2 years?",o:["£8670","£8400","£10 200","£9180"],a:0,e:"12000 × 0.85² = £8670. (£8400 subtracts 15% of the original twice — simple depreciation, wrong.)"},
- {q:"y ∝ x² and y = 18 when x = 3. Find y when x = 5.",o:["50","30","45","75"],a:0,e:"k = 18/9 = 2 → y = 2 × 25 = 50."},
- {q:"A force of 60 N acts on 0.5 m². Pressure?",o:["120 N/m²","30 N/m²","60.5 N/m²","0.008 N/m²"],a:0,e:"P = F/A = 60 ÷ 0.5 = 120 N/m². Dividing by a number less than 1 makes it bigger."},
+ {q:"y ∝ x² and y = 18 when x = 3. Find y when x = 5.",o:["50","30","45","75"],a:0,e:"k = <span class='fr'><span class='nu'>18</span><span class='dn'>9</span></span> = 2 → y = 2 × 25 = 50."},
+ {q:"A force of 60 N acts on 0.5 m². Pressure?",o:["120 N/m²","30 N/m²","60.5 N/m²","0.008 N/m²"],a:0,e:"P = <span class='fr'><span class='nu'>F</span><span class='dn'>A</span></span> = 60 ÷ 0.5 = 120 N/m². Dividing by a number less than 1 makes it bigger."},
  {q:"Two successive 10% increases give a total increase of…",o:["21%","20%","110%","10%"],a:0,e:"×1.1 × 1.1 = ×1.21 → 21%. Percentage changes multiply."},
  {q:"Convert 72 km/h to m/s.",o:["20 m/s","7.2 m/s","259.2 m/s","36 m/s"],a:0,e:"72 000 m ÷ 3600 s = 20 m/s (÷3.6)."}
 ],
 geo:[
  {q:"The angle in a semicircle is always…",o:["90°","180°","45°","60°"],a:0,e:"Angle subtended by a diameter at the circumference = 90° — one of the seven circle theorems."},
- {q:"sin 30° = ?",o:["½","√3⁄2","√2⁄2","1"],a:0,e:"Exact value, needed without a calculator: sin 30° = ½."},
- {q:"You know two sides and the INCLUDED angle of a non-right triangle and want the third side. Use…",o:["the cosine rule","the sine rule","Pythagoras","½ab sin C"],a:0,e:"a² = b² + c² − 2bc cos A fits exactly this information. Sine rule needs an opposite pair."},
+ {q:"sin 30° = ?",o:["<span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>","<span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>3</span></span></span><span class='dn'>2</span></span>","<span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>2</span></span></span><span class='dn'>2</span></span>","1"],a:0,e:"Exact value, needed without a calculator: sin 30° = <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>."},
+ {q:"You know two sides and the INCLUDED angle of a non-right triangle and want the third side. Use…",o:["the cosine rule","the sine rule","Pythagoras","<span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>ab sin C"],a:0,e:"a² = b² + c² − 2bc cos A fits exactly this information. Sine rule needs an opposite pair."},
  {q:"Two similar shapes have length scale factor 3. The area scale factor is…",o:["9","3","6","27"],a:0,e:"Area SF = (length SF)² = 9. Volume SF would be 27."},
- {q:"Arc length of a 60° sector, radius 6 cm (in terms of π)?",o:["2π cm","6π cm","π cm","12π cm"],a:0,e:"(60/360) × 2π × 6 = ⅙ × 12π = 2π cm."},
+ {q:"Arc length of a 60° sector, radius 6 cm (in terms of π)?",o:["2π cm","6π cm","π cm","12π cm"],a:0,e:"<span class='fr'><span class='nu'>60</span><span class='dn'>360</span></span> × 2π × 6 = <span class='fr'><span class='nu'>1</span><span class='dn'>6</span></span> × 12π = 2π cm."},
  {q:"In a cyclic quadrilateral, opposite angles…",o:["sum to 180°","are equal","sum to 360°","sum to 90°"],a:0,e:"Opposite angles of a cyclic quadrilateral sum to 180°."},
  {q:"Length scale factor 2 → volume scale factor…",o:["8","4","2","6"],a:0,e:"Volume SF = 2³ = 8."},
  {q:"a = (1 over 3), b = (2 over −1). What is a + 2b?",o:["(5 over 1)","(3 over 2)","(5 over −2)","(4 over 1)"],a:0,e:"a + 2b = (1+4, 3−2) = (5, 1)."},
- {q:"tan 45° = ?",o:["1","½","√3","√2⁄2"],a:0,e:"tan 45° = 1 — a 45° right-angled triangle is isosceles, so opp = adj."},
- {q:"Hypotenuse 10, angle 30°. The side OPPOSITE the angle is…",o:["5","8.66","10","5√3"],a:0,e:"opp = hyp × sin 30° = 10 × ½ = 5."}
+ {q:"tan 45° = ?",o:["1","<span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span>","<span class='rt'>√<span class='vinc'>3</span></span>","<span class='fr'><span class='nu'><span class='rt'>√<span class='vinc'>2</span></span></span><span class='dn'>2</span></span>"],a:0,e:"tan 45° = 1 — a 45° right-angled triangle is isosceles, so opp = adj."},
+ {q:"Hypotenuse 10, angle 30°. The side OPPOSITE the angle is…",o:["5","8.66","10","5<span class='rt'>√<span class='vinc'>3</span></span>"],a:0,e:"opp = hyp × sin 30° = 10 × <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span> = 5."}
 ],
 prob:[
- {q:"3 red, 2 blue counters; two taken WITHOUT replacement. P(both red)?",o:["3/10","9/25","6/25","3/5"],a:0,e:"3/5 × 2/4 = 6/20 = 3/10. Both numbers drop after the first pick. (9/25 is the WITH-replacement error.)"},
- {q:"P(A | B) equals…",o:["P(A ∩ B) ÷ P(B)","P(A) × P(B)","P(A ∪ B) ÷ P(B)","P(B) ÷ P(A ∩ B)"],a:0,e:"Conditional probability: restrict the world to B, then ask how much of it is also A."},
+ {q:"3 red, 2 blue counters; two taken WITHOUT replacement. P(both red)?",o:["<span class='fr'><span class='nu'>3</span><span class='dn'>10</span></span>","<span class='fr'><span class='nu'>9</span><span class='dn'>25</span></span>","<span class='fr'><span class='nu'>6</span><span class='dn'>25</span></span>","<span class='fr'><span class='nu'>3</span><span class='dn'>5</span></span>"],a:0,e:"<span class='fr'><span class='nu'>3</span><span class='dn'>5</span></span> × <span class='fr'><span class='nu'>2</span><span class='dn'>4</span></span> = <span class='fr'><span class='nu'>6</span><span class='dn'>20</span></span> = <span class='fr'><span class='nu'>3</span><span class='dn'>10</span></span>. Both numbers drop after the first pick. (<span class='fr'><span class='nu'>9</span><span class='dn'>25</span></span> is the WITH-replacement error.)"},
+ {q:"P(A | B) equals…",o:["<span class='fr'><span class='nu'>P(A ∩ B)</span><span class='dn'>P(B)</span></span>","P(A) × P(B)","<span class='fr'><span class='nu'>P(A ∪ B)</span><span class='dn'>P(B)</span></span>","<span class='fr'><span class='nu'>P(B)</span><span class='dn'>P(A ∩ B)</span></span>"],a:0,e:"Conditional probability: restrict the world to B, then ask how much of it is also A."},
  {q:"For INDEPENDENT events A and B, P(A and B) = ?",o:["P(A) × P(B)","P(A) + P(B)","P(A) − P(B)","P(A) ÷ P(B)"],a:0,e:"Independence means multiply. Adding is for mutually exclusive 'or'."},
  {q:"The fastest route to P(at least one six) in several rolls is…",o:["1 − P(no sixes)","adding P(six) each roll","P(six) × number of rolls","a two-way table"],a:0,e:"'At least one' = 1 − P(none) — one calculation instead of many."},
  {q:"P(A) = 0.5, P(B) = 0.4, P(A ∩ B) = 0.2. P(A ∪ B) = ?",o:["0.7","0.9","0.1","0.3"],a:0,e:"0.5 + 0.4 − 0.2 = 0.7 (subtract the overlap once — it's on your formulae sheet)."},
  {q:"The set A ∩ B′ contains elements that are…",o:["in A but not in B","in both A and B","in neither A nor B","in B but not in A"],a:0,e:"∩ = and, B′ = not B → in A AND not in B."},
- {q:"A bag has 4 white, 3 black. Two picked without replacement. P(exactly one white)?",o:["4/7","24/49","12/42","2/7"],a:0,e:"WB + BW = (4/7 × 3/6) + (3/7 × 4/6) = 12/42 + 12/42 = 24/42 = 4/7. TWO orders — forgetting one halves the answer."},
+ {q:"A bag has 4 white, 3 black. Two picked without replacement. P(exactly one white)?",o:["<span class='fr'><span class='nu'>4</span><span class='dn'>7</span></span>","<span class='fr'><span class='nu'>24</span><span class='dn'>49</span></span>","<span class='fr'><span class='nu'>12</span><span class='dn'>42</span></span>","<span class='fr'><span class='nu'>2</span><span class='dn'>7</span></span>"],a:0,e:"WB + BW = (<span class='fr'><span class='nu'>4</span><span class='dn'>7</span></span> × <span class='fr'><span class='nu'>3</span><span class='dn'>6</span></span>) + (<span class='fr'><span class='nu'>3</span><span class='dn'>7</span></span> × <span class='fr'><span class='nu'>4</span><span class='dn'>6</span></span>) = <span class='fr'><span class='nu'>12</span><span class='dn'>42</span></span> + <span class='fr'><span class='nu'>12</span><span class='dn'>42</span></span> = <span class='fr'><span class='nu'>24</span><span class='dn'>42</span></span> = <span class='fr'><span class='nu'>4</span><span class='dn'>7</span></span>. TWO orders — forgetting one halves the answer."},
  {q:"Events A and B are independent exactly when…",o:["P(A ∩ B) = P(A) × P(B)","P(A ∪ B) = 1","P(A) = P(B)","P(A ∩ B) = 0"],a:0,e:"That's the definition. P(A ∩ B) = 0 is mutual exclusivity — a different idea."},
- {q:"Two fair dice are rolled. P(total = 7)?",o:["1/6","1/12","7/36","1/36"],a:0,e:"Six ways (1,6)…(6,1) out of 36 → 6/36 = 1/6 — the most likely total."},
+ {q:"Two fair dice are rolled. P(total = 7)?",o:["<span class='fr'><span class='nu'>1</span><span class='dn'>6</span></span>","<span class='fr'><span class='nu'>1</span><span class='dn'>12</span></span>","<span class='fr'><span class='nu'>7</span><span class='dn'>36</span></span>","<span class='fr'><span class='nu'>1</span><span class='dn'>36</span></span>"],a:0,e:"Six ways (1,6)…(6,1) out of 36 → <span class='fr'><span class='nu'>6</span><span class='dn'>36</span></span> = <span class='fr'><span class='nu'>1</span><span class='dn'>6</span></span> — the most likely total."},
  {q:"P(A) = 0.3. Over 200 independent trials, expected occurrences of A?",o:["60","30","70","0.3"],a:0,e:"0.3 × 200 = 60."}
 ],
 stat:[
- {q:"On a cumulative frequency diagram with n = 80, the median is read at…",o:["the 40th value","the 41st value","the 20th value","cumulative frequency 80"],a:0,e:"Read across from n/2 = 40 to the curve, then down."},
+ {q:"On a cumulative frequency diagram with n = 80, the median is read at…",o:["the 40th value","the 41st value","the 20th value","cumulative frequency 80"],a:0,e:"Read across from <span class='fr'><span class='nu'>n</span><span class='dn'>2</span></span> = 40 to the curve, then down."},
  {q:"On a histogram, the FREQUENCY of a bar equals…",o:["frequency density × class width","the bar height","frequency density ÷ class width","the bar height × the number of bars"],a:0,e:"Frequency = area of the bar = FD × width. Height alone is only frequency density."},
  {q:"The interquartile range is…",o:["UQ − LQ","max − min","UQ − median","the middle value"],a:0,e:"IQR = upper quartile − lower quartile: the spread of the middle 50%."},
  {q:"A box plot does NOT directly show…",o:["the mean","the median","the quartiles","the range"],a:0,e:"Box plots show min, LQ, median, UQ, max — the mean isn't marked."},
- {q:"600 students: 300 in Year 10. A stratified sample of 50 should include how many Year 10s?",o:["25","30","50","15"],a:0,e:"300/600 × 50 = 25 — same proportion as the population."},
- {q:"20 fish are tagged and released. A later sample of 30 contains 5 tagged. Estimated population?",o:["120","150","100","3000"],a:0,e:"5/30 = 20/N → N = 20 × 30/5 = 120 (capture–recapture)."},
+ {q:"600 students: 300 in Year 10. A stratified sample of 50 should include how many Year 10s?",o:["25","30","50","15"],a:0,e:"<span class='fr'><span class='nu'>300</span><span class='dn'>600</span></span> × 50 = 25 — same proportion as the population."},
+ {q:"20 fish are tagged and released. A later sample of 30 contains 5 tagged. Estimated population?",o:["120","150","100","3000"],a:0,e:"<span class='fr'><span class='nu'>5</span><span class='dn'>30</span></span> = <span class='fr'><span class='nu'>20</span><span class='dn'>N</span></span> → N = <span class='fr'><span class='nu'>20 × 30</span><span class='dn'>5</span></span> = 120 (capture–recapture)."},
  {q:"A full comparison of two distributions needs…",o:["an average AND a measure of spread, in context","just the two means","just the two ranges","the two modes"],a:0,e:"Compare a measure of centre and a measure of spread, interpreted in the context — both, or the comparison mark is lost."},
  {q:"Frequency 15 in a class of width 5. Frequency density?",o:["3","75","20","0.33"],a:0,e:"FD = 15 ÷ 5 = 3."},
  {q:"Moving averages are used on a time series to…",o:["smooth fluctuations and show the trend","predict individual values exactly","remove the need for a graph","calculate the mode"],a:0,e:"They iron out seasonal ups and downs so the underlying trend is visible."},
@@ -732,7 +738,7 @@ F:[
 {d:"Algebra",t:"Equation with brackets",m:3,q:"Solve 5(x − 2) = 3x + 7",steps:[
  {w:"5x − 10 = 3x + 7",k:"M1",n:"Expand the bracket — both terms"},
  {w:"2x = 17",k:"M1",n:"x-terms one side, numbers the other"},
- {w:"x = 8.5",k:"A1",n:"x = 17/2 is equally correct",f:1}]},
+ {w:"x = 8.5",k:"A1",n:"x = <span class='fr'><span class='nu'>17</span><span class='dn'>2</span></span> is equally correct",f:1}]},
 {d:"Algebra",t:"nth term — and is 150 a term?",m:4,q:"A sequence begins 7, 11, 15, 19, …  (a) Find the nth term.  (b) Is 150 a term of the sequence? <span class='qnote'>You must show how you decide.</span>",steps:[
  {w:"Common difference 4 → nth term starts 4n",k:"M1",n:""},
  {w:"Check n = 1: 4(1) = 4, first term is 7 → nth term = 4n + 3",k:"A1",n:""},
@@ -765,7 +771,7 @@ F:[
 {d:"Geometry",t:"Pythagoras — a shorter side",m:3,svg:"ladder",q:"A 5 m ladder leans against a vertical wall. Its foot is 1.4 m from the base of the wall. How far up the wall does the ladder reach? Give your answer to 1 decimal place.",steps:[
  {w:"x² = 5² − 1.4² = 25 − 1.96",k:"M1",n:"Finding a SHORTER side → subtract. The ladder is the hypotenuse"},
  {w:"x² = 23.04",k:"A1",n:""},
- {w:"x = √23.04 = 4.8 m",k:"A1",n:"Sanity check: 4.8 &lt; 5, shorter than the hypotenuse ✓",f:1}]},
+ {w:"x = <span class='rt'>√<span class='vinc'>23.04</span></span> = 4.8 m",k:"A1",n:"Sanity check: 4.8 &lt; 5, shorter than the hypotenuse ✓",f:1}]},
 {d:"Probability",t:"Independent events",m:3,q:"The probability that Dev's bus is late on any day is 0.2.  (a) Find the probability the bus is late on both Monday and Tuesday.  (b) Find the probability it is late on neither day.",steps:[
  {w:"(a) P(late AND late) = 0.2 × 0.2 = 0.04",k:"M1 A1",n:"Independent events multiply"},
  {w:"(b) P(not late) = 1 − 0.2 = 0.8, so 0.8 × 0.8 = 0.64",k:"A1",n:"'Neither' = not-late twice",f:1}]},
@@ -777,15 +783,15 @@ F:[
 {d:"Probability",t:"Two dice — sample space",m:3,q:"Two fair six-sided dice are rolled and their scores are added. Work out the probability that the total is 10.",steps:[
  {w:"There are 6 × 6 = 36 equally likely outcomes",k:"M1",n:"State the size of the sample space"},
  {w:"Totals of 10:  (4,6), (5,5), (6,4) — 3 ways",k:"A1",n:"(4,6) and (6,4) are DIFFERENT outcomes"},
- {w:"P(total 10) = 3/36 = 1/12",k:"A1",n:"",f:1}]},
+ {w:"P(total 10) = <span class='fr'><span class='nu'>3</span><span class='dn'>36</span></span> = <span class='fr'><span class='nu'>1</span><span class='dn'>12</span></span>",k:"A1",n:"",f:1}]},
 {d:"Statistics",t:"Mean from a frequency table",m:3,q:"Goals scored per match this season:  0 goals × 4 matches,  1 goal × 8,  2 goals × 6,  3 goals × 2.  Work out the mean number of goals per match.",steps:[
  {w:"Total goals = (0×4) + (1×8) + (2×6) + (3×2) = 26",k:"M1",n:"Value × frequency for every row"},
  {w:"Total matches = 4 + 8 + 6 + 2 = 20",k:"M1",n:"Divide by total FREQUENCY, never by the number of rows"},
  {w:"Mean = 26 ÷ 20 = 1.3 goals",k:"A1",n:"",f:1}]},
 {d:"Statistics",t:"Pie chart",m:3,q:"72 students were asked how they travel to school. The 'walk' sector of the pie chart has an angle of 135°. How many students walk?",steps:[
- {w:"Fraction who walk = 135⁄360",k:"M1",n:"Sector angle out of the full turn"},
- {w:"135⁄360 × 72",k:"M1",n:""},
- {w:"= 27 students",k:"A1",n:"Check: 135/360 = 3/8, and 3/8 of 72 = 27 ✓",f:1}]},
+ {w:"Fraction who walk = <span class='fr'><span class='nu'>135</span><span class='dn'>360</span></span>",k:"M1",n:"Sector angle out of the full turn"},
+ {w:"<span class='fr'><span class='nu'>135</span><span class='dn'>360</span></span> × 72",k:"M1",n:""},
+ {w:"= 27 students",k:"A1",n:"Check: <span class='fr'><span class='nu'>135</span><span class='dn'>360</span></span> = <span class='fr'><span class='nu'>3</span><span class='dn'>8</span></span>, and <span class='fr'><span class='nu'>3</span><span class='dn'>8</span></span> of 72 = 27 ✓",f:1}]},
 {d:"Statistics",t:"Choosing the right average",m:3,q:"Five salaries at a firm: £18k, £19k, £20k, £21k, £95k. Which average best represents a typical salary? <span class='qnote'>Support your answer with calculations.</span>",steps:[
  {w:"Mean = 173 ÷ 5 = £34.6k — higher than four of the five salaries",k:"M1",n:"Calculate it to show WHY it misleads"},
  {w:"Median = £20k (middle of the ordered list)",k:"B1",n:""},
@@ -796,17 +802,17 @@ H:[
  {w:"Maximum of a ÷ b needs the biggest top and the smallest bottom:  UB(a) = 5.45,  LB(b) = 2.05",k:"B2",n:"Writing this rule down IS the method"},
  {w:"5.45 ÷ 2.05 = 2.6585…",k:"M1",n:""},
  {w:"= 2.66 (3 s.f.)",k:"A1",n:"",f:1}]},
-{d:"Number",t:"Expanding brackets with surds",m:3,q:"Expand and simplify (3 + √2)(4 − √2).",steps:[
- {w:"= 12 − 3√2 + 4√2 − (√2 × √2)",k:"M1",n:"Four terms, exactly like (x + 3)(x + 2)"},
- {w:"√2 × √2 = 2, so:  12 − 3√2 + 4√2 − 2",k:"A1",n:"(√2)² = 2 — not 4, not √4"},
- {w:"= 10 + √2",k:"A1",n:"Rationals together, surds together",f:1}]},
-{d:"Number",t:"Recurring decimal proof",m:3,q:"Prove that 0.454545… = 5⁄11. <span class='qnote'>'Prove' — every step must be shown.</span>",steps:[
+{d:"Number",t:"Expanding brackets with surds",m:3,q:"Expand and simplify (3 + <span class='rt'>√<span class='vinc'>2</span></span>)(4 − <span class='rt'>√<span class='vinc'>2</span></span>).",steps:[
+ {w:"= 12 − 3<span class='rt'>√<span class='vinc'>2</span></span> + 4<span class='rt'>√<span class='vinc'>2</span></span> − (<span class='rt'>√<span class='vinc'>2</span></span> × <span class='rt'>√<span class='vinc'>2</span></span>)",k:"M1",n:"Four terms, exactly like (x + 3)(x + 2)"},
+ {w:"<span class='rt'>√<span class='vinc'>2</span></span> × <span class='rt'>√<span class='vinc'>2</span></span> = 2, so:  12 − 3<span class='rt'>√<span class='vinc'>2</span></span> + 4<span class='rt'>√<span class='vinc'>2</span></span> − 2",k:"A1",n:"(<span class='rt'>√<span class='vinc'>2</span></span>)² = 2 — not 4, not <span class='rt'>√<span class='vinc'>4</span></span>"},
+ {w:"= 10 + <span class='rt'>√<span class='vinc'>2</span></span>",k:"A1",n:"Rationals together, surds together",f:1}]},
+{d:"Number",t:"Recurring decimal proof",m:3,q:"Prove that 0.454545… = <span class='fr'><span class='nu'>5</span><span class='dn'>11</span></span>. <span class='qnote'>'Prove' — every step must be shown.</span>",steps:[
  {w:"Let x = 0.454545…   then 100x = 45.454545…",k:"M1",n:"Multiply by 10ⁿ where n = length of the repeating block"},
  {w:"100x − x = 45.4545… − 0.4545…   →   99x = 45",k:"M1",n:"Subtracting kills the recurring tail — the heart of the proof"},
- {w:"x = 45⁄99 = 5⁄11   ∎",k:"A1",n:"Simplify fully and close the proof",f:1}]},
+ {w:"x = <span class='fr'><span class='nu'>45</span><span class='dn'>99</span></span> = <span class='fr'><span class='nu'>5</span><span class='dn'>11</span></span>   ∎",k:"A1",n:"Simplify fully and close the proof",f:1}]},
 {d:"Algebra",t:"Quadratic formula",m:3,q:"Solve 2x² + 5x − 1 = 0. Give your solutions to 2 decimal places. <span class='qnote'>2 d.p. requested = use the formula, it won't factorise.</span>",steps:[
- {w:"a = 2, b = 5, c = −1:   x = (−5 ± √(5² − 4×2×(−1))) ⁄ (2×2)",k:"M1",n:"Substitute into the formula — it's ON your sheet, so this mark is a gift"},
- {w:"Discriminant: 25 + 8 = 33, so  x = (−5 ± √33) ⁄ 4",k:"A1",n:"Watch the double negative: −4×2×(−1) = +8"},
+ {w:"a = 2, b = 5, c = −1:   x = <span class='fr'><span class='nu'>−5 ± <span class='rt'>√<span class='vinc'>5² − 4×2×(−1)</span></span></span><span class='dn'>2 × 2</span></span>",k:"M1",n:"Substitute into the formula — it's ON your sheet, so this mark is a gift"},
+ {w:"Discriminant: 25 + 8 = 33, so  x = <span class='fr'><span class='nu'>−5 ± <span class='rt'>√<span class='vinc'>33</span></span></span><span class='dn'>4</span></span>",k:"A1",n:"Watch the double negative: −4×2×(−1) = +8"},
  {w:"x = 0.19  or  x = −2.69  (2 d.p.)",k:"A1",n:"Both roots needed",f:1}]},
 {d:"Algebra",t:"Linear meets quadratic",m:5,q:"Solve the simultaneous equations   y = x² − 3x + 1   and   y = x − 2.",steps:[
  {w:"Both equal y, so:   x² − 3x + 1 = x − 2",k:"M1",n:"Substitution — set the expressions equal"},
@@ -823,9 +829,9 @@ H:[
  {w:"(b) 943 × 1.03²",k:"M1",n:"Repeated percentage change: one multiplier, powered"},
  {w:"= £1000.43 (nearest penny)",k:"A1",n:"",f:1}]},
 {d:"Ratio",t:"Inverse proportion",m:4,q:"t is inversely proportional to the square of d. When d = 2, t = 5. Find the value of t when d = 5.",steps:[
- {w:"t = k ⁄ d²",k:"M1",n:"Write the general equation FIRST — this mark exists even if you go no further"},
- {w:"5 = k ⁄ 4  →  k = 20",k:"A1",n:""},
- {w:"t = 20 ⁄ 5² = 20 ⁄ 25",k:"M1",n:""},
+ {w:"t = <span class='fr'><span class='nu'>k</span><span class='dn'>d²</span></span>",k:"M1",n:"Write the general equation FIRST — this mark exists even if you go no further"},
+ {w:"5 = <span class='fr'><span class='nu'>k</span><span class='dn'>4</span></span>  →  k = 20",k:"A1",n:""},
+ {w:"t = <span class='fr'><span class='nu'>20</span><span class='dn'>5²</span></span> = <span class='fr'><span class='nu'>20</span><span class='dn'>25</span></span>",k:"M1",n:""},
  {w:"t = 0.8",k:"A1",n:"",f:1}]},
 {d:"Ratio",t:"Combining two ratios",m:3,q:"In a school, gold : silver awards = 3 : 4 and silver : bronze awards = 6 : 7. Find gold : bronze in its simplest form.",steps:[
  {w:"Silver appears in both — scale each ratio so silver matches: LCM(4, 6) = 12",k:"M1",n:"The linking quantity must be made equal first"},
@@ -836,19 +842,19 @@ H:[
  {w:"x = 58°",k:"A1",n:""},
  {w:"Reason: the angle at the centre is twice the angle at the circumference",k:"B1",n:"Exact theorem wording — a paraphrase risks the mark",f:1}]},
 {d:"Geometry",t:"Sine rule",m:3,svg:"sine",q:"In triangle ABC, angle A = 41°, angle B = 67° and BC = 8.2 cm. Calculate the length x of side AC. Give your answer to 3 significant figures.",steps:[
- {w:"Sine rule:   x ⁄ sin B = BC ⁄ sin A",k:"M1",n:"Pair each side with its OPPOSITE angle: BC faces A, AC faces B. The rule is on your sheet"},
- {w:"x = 8.2 × sin 67° ⁄ sin 41°",k:"M1",n:"Calculator in DEGREE mode — check before pressing anything"},
+ {w:"Sine rule:   <span class='fr'><span class='nu'>x</span><span class='dn'>sin B</span></span> = <span class='fr'><span class='nu'>BC</span><span class='dn'>sin A</span></span>",k:"M1",n:"Pair each side with its OPPOSITE angle: BC faces A, AC faces B. The rule is on your sheet"},
+ {w:"x = <span class='fr'><span class='nu'>8.2 × sin 67°</span><span class='dn'>sin 41°</span></span>",k:"M1",n:"Calculator in DEGREE mode — check before pressing anything"},
  {w:"x = 11.5 cm (3 s.f.)",k:"A1",n:"Sanity check: the bigger angle (67°) faces the longer side ✓",f:1}]},
-{d:"Geometry",t:"Volume of a composite solid",m:4,svg:"cone",q:"A toy is a cone of radius 3 cm and height 8 cm fixed on top of a hemisphere of radius 3 cm. Work out the total volume of the toy. Give your answer to 3 significant figures. <span class='qnote'>Volume of a cone = ⅓πr²h · Volume of a sphere = 4⁄3πr³ (given in the question, as in the real exam).</span>",steps:[
- {w:"Cone:  ⅓ × π × 3² × 8 = 24π",k:"M1",n:"Keep it in terms of π until the very end"},
- {w:"Hemisphere:  ½ × 4⁄3 × π × 3³ = 18π",k:"M1",n:"HALF the sphere — forgetting the ½ is the top error here"},
+{d:"Geometry",t:"Volume of a composite solid",m:4,svg:"cone",q:"A toy is a cone of radius 3 cm and height 8 cm fixed on top of a hemisphere of radius 3 cm. Work out the total volume of the toy. Give your answer to 3 significant figures. <span class='qnote'>Volume of a cone = <span class='fr'><span class='nu'>1</span><span class='dn'>3</span></span>πr²h · Volume of a sphere = <span class='fr'><span class='nu'>4</span><span class='dn'>3</span></span>πr³ (given in the question, as in the real exam).</span>",steps:[
+ {w:"Cone:  <span class='fr'><span class='nu'>1</span><span class='dn'>3</span></span> × π × 3² × 8 = 24π",k:"M1",n:"Keep it in terms of π until the very end"},
+ {w:"Hemisphere:  <span class='fr'><span class='nu'>1</span><span class='dn'>2</span></span> × <span class='fr'><span class='nu'>4</span><span class='dn'>3</span></span> × π × 3³ = 18π",k:"M1",n:"HALF the sphere — forgetting the ½ is the top error here"},
  {w:"Total = 24π + 18π = 42π",k:"A1",n:""},
  {w:"= 131.946… = 132 cm³ (3 s.f.)",k:"A1",n:"",f:1}]},
 {d:"Probability",t:"Without replacement",m:4,q:"A bag contains 5 red and 3 blue counters. Two counters are taken at random without replacement. Work out the probability that the counters are different colours.",steps:[
  {w:"Two orders give different colours: red-then-blue OR blue-then-red",k:"M1",n:"Forgetting one order halves the answer"},
- {w:"P(RB) = 5⁄8 × 3⁄7 = 15⁄56",k:"M1",n:"Both numbers drop for the second pick — without replacement"},
- {w:"P(BR) = 3⁄8 × 5⁄7 = 15⁄56",k:"M1",n:""},
- {w:"P(different) = 15⁄56 + 15⁄56 = 30⁄56 = 15⁄28",k:"A1",n:"Multiply along branches, ADD between branches",f:1}]},
+ {w:"P(RB) = <span class='fr'><span class='nu'>5</span><span class='dn'>8</span></span> × <span class='fr'><span class='nu'>3</span><span class='dn'>7</span></span> = <span class='fr'><span class='nu'>15</span><span class='dn'>56</span></span>",k:"M1",n:"Both numbers drop for the second pick — without replacement"},
+ {w:"P(BR) = <span class='fr'><span class='nu'>3</span><span class='dn'>8</span></span> × <span class='fr'><span class='nu'>5</span><span class='dn'>7</span></span> = <span class='fr'><span class='nu'>15</span><span class='dn'>56</span></span>",k:"M1",n:""},
+ {w:"P(different) = <span class='fr'><span class='nu'>15</span><span class='dn'>56</span></span> + <span class='fr'><span class='nu'>15</span><span class='dn'>56</span></span> = <span class='fr'><span class='nu'>30</span><span class='dn'>56</span></span> = <span class='fr'><span class='nu'>15</span><span class='dn'>28</span></span>",k:"A1",n:"Multiply along branches, ADD between branches",f:1}]},
 {d:"Probability",t:"Independence",m:4,q:"A and B are independent events. P(A) = 0.6 and P(A and B) = 0.24.  (a) Find P(B).  (b) Find P(A or B).",steps:[
  {w:"(a) Independence: P(A and B) = P(A) × P(B), so 0.24 = 0.6 × P(B)",k:"M1",n:"State the definition — that's the method mark"},
  {w:"P(B) = 0.4",k:"A1",n:""},
@@ -856,16 +862,16 @@ H:[
  {w:"= 0.76",k:"A1",n:"",f:1}]},
 {d:"Probability",t:"At least one",m:3,q:"A fair dice is rolled three times. Work out the probability of getting at least one six.",steps:[
  {w:"P(at least one six) = 1 − P(no sixes)",k:"M1",n:"'At least one' → go through the complement, always"},
- {w:"P(no sixes) = (5⁄6)³ = 125⁄216",k:"M1",n:""},
- {w:"P(at least one six) = 1 − 125⁄216 = 91⁄216",k:"A1",n:"",f:1}]},
+ {w:"P(no sixes) = (<span class='fr'><span class='nu'>5</span><span class='dn'>6</span></span>)³ = <span class='fr'><span class='nu'>125</span><span class='dn'>216</span></span>",k:"M1",n:""},
+ {w:"P(at least one six) = 1 − <span class='fr'><span class='nu'>125</span><span class='dn'>216</span></span> = <span class='fr'><span class='nu'>91</span><span class='dn'>216</span></span>",k:"A1",n:"",f:1}]},
 {d:"Statistics",t:"Histogram frequencies",m:4,q:"Times (t min): 0 &lt; t ≤ 10 has frequency 20;  10 &lt; t ≤ 15 has frequency 30.  (a) Find the frequency density of each class.  (b) The bar for 15 &lt; t ≤ 25 has frequency density 1.5. Find its frequency.",steps:[
  {w:"(a) FD = frequency ÷ class width:  20 ÷ 10 = 2",k:"M1",n:"The definition IS the method"},
  {w:"30 ÷ 5 = 6",k:"A1",n:"The narrower class has the taller bar — that's the whole point of histograms"},
  {w:"(b) frequency = FD × width = 1.5 × 10",k:"M1",n:"Reverse the formula"},
  {w:"= 15",k:"A1",n:"",f:1}]},
 {d:"Statistics",t:"Capture–recapture",m:3,q:"A biologist catches, tags and releases 40 fish in a lake. Later she catches 50 fish; 8 of them are tagged. Estimate the number of fish in the lake.",steps:[
- {w:"Assume the proportion tagged is the same in the sample and the lake:  8⁄50 = 40⁄N",k:"M1",n:"Write the proportion statement — the method mark"},
- {w:"N = 40 × 50 ⁄ 8",k:"M1",n:""},
+ {w:"Assume the proportion tagged is the same in the sample and the lake:  <span class='fr'><span class='nu'>8</span><span class='dn'>50</span></span> = <span class='fr'><span class='nu'>40</span><span class='dn'>N</span></span>",k:"M1",n:"Write the proportion statement — the method mark"},
+ {w:"N = <span class='fr'><span class='nu'>40 × 50</span><span class='dn'>8</span></span>",k:"M1",n:""},
  {w:"N = 250 fish",k:"A1",n:"",f:1}]},
 {d:"Statistics",t:"Comparing distributions",m:2,q:"Class A test scores: median 62, IQR 18.  Class B: median 55, IQR 30.  Compare the two distributions. <span class='qnote'>Two comparison marks — one for average, one for spread, both in context.</span>",steps:[
  {w:"Class A's median (62) is higher than Class B's (55), so Class A scored better on average",k:"B1",n:"Comparative word + context. 'A is 62' alone is a description, not a comparison"},
@@ -956,9 +962,9 @@ function startDeck(){
 }
 function showCard(flip){
  const d=availDecks()[deckIdx];
- if(cardQ.length===0){$("#fq").textContent="Deck complete! ✓";$("#fa").textContent="Shuffle to go again.";$("#fmeta").textContent=d.cards.length+" of "+d.cards.length+" mastered";$("#fcard").classList.remove("flip");return;}
+ if(cardQ.length===0){$("#fq").innerHTML="Deck complete! ✓";$("#fa").innerHTML="Shuffle to go again.";$("#fmeta").textContent=d.cards.length+" of "+d.cards.length+" mastered";$("#fcard").classList.remove("flip");return;}
  const c=d.cards[cardQ[cardPos%cardQ.length]];
- $("#fq").textContent=c.q;$("#fa").textContent=c.a;
+ $("#fq").innerHTML=c.q;$("#fa").innerHTML=c.a;
  $("#fcard").classList.toggle("flip",!!flip);
  $("#fmeta").textContent=d.name+" · card "+((cardPos%cardQ.length)+1)+" of "+cardQ.length+" remaining · "+gotCount+" mastered";
 }
