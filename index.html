@@ -270,6 +270,7 @@ body{font-size:18px}
 .uhead .utitle{font-size:18px}.uhead .unum,.uhead .udom{font-size:14px}.ubody{font-size:17px}.uspec{font-size:14px}
 sup,sub{font-size:.72em;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{top:.28em}
 .wtsx{flex:1}
+.navhub{flex:0 0 auto;display:flex;align-items:center;padding:0 16px;color:#F4B740;font-weight:800;text-decoration:none;white-space:nowrap;border-right:1px solid rgba(255,255,255,.2)}.navhub:hover{background:rgba(255,255,255,.08)}
 </style>
 </head>
 <body>
@@ -284,6 +285,7 @@ sup,sub{font-size:.72em;line-height:0;position:relative;vertical-align:baseline}
   </div>
 </header>
 <nav class="tabs"><div class="in">
+  <a class="navhub" href="https://geographyhub.github.io/Peckham_Hub/" aria-label="Back to the Peckham Hub">&#8592; Hub</a>
   <button class="on" data-tab="wt">Working Towards</button>
   <button data-tab="mock">Year 11 Mock</button>
   <button data-tab="papers">Papers</button>
@@ -652,7 +654,7 @@ NOTES["H-5"]=[
 ["Give a full reason for every angle you find, using the correct names.","An isosceles triangle has one angle 40° at the top. Find the base angles.","180 − 40 = 140|Base angles are equal: 140 ÷ 2","70° each (base angles of an isosceles triangle are equal)"],
 ["On coordinates, use the differences in x and y as the two shorter sides. In 3D, the diagonal of a cuboid is √(a<sup>2</sup> + b<sup>2</sup> + c<sup>2</sup>).","Find the distance between (1, 2) and (7, 10).","Differences: 6 and 8|√(36 + 64) = √100","10 units"],
 ["Label O, A, H from the angle. Pick the ratio that uses the two sides involved.","An angle has adjacent 8 cm and opposite 5 cm. Find the angle.","tan x = 5 ÷ 8|x = tan<sup>−1</sup>(0.625)","32.0° (1 d.p.)"],
-["Plan the route: which triangle gives you a side you need for the next triangle? Keep full accuracy between steps.","Find a hypotenuse with Pythagoras, then use it as the adjacent side of a second right-angled triangle. Why keep the unrounded value?","Rounding early carries an error into the next step","Use the full calculator value in step 2"]];
+["Plan the route: which triangle gives you a side you need for the next triangle? Keep full accuracy between steps.","A 5 m ladder leans against a wall with its foot 1.4 m from the wall. Find the angle it makes with the ground, then how high up the wall it reaches.","Angle: cos θ = 1.4 ÷ 5 = 0.28, so θ = cos<sup>−1</sup>(0.28) = 73.7°|Height: Pythagoras, √(5<sup>2</sup> − 1.4<sup>2</sup>) = √23.04 = 4.8 m|Keep the full calculator value between steps so rounding errors do not build up","Angle 73.7°, height 4.8 m"]];
 NOTES["H-6"]=[
 ["√ab = √a × √b. Find the largest square factor.","Simplify √48","48 = 16 × 3|√16 × √3","4√3"],
 ["Treat surds like letters when expanding; √a × √a = a.","Expand (3 + √2)(1 − √2)","3 − 3√2 + √2 − 2|Collect","1 − 2√2"],
@@ -713,7 +715,7 @@ NOTES["H-17"]=[
 ["Repeated change: amount × multiplier<sup>n</sup>. To find n, try values until you pass the target.","A population of 2000 grows by 15% a year. Find it after 4 years.","2000 × 1.15<sup>4</sup>|= 3498.0…","3498"],
 ["The gradient of a graph is a rate of change. For a curve, draw a tangent and find its gradient.","A tangent passes through (2, 10) and (6, 30). Estimate the rate of change.","(30 − 10) ÷ (6 − 2)","5 units per unit of x"]];
 NOTES["H-18"]=[
-["Cone: V = ⅓πr<sup>2</sup>h, curved SA = πrl. Sphere: V = <sup>4</sup>⁄<sub>3</sub>πr<sup>3</sup>, SA = 4πr<sup>2</sup>. Pyramid: V = ⅓ × base × height. These are on the formulae sheet: practise finding and using them.","Find the volume of a cone with radius 3 cm and height 8 cm, in terms of π.","⅓ × π × 9 × 8","24π cm<sup>3</sup>"],
+["Cone: V = ⅓πr<sup>2</sup>h, curved SA = πrl. Sphere: V = <sup>4</sup>⁄<sub>3</sub>πr<sup>3</sup>, SA = 4πr<sup>2</sup>. Pyramid: V = ⅓ × base × height. These are printed in the question when you need them, so practise using them quickly.","Find the volume of a cone with radius 3 cm and height 8 cm, in terms of π.","⅓ × π × 9 × 8","24π cm<sup>3</sup>"],
 ["Find each part separately, then add or subtract. A frustum is a big cone minus a small cone.","A hemisphere of radius 3 cm sits on a cylinder of radius 3 cm and height 10 cm. Find the total volume.","Cylinder: π × 9 × 10 = 90π|Hemisphere: ½ × <sup>4</sup>⁄<sub>3</sub> × π × 27 = 18π","108π cm<sup>3</sup> (339 cm<sup>3</sup> to 3 s.f.)"],
 ["Plan: the view from above. Front elevation: from the front. Side elevation: from the side. Draw only what you can see.","What does the plan of a cylinder standing upright look like?","Looking down from above","A circle"],
 ["Find a right-angled triangle inside the solid. You often need a diagonal of the base first.","A cuboid has base 6 cm by 8 cm and height 5 cm. Find the angle between the space diagonal and the base.","Base diagonal = √(36 + 64) = 10 cm|tan θ = 5 ÷ 10","26.6° (1 d.p.)"]];
@@ -949,7 +951,7 @@ rat:[
  {q:"£2000 at 3% compound interest for 2 years is worth…",o:["£2121.80","£2120.00","£2060.00","£2180.00"],a:0,e:"2000 × 1.03<sup>2</sup> = £2121.80. (£2120 is simple interest: the trap option.)"},
  {q:"A price is £64 AFTER a 20% reduction. The original price was…",o:["£80","£76.80","£84","£51.20"],a:0,e:"64 = 80% of original → 64 ÷ 0.8 = £80. Adding 20% to £64 gives 76.80: wrong."},
  {q:"Mass 150 g, volume 20 cm<sup>3</sup>. Density?",o:["7.5 g/cm<sup>3</sup>","0.13 g/cm<sup>3</sup>","3000 g/cm<sup>3</sup>","130 g/cm<sup>3</sup>"],a:0,e:"D = <span class='fr'><span class='nu'>M</span><span class='dn'>V</span></span> = 150 ÷ 20 = 7.5 g/cm<sup>3</sup>."},
- {q:"a : b = 2 : 3 and b : c = 4 : 5. Then a : c = ?",o:["8 : 15","2 : 5","6 : 20 in lowest terms","3 : 4"],a:0,e:"Match b: 8:12 and 12:15 → a:c = 8:15."},
+ {q:"a : b = 2 : 3 and b : c = 4 : 5. Then a : c = ?",o:["8 : 15","2 : 5","12 : 15","3 : 4"],a:0,e:"Match b: 8:12 and 12:15 → a:c = 8:15."},
  {q:"A £12 000 car loses 15% of its value each year. Value after 2 years?",o:["£8670","£8400","£10 200","£9180"],a:0,e:"12000 × 0.85<sup>2</sup> = £8670. (£8400 subtracts 15% of the original twice: simple depreciation, wrong.)"},
  {q:"y ∝ x<sup>2</sup> and y = 18 when x = 3. Find y when x = 5.",o:["50","30","45","75"],a:0,e:"k = <span class='fr'><span class='nu'>18</span><span class='dn'>9</span></span> = 2 → y = 2 × 25 = 50."},
  {q:"A force of 60 N acts on 0.5 m<sup>2</sup>. Pressure?",o:["120 N/m<sup>2</sup>","30 N/m<sup>2</sup>","60.5 N/m<sup>2</sup>","0.008 N/m<sup>2</sup>"],a:0,e:"P = <span class='fr'><span class='nu'>F</span><span class='dn'>A</span></span> = 60 ÷ 0.5 = 120 N/m<sup>2</sup>. Dividing by a number less than 1 makes it bigger."},
@@ -985,11 +987,11 @@ stat:[
  {q:"On a histogram, the FREQUENCY of a bar equals…",o:["frequency density × class width","the bar height","frequency density ÷ class width","the bar height × the number of bars"],a:0,e:"Frequency = area of the bar = FD × width. Height alone is only frequency density."},
  {q:"The interquartile range is…",o:["UQ − LQ","max − min","UQ − median","the middle value"],a:0,e:"IQR = upper quartile − lower quartile: the spread of the middle 50%."},
  {q:"A box plot does NOT directly show…",o:["the mean","the median","the quartiles","the range"],a:0,e:"Box plots show min, LQ, median, UQ, max: the mean isn't marked."},
- {q:"600 students: 300 in Year 10. A stratified sample of 50 should include how many Year 10s?",o:["25","30","50","15"],a:0,e:"<span class='fr'><span class='nu'>300</span><span class='dn'>600</span></span> × 50 = 25: same proportion as the population."},
+ {q:"To find out how much exercise people in a town do, Ben asks people leaving a gym. His sample is…",o:["biased, because gym users exercise more than most people","fine, because it is easy to collect","biased, because the sample is too large","fine, as long as he asks 100 people"],a:0,e:"A sample is biased if some groups are more likely to be chosen. A larger sample from the same place is still biased."},
  {q:"20 fish are tagged and released. A later sample of 30 contains 5 tagged. Estimated population?",o:["120","150","100","3000"],a:0,e:"<span class='fr'><span class='nu'>5</span><span class='dn'>30</span></span> = <span class='fr'><span class='nu'>20</span><span class='dn'>N</span></span> → N = <span class='fr'><span class='nu'>20 × 30</span><span class='dn'>5</span></span> = 120 (capture–recapture)."},
  {q:"A full comparison of two distributions needs…",o:["an average AND a measure of spread, in context","just the two means","just the two ranges","the two modes"],a:0,e:"Compare a measure of centre and a measure of spread, interpreted in the context: both, or the comparison mark is lost."},
  {q:"Frequency 15 in a class of width 5. Frequency density?",o:["3","75","20","0.33"],a:0,e:"FD = 15 ÷ 5 = 3."},
- {q:"Moving averages are used on a time series to…",o:["smooth fluctuations and show the trend","predict individual values exactly","remove the need for a graph","calculate the mode"],a:0,e:"They iron out seasonal ups and downs so the underlying trend is visible."},
+ {q:"A time series graph of monthly ice-cream sales rises every summer and falls every winter, but each year is higher than the last. The best description is…",o:["an upward trend with a seasonal pattern","a downward trend","no trend at all","negative correlation"],a:0,e:"Describe the overall trend (rising year on year) AND the repeating seasonal pattern, in context."},
  {q:"Compared to the range, the IQR is…",o:["less affected by extreme values","more affected by extreme values","always larger","always equal"],a:0,e:"IQR ignores the top and bottom quarters, so outliers barely touch it."}
 ]}
 };
@@ -1386,6 +1388,7 @@ function shuf(r,a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(
 const gcd=(a,b)=>{a=Math.abs(a);b=Math.abs(b);while(b){[a,b]=[b,a%b];}return a;};
 const fr=(n,d)=>"<span class='fr'><span class='nu'>"+n+"</span><span class='dn'>"+d+"</span></span>";
 const rd=(x,dp)=>{const m=Math.pow(10,dp);return Math.round(x*m+1e-9)/m;};
+const money=x=>{const v=rd(x,2);return Number.isInteger(v)?String(v):v.toFixed(2);};
 const fmt=x=>{const s=String(rd(x,6));return s.replace('-','\u2212');};
 const sg=x=>x<0?"\u2212 "+Math.abs(x):"+ "+x;          // signed term for "x + 3"
 const co=(c,v)=>c===1?v:(c===-1?"\u2212"+v:fmt(c)+v);   // coefficient
@@ -1429,53 +1432,55 @@ function svgCircleThm(kind,v){ // kind: centre | semi | cyclic
  return s+ndA+"</svg>";}
 /* ===================== GRADE 3 ===================== */
 WT[3]=[
-{n:"Number and negatives",nc:1,g:"Multiplying or dividing: same signs give a positive, different signs give a negative. Adding a negative is the same as subtracting.",
+{n:"Number and negatives",nc:1,g:"Multiplying or dividing: same signs give a positive, different signs give a negative. Subtracting a negative is the same as adding. A negative number squared is always positive.",
  trap:"(\u22128)<sup>2</sup> is +64, not \u221264: the bracket squares the minus sign too.",
  gen:r=>{const t=R(r,0,2);const a=RNZ(r,-12,12),b=RNZ(r,-9,9);
   if(t===0){const v=a*b;return{q:"Work out ("+fmt(a)+") \u00d7 ("+fmt(b)+")",ans:{t:'num',v},steps:["Signs: "+(a*b>0?"same signs, so positive":"different signs, so negative"),Math.abs(a)+" \u00d7 "+Math.abs(b)+" = "+Math.abs(v),"Answer: "+fmt(v)]};}
   if(t===1){const v=a-b;return{q:"Work out "+fmt(a)+" \u2212 ("+fmt(b)+")",ans:{t:'num',v},steps:["Subtracting a negative is adding: "+fmt(a)+(b<0?" + "+(-b):" \u2212 "+b),"Answer: "+fmt(v)]};}
   const x=R(r,2,9);return{q:"Work out (\u2212"+x+")<sup>2</sup>",ans:{t:'num',v:x*x},steps:["(\u2212"+x+") \u00d7 (\u2212"+x+")","Same signs, so positive: "+x*x]};}},
-{n:"Written methods",nc:1,g:"Line up place value. For long multiplication, split the second number into tens and units, then add the two rows.",
+{n:"Written methods",nc:1,g:"Line up the place values. Long multiplication: multiply by the units, then by the tens (with a placeholder zero), then add the rows. Short division: divide one digit at a time, carrying any remainder. Subtraction: exchange from the next column when you need to.",
  trap:"Forgetting the placeholder zero on the tens row of a long multiplication.",
  gen:r=>{const t=R(r,0,2);
   if(t===0){const a=R(r,23,98),b=R(r,13,49);return{q:"Work out "+a+" \u00d7 "+b,ans:{t:'num',v:a*b},steps:[a+" \u00d7 "+(b%10)+" = "+a*(b%10),a+" \u00d7 "+(b-b%10)+" = "+a*(b-b%10),"Add: "+a*(b%10)+" + "+a*(b-b%10)+" = "+a*b]};}
   if(t===1){const d=R(r,3,9),q=R(r,24,199);return{q:"Work out "+d*q+" \u00f7 "+d,ans:{t:'num',v:q},steps:["Use short division (bus stop): "+d+" into "+d*q,"Answer: "+q,"Check: "+q+" \u00d7 "+d+" = "+d*q]};}
   const a=R(r,1200,4999),b=R(r,300,1199);return{q:"Work out "+a+" \u2212 "+b,ans:{t:'num',v:a-b},steps:["Line up the columns and exchange where needed","Answer: "+(a-b),"Check: "+(a-b)+" + "+b+" = "+a]};}},
-{n:"Factors, multiples, primes",nc:1,g:"A factor divides into a number exactly. A multiple is in its times table. A prime has exactly two factors: 1 and itself (so 1 is not prime).",
- trap:"Saying 1 is prime, or that 9 is prime because it is odd.",
- gen:r=>{const t=R(r,0,2);
-  if(t===0){const ps=[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47];const p=P(r,ps);const others=[];while(others.length<3){const x=R(r,4,49);if(!ps.includes(x)&&!others.includes(x))others.push(x);}
-   return{q:"Which of these numbers is prime?",ans:mcq(r,String(p),others.map(String)),steps:[p+" has exactly two factors: 1 and "+p,"The others all have more than two factors"]};}
-  if(t===1){const n=R(r,4,15);return{q:"Work out the value of "+n+"<sup>2</sup> + 2<sup>3</sup>",ans:{t:'num',v:n*n+8},steps:[n+"<sup>2</sup> = "+n*n,"2<sup>3</sup> = 8",n*n+" + 8 = "+(n*n+8)]};}
-  const a=R(r,2,6),b=R(r,2,9),c=R(r,2,9);return{q:"Work out "+a+" + "+b+" \u00d7 "+c,ans:{t:'num',v:a+b*c},steps:["Multiply before adding (BIDMAS)",b+" \u00d7 "+c+" = "+b*c,a+" + "+b*c+" = "+(a+b*c)]};}},
-{n:"Fractions, decimals, percentages",nc:1,g:"Percent means out of 100. To find a fraction of an amount, divide by the bottom and multiply by the top.",
+{n:"Factors, multiples, primes",nc:1,g:"A factor divides into a number exactly. A multiple is in its times table. A prime has exactly two factors: 1 and itself (so 1 is not prime). HCF: the highest factor two numbers share. LCM: the lowest multiple two numbers share.",
+ trap:"Saying 1 is prime, or that 9 is prime because it is odd. Mixing up HCF and LCM: the HCF can never be bigger than the smaller number.",
+ gen:r=>{const t=R(r,0,3);
+  if(t===0){const ps=[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47];const p=P(r,ps);const others=[];while(others.length<3){const x=P(r,[1,9,15,21,25,27,33,35,39,49,51,57]);if(!others.includes(x))others.push(x);}
+   return{q:"Which of these numbers is prime?",ans:mcq(r,String(p),others.map(String)),steps:[p+" has exactly two factors: 1 and "+p,"Each of the others has more than two factors (and 1 has only one factor, so it is not prime)"]};}
+  if(t===1){const g=P(r,[2,3,4,5,6,7,8]);let a=R(r,2,9),b=R(r,2,9);while(gcd(a,b)!==1||a===b){a=R(r,2,9);b=R(r,2,9);}return{q:"Work out the highest common factor (HCF) of "+g*a+" and "+g*b+".",ans:{t:'num',v:g},steps:["Factors of "+g*a+" that also divide "+g*b+": the biggest is "+g,"Check: "+g*a+" = "+g+" \u00d7 "+a+" and "+g*b+" = "+g+" \u00d7 "+b+", and "+a+" and "+b+" share no other factor","HCF = "+g]};}
+  if(t===2){const pairs=[[4,6],[6,8],[4,10],[6,9],[8,12],[6,10],[9,12],[10,15],[12,18],[8,10],[5,6],[4,7]];const[p,q]=P(r,pairs);const l=p*q/gcd(p,q);const mp=[];for(let k=1;k*p<=l;k++)mp.push(k*p);return{q:"Work out the lowest common multiple (LCM) of "+p+" and "+q+".",ans:{t:'num',v:l},steps:["Multiples of "+p+": "+mp.join(", "),l+" is the first one that is also a multiple of "+q,"LCM = "+l]};}
+  const n=P(r,[12,18,20,24,28,30,36,40,42,45]);const fs=[];for(let k=1;k<=n;k++)if(n%k===0)fs.push(k);const non=[];while(non.length<3){const x=R(r,2,n-1);if(n%x!==0&&!non.includes(x))non.push(x);}const f=P(r,fs.filter(x=>x>1&&x<n));
+  return{q:"Which of these numbers is a factor of "+n+"?",ans:mcq(r,String(f),non.map(String)),steps:["Factors of "+n+": "+fs.join(", "),f+" divides into "+n+" exactly: "+n+" \u00f7 "+f+" = "+n/f]};}},
+{n:"Fractions, decimals, percentages",nc:1,g:"Percent means out of 100. To find a fraction of an amount, divide by the bottom and multiply by the top. To find a percentage, build it from 10% and 5%. Decimal to percentage: multiply by 100.",
  trap:"Writing 0.7 as 7% instead of 70%.",
  gen:r=>{const t=R(r,0,2);
   if(t===0){const p=P(r,[5,10,15,20,25,30,35,40,45,60,75]),a=P(r,[40,60,80,120,160,200,240,300,360,400,480]);const v=p*a/100;return{q:"Work out "+p+"% of "+a,ans:{t:'num',v},steps:["10% of "+a+" = "+fmt(a/10),(p%10?"5% = "+fmt(a/20)+", so ":"")+p+"% = "+fmt(v)]};}
   if(t===1){const d=P(r,[3,4,5,6,8]),n=R(r,1,d-1),k=R(r,2,12);const A=d*k*R(r,1,3);return{q:"Work out "+fr(n,d)+" of "+A,ans:{t:'num',v:A/d*n},steps:[A+" \u00f7 "+d+" = "+A/d,A/d+" \u00d7 "+n+" = "+A/d*n]};}
   const x=P(r,[0.3,0.45,0.07,0.6,0.85,0.125,0.04]);return{q:"Write "+x+" as a percentage.",ans:{t:'num',v:rd(x*100,4),unit:"%"},steps:["Multiply by 100",x+" \u00d7 100 = "+fmt(x*100)+"%"]};}},
-{n:"Money, units and best value",nc:0,g:"Best value: work out the cost of ONE item (or the amount per \u00a31) for each offer, then compare like with like.",
+{n:"Money, units and best value",nc:0,g:"Metric units: 1 cm = 10 mm, 1 m = 100 cm, 1 kg = 1000 g, 1 litre = 1000 ml. Money: write everything in pounds or everything in pence before you add. Best value: work out the cost of ONE item for each offer, then compare like with like.",
  trap:"Mixing pence and pounds: write everything in the same unit first.",
  gen:r=>{const t=R(r,0,2);
   if(t===0){const c=["mm","cm","m","g","kg","ml","litres"];const k=R(r,0,3);const sets=[["cm","mm",10],["m","cm",100],["kg","g",1000],["litres","ml",1000]][k];const x=R(r,2,95)/(k<1?1:10);return{q:"Convert "+fmt(x)+" "+sets[0]+" into "+sets[1]+".",ans:{t:'num',v:rd(x*sets[2],4),unit:sets[1]},steps:["1 "+sets[0].replace(/s$/,'')+" = "+sets[2]+" "+sets[1],fmt(x)+" \u00d7 "+sets[2]+" = "+fmt(x*sets[2])+" "+sets[1]]};}
   if(t===1){const p1=R(r,60,99),n1=R(r,3,5),p2=R(r,40,95);const n2=n1+R(r,2,4);const c1=p1*n1,c2=p2*n2;const u1=c1/n1,u2=c2/n2;if(Math.abs(u1-u2)<1)return WT[3][4].gen(r);
    const best=u1<u2?"Pack A":"Pack B";return{q:"Pack A: "+n1+" rolls for \u00a3"+(c1/100).toFixed(2)+"<br>Pack B: "+n2+" rolls for \u00a3"+(c2/100).toFixed(2)+"<br>Which pack is better value?",ans:mcq(r,best,[best==="Pack A"?"Pack B":"Pack A","They are the same"]),steps:["A: \u00a3"+(c1/100).toFixed(2)+" \u00f7 "+n1+" = "+fmt(u1)+"p each","B: \u00a3"+(c2/100).toFixed(2)+" \u00f7 "+n2+" = "+fmt(rd(u2,2))+"p each",best+" costs less per roll"]};}
   const a=R(r,3,8),pa=R(r,105,299),b=R(r,2,5),pb=R(r,45,99);const tot=a*pa+b*pb;return{q:"Sam buys "+a+" notebooks at \u00a3"+(pa/100).toFixed(2)+" each and "+b+" pens at "+pb+"p each. He pays with a \u00a320 note. How much change does he get, in pounds?",ans:{t:'num',v:rd((2000-tot)/100,2),unit:"\u00a3",dp:2},steps:[a+" \u00d7 \u00a3"+(pa/100).toFixed(2)+" = \u00a3"+(a*pa/100).toFixed(2),b+" \u00d7 "+pb+"p = \u00a3"+(b*pb/100).toFixed(2),"Total \u00a3"+(tot/100).toFixed(2)+"; change = \u00a320 \u2212 \u00a3"+(tot/100).toFixed(2)+" = \u00a3"+((2000-tot)/100).toFixed(2)]};}},
-{n:"Simple algebra",nc:1,g:"Collect like terms by adding the numbers in front of the same letter. To solve, do the opposite operation to both sides, one step at a time.",
+{n:"Simple algebra",nc:1,g:"Collect like terms by adding the numbers in front of the same letter. To substitute, replace each letter with its number and use BIDMAS. To solve, do the opposite operation to both sides, one step at a time.",
  trap:"Writing 3x + 2 = 5x: you cannot add terms that are not alike.",
  gen:r=>{const t=R(r,0,2);
   if(t===0){const a=R(r,2,9),x=R(r,2,12),b=R(r,1,20);const c=a*x+b;return{q:"Solve "+a+"x + "+b+" = "+c,ans:{t:'num',v:x},steps:["Subtract "+b+": "+a+"x = "+(c-b),"Divide by "+a+": x = "+x]};}
   if(t===1){const a=R(r,2,6),b=R(r,2,9),p=R(r,2,8),q=R(r,-6,9);const v=a*p+b*q;return{q:"T = "+a+"P + "+b+"W<br>Work out T when P = "+p+" and W = "+fmt(q),ans:{t:'num',v},steps:["T = "+a+" \u00d7 "+p+" + "+b+" \u00d7 "+fmt(q),"T = "+a*p+" + "+fmt(b*q)+" = "+fmt(v)]};}
   const a=R(r,2,9),b=R(r,2,9),c=R(r,1,9),d=R(r,1,9);const right=lin(a+b,c-d,'x').replace(/^/,"");const corr=co(a+b,'x')+" "+sg(c-d).replace("+ 0","");
   const ans=(c-d===0)?co(a+b,'x'):corr;return{q:"Simplify "+co(a,'x')+" + "+c+" + "+co(b,'x')+" \u2212 "+d,ans:mcq(r,ans,[co(a+b,'x')+" "+sg(c+d),co(a+b+c-d,'x'),co(a*b,'x')+" "+sg(c-d),(a+b+c-d)+"x"]),steps:["x terms: "+a+"x + "+b+"x = "+(a+b)+"x","Numbers: "+c+" \u2212 "+d+" = "+(c-d),"Answer: "+ans]};}},
-{n:"Linear sequences",nc:1,g:"The nth term of a linear sequence is (difference)n + (zero term). The zero term is the term before the first one.",
+{n:"Linear sequences",nc:1,g:"The nth term of a linear sequence is (difference)n + (zero term). The zero term is the term before the first one. To find any term, substitute its position for n.",
  trap:"Writing n + 3 for a sequence going up in 3s: the difference goes in FRONT of n.",
  gen:r=>{const d=RNZ(r,-6,9),a=R(r,-5,15);const s=[0,1,2,3].map(i=>a+d*i);const z=a-d;
   if(R(r,0,1)===0){const ans=lin(d,z,'n');return{q:"Here is a linear sequence: "+s.map(fmt).join(", ")+"<br>Work out an expression for the nth term.",ans:mcq(r,ans,[lin(d,a,'n'),lin(1,d,'n'),lin(d,-z,'n'),lin(z,d,'n')]),steps:["Difference = "+fmt(d)+", so "+co(d,'n'),"Zero term = "+fmt(a)+" \u2212 "+(d<0?"(\u2212"+(-d)+")":d)+" = "+fmt(z),"nth term = "+ans]};}
   const n=R(r,10,30);return{q:"The nth term of a sequence is "+lin(d,z,'n')+"<br>Work out the "+n+"th term.",ans:{t:'num',v:d*n+z},steps:["Substitute n = "+n,fmt(d)+" \u00d7 "+n+" "+sg(z)+" = "+fmt(d*n+z)]};}},
 {n:"Simple ratio",nc:1,g:"To share in a ratio: add the parts, find one part, then multiply. To simplify, divide every part by the highest common factor.",
  trap:"Dividing the total by one of the numbers in the ratio instead of the total number of parts.",
- gen:r=>{const a=R(r,1,7),b=R(r,1,9);if(a===b)return WT[3][7].gen(r);
+ gen:r=>{const a=R(r,1,7),b=R(r,1,9);if(a===b||gcd(a,b)!==1)return WT[3][7].gen(r);
   if(R(r,0,1)===0){const k=R(r,3,30);const tot=(a+b)*k;return{q:"Share \u00a3"+tot+" in the ratio "+a+" : "+b+". How much is the larger share, in pounds?",ans:{t:'num',v:Math.max(a,b)*k,unit:"\u00a3"},steps:["Total parts = "+a+" + "+b+" = "+(a+b),"One part = "+tot+" \u00f7 "+(a+b)+" = "+k,"Larger share = "+Math.max(a,b)+" \u00d7 "+k+" = \u00a3"+Math.max(a,b)*k]};}
   const k=R(r,2,9);const g=gcd(a,b);const A=a/g,B=b/g;return{q:"Write "+a*k+" : "+b*k+" in its simplest form.",ans:mcq(r,A+" : "+B,[B+" : "+A,a+" : "+b===A+" : "+B?(A*2)+" : "+(B*2):a+" : "+b,(A+1)+" : "+(B+1),A+" : "+(B*2)]),steps:["HCF of "+a*k+" and "+b*k+" is "+(k*g),"Divide both: "+A+" : "+B]};}},
 {n:"Angles and area",nc:1,g:"Angles on a straight line add to 180\u00b0. Angles in a triangle add to 180\u00b0. Area of a rectangle = length \u00d7 width; area of a triangle = \u00bd \u00d7 base \u00d7 height.",
@@ -1484,7 +1489,7 @@ WT[3]=[
   if(t===0){const a=R(r,30,80),b=R(r,30,80);return{q:"The diagram shows three angles on a straight line. Work out the size of angle x.",svg:svgLineAngles(a+"\u00b0",b+"\u00b0"),ans:{t:'num',v:180-a-b,unit:"\u00b0"},steps:["Angles on a straight line add to 180\u00b0","x = 180 \u2212 "+a+" \u2212 "+b+" = "+(180-a-b)+"\u00b0"]};}
   if(t===1){const a=R(r,35,75),b=R(r,35,75);return{q:"Work out the size of angle x in the triangle.",svg:svgTriAngles(a+"\u00b0",b+"\u00b0"),ans:{t:'num',v:180-a-b,unit:"\u00b0"},steps:["Angles in a triangle add to 180\u00b0","x = 180 \u2212 "+a+" \u2212 "+b+" = "+(180-a-b)+"\u00b0"]};}
   const w=R(r,10,16),h=R(r,8,14),cw=R(r,3,w-5),ch=R(r,3,h-4);const A=w*h-cw*ch;return{q:"Work out the area of this shape. All corners are right angles.",svg:svgLshape(w,h,cw,ch),ans:{t:'num',v:A,unit:"cm<sup>2</sup>"},steps:["Missing lengths: "+cw+" cm across and "+ch+" cm down","Whole rectangle: "+w+" \u00d7 "+h+" = "+w*h,"Cut-out: "+cw+" \u00d7 "+ch+" = "+cw*ch,"Area = "+w*h+" \u2212 "+cw*ch+" = "+A+" cm<sup>2</sup>"]};}},
-{n:"Charts and averages",nc:1,g:"Mean: add them up and divide by how many. Median: the middle value once in ORDER. Mode: most common. Range: biggest minus smallest.",
+{n:"Averages and range",nc:1,g:"Mean: add them up and divide by how many. If you know the mean, the total = mean \u00d7 how many. Median: the middle value once in ORDER. Mode: most common. Range: biggest minus smallest.",
  trap:"Finding the median without putting the numbers in order first.",
  gen:r=>{const n=P(r,[5,7,9]);const d=[];for(let i=0;i<n;i++)d.push(R(r,1,20));const s=d.slice().sort((a,b)=>a-b);const t=R(r,0,2);
   if(t===0)return{q:"Here are "+n+" numbers: "+d.join(", ")+"<br>Work out the median.",ans:{t:'num',v:s[(n-1)/2]},steps:["In order: "+s.join(", "),"Middle value (position "+((n+1)/2)+") = "+s[(n-1)/2]]};
@@ -1500,15 +1505,15 @@ WT[3]=[
 WT[4]=[
 {n:"Fraction arithmetic",nc:1,g:"Add or subtract: make the denominators the same first. Multiply: tops times tops, bottoms times bottoms. Divide: keep, change, flip.",
  trap:"Adding the denominators: \u00bd + \u2153 is not \u2156.",
- gen:r=>{const t=R(r,0,2);const d1=P(r,[3,4,5,6,8]),d2=P(r,[3,4,5,7,9]);const n1=R(r,1,d1-1),n2=R(r,1,d2-1);
+ gen:r=>{const t=R(r,0,2);const d1=P(r,[3,4,5,6,8]),d2=P(r,[3,4,5,7,9]);let n1=R(r,1,d1-1),n2=R(r,1,d2-1);while(gcd(n1,d1)!==1)n1=R(r,1,d1-1);while(gcd(n2,d2)!==1)n2=R(r,1,d2-1);
   if(t===0){const N=n1*d2+n2*d1,D=d1*d2;return{q:"Work out "+fr(n1,d1)+" + "+fr(n2,d2)+"<br>Give your answer as a fraction in its simplest form.",ans:{t:'frac',n:N,d:D,simplest:1},steps:["Common denominator "+D+": "+fr(n1*d2,D)+" + "+fr(n2*d1,D),"= "+fr(N,D)+(gcd(N,D)>1?" = "+fr(N/gcd(N,D),D/gcd(N,D)):"")]};}
   if(t===1){const N=n1*d2,D=d1*n2;return{q:"Work out "+fr(n1,d1)+" \u00f7 "+fr(n2,d2)+"<br>Give your answer as a fraction in its simplest form.",ans:{t:'frac',n:N,d:D,simplest:1},steps:["Keep, change, flip: "+fr(n1,d1)+" \u00d7 "+fr(d2,n2),"= "+fr(N,D)+(gcd(N,D)>1?" = "+fr(N/gcd(N,D),D/gcd(N,D)):"")]};}
   const w1=R(r,1,3),w2=R(r,1,2);const A=w1*d1+n1,B=w2*d2+n2;const N=A*B,D=d1*d2;return{q:"Work out "+w1+fr(n1,d1)+" \u00d7 "+w2+fr(n2,d2)+"<br>Give your answer as an improper fraction in its simplest form.",ans:{t:'frac',n:N,d:D,simplest:1},steps:["Make improper: "+fr(A,d1)+" \u00d7 "+fr(B,d2),"= "+fr(N,D)+(gcd(N,D)>1?" = "+fr(N/gcd(N,D),D/gcd(N,D)):"")]};}},
 {n:"Percentage change",nc:0,g:"Use a multiplier: a 15% increase is \u00d7 1.15, a 15% decrease is \u00d7 0.85. Percentage change = change \u00f7 original \u00d7 100.",
  trap:"Dividing by the new amount instead of the original when finding a percentage change.",
  gen:r=>{const t=R(r,0,1);const o=R(r,20,400)*5,p=P(r,[4,6,12,15,18,22,35,45]);
-  if(t===0){const up=R(r,0,1);const m=up?1+p/100:1-p/100;return{q:(up?"Increase":"Decrease")+" \u00a3"+o+" by "+p+"%",ans:{t:'num',v:rd(o*m,2),unit:"\u00a3",dp:2},steps:["Multiplier = "+fmt(m),o+" \u00d7 "+fmt(m)+" = \u00a3"+fmt(rd(o*m,2))]};}
-  const n=o+o*p/100*(R(r,0,1)?1:-1);const ch=n-o;return{q:"A price changes from \u00a3"+o+" to \u00a3"+fmt(n)+". Work out the percentage change. (Use a minus sign for a decrease.)",ans:{t:'num',v:rd(ch/o*100,2),unit:"%"},steps:["Change = "+fmt(n)+" \u2212 "+o+" = "+fmt(ch),"\u00f7 original: "+fmt(ch)+" \u00f7 "+o+" \u00d7 100 = "+fmt(ch/o*100)+"%"]};}},
+  if(t===0){const up=R(r,0,1);const m=up?1+p/100:1-p/100;return{q:(up?"Increase":"Decrease")+" \u00a3"+o+" by "+p+"%. Give your answer in pounds.",ans:{t:'num',v:rd(o*m,2),unit:"\u00a3",dp:2},steps:["Multiplier = "+fmt(m),o+" \u00d7 "+fmt(m)+" = \u00a3"+fmt(rd(o*m,2))]};}
+  const n=o+o*p/100*(R(r,0,1)?1:-1);const ch=n-o;return{q:"A price changes from \u00a3"+o+" to \u00a3"+money(n)+". Work out the percentage change. (Use a minus sign for a decrease.)",ans:{t:'num',v:rd(ch/o*100,2),unit:"%"},steps:["Change = "+money(n)+" \u2212 "+o+" = "+money(ch),"\u00f7 original: "+fmt(ch)+" \u00f7 "+o+" \u00d7 100 = "+fmt(ch/o*100)+"%"]};}},
 {n:"Expand, factorise, rearrange",nc:1,g:"Expand: multiply everything inside the bracket. Factorise: take out the highest common factor. Rearrange: undo operations in reverse order.",
  trap:"Expanding \u22122(x \u2212 1) as \u22122x \u2212 2: a negative times a negative is positive.",
  gen:r=>{const t=R(r,0,2);
@@ -1519,13 +1524,13 @@ WT[4]=[
  trap:"Moving a term across without changing its sign.",
  gen:r=>{const t=R(r,0,1);const x=R(r,-4,10),a=R(r,4,9),c=R(r,1,a-1),b=R(r,-15,15);const d=a*x+b-c*x;
   if(t===0)return{q:"Solve "+co(a,'x')+" "+sg(b)+" = "+co(c,'x')+" "+sg(d),ans:{t:'num',v:x},steps:["Subtract "+c+"x: "+(a-c)+"x "+sg(b)+" = "+fmt(d),"Subtract "+fmt(b)+": "+(a-c)+"x = "+fmt(d-b),"x = "+fmt(x)]};
-  const k=R(r,2,7),m=R(r,1,12),v=R(r,-3,9);return{q:"Solve "+k+"x + "+m+" > "+(k*v+m)+"<br>Type the boundary number (x > ?)",ans:{t:'num',v},steps:["Subtract "+m+": "+k+"x > "+k*v,"Divide by "+k+": x > "+v]};}},
+  const k=R(r,2,7),m=R(r,1,12),v=R(r,-3,9);return{q:"Solve "+k+"x + "+m+" > "+fmt(k*v+m),ans:mcq(r,"x > "+fmt(v),["x < "+fmt(v),"x > "+fmt(v+m),"x > "+fmt(k*v),"x > "+fmt(-v)]),steps:["Subtract "+m+" from both sides: "+k+"x > "+fmt(k*v),"Divide both sides by "+k+": x > "+fmt(v)]};}},
 {n:"Straight-line graphs",nc:1,g:"In y = mx + c, m is the gradient (steepness) and c is where the line crosses the y-axis. Gradient = change in y \u00f7 change in x.",
  trap:"Reading the gradient as change in x \u00f7 change in y.",
  gen:r=>{const t=R(r,0,1);const m=RNZ(r,-5,6),c=RNZ(r,-8,9);
   if(t===0){const x1=R(r,-3,2),x2=x1+R(r,1,4);return{q:"A line passes through ("+fmt(x1)+", "+fmt(m*x1+c)+") and ("+fmt(x2)+", "+fmt(m*x2+c)+").<br>Work out the gradient.",ans:{t:'num',v:m},steps:["Change in y = "+(m*x2+c)+" \u2212 "+fmt(m*x1+c)+" = "+fmt(m*(x2-x1)),"Change in x = "+(x2-x1),"Gradient = "+fmt(m*(x2-x1))+" \u00f7 "+(x2-x1)+" = "+fmt(m)]};}
   return{q:"The line y = "+lin(m,c)+" crosses the y-axis at (0, k). Work out k.",ans:{t:'num',v:c},steps:["The y-intercept is the number on its own","k = "+fmt(c)]};}},
-{n:"Ratio problems",nc:1,g:"If you know the DIFFERENCE between shares, it equals the difference in parts. Find one part from that, then the rest.",
+{n:"Ratio problems",nc:1,g:"If you know the DIFFERENCE between shares, it equals the difference in parts. Find one part from that, then the rest. As a fraction, each share is its parts over the TOTAL parts.",
  trap:"Treating a difference as if it were the total.",
  gen:r=>{const a=R(r,2,9),b=R(r,1,a-1),k=R(r,3,25);if(gcd(a,b)>1)return WT[4][5].gen(r);
   if(R(r,0,1)===0)return{q:"Ana and Ben share money in the ratio "+a+" : "+b+". Ana gets \u00a3"+(a-b)*k+" more than Ben. How much does Ben get, in pounds?",ans:{t:'num',v:b*k,unit:"\u00a3"},steps:["Difference in parts = "+a+" \u2212 "+b+" = "+(a-b),"One part = "+(a-b)*k+" \u00f7 "+(a-b)+" = "+k,"Ben = "+b+" \u00d7 "+k+" = \u00a3"+b*k]};
@@ -1535,7 +1540,7 @@ WT[4]=[
  gen:r=>{const t=R(r,0,1);
   if(t===0){const mins=P(r,[10,12,15,20,30,40,45]),s=P(r,[24,30,36,42,48,60]);const d=s*mins/60;return{q:"A cyclist travels "+fmt(d)+" miles in "+mins+" minutes. Work out the average speed in miles per hour.",ans:{t:'num',v:s,unit:"mph"},steps:[mins+" minutes = "+fmt(mins/60)+" hours ("+mins+" \u00f7 60)","Speed = "+fmt(d)+" \u00f7 "+fmt(rd(mins/60,4))+" = "+s+" mph"]};}
   const D=P(r,[2.7,7.8,8.5,11.3,19.3,0.9]),V=R(r,5,40);return{q:"A metal has density "+D+" g/cm<sup>3</sup>. A piece has volume "+V+" cm<sup>3</sup>. Work out its mass in grams.",ans:{t:'num',v:rd(D*V,2),unit:"g"},steps:["Mass = density \u00d7 volume",D+" \u00d7 "+V+" = "+fmt(D*V)+" g"]};}},
-{n:"Polygons, circles, prisms",nc:0,g:"Exterior angles of a polygon add to 360\u00b0. Circle: area = \u03c0r<sup>2</sup>, circumference = \u03c0d. Prism volume = area of cross-section \u00d7 length.",
+{n:"Polygons, circles, prisms",nc:0,g:"Exterior angles of a polygon add to 360\u00b0, and each interior angle = 180\u00b0 \u2212 exterior angle. Circle: area = \u03c0r<sup>2</sup>, circumference = \u03c0d. Prism volume = area of cross-section \u00d7 length.",
  trap:"Using the diameter in \u03c0r<sup>2</sup>: halve it first.",
  gen:r=>{const t=R(r,0,2);
   if(t===0){const n=P(r,[5,6,8,9,10,12]);return{q:"Work out the size of each interior angle of a regular polygon with "+n+" sides.",ans:{t:'num',v:180-360/n,unit:"\u00b0"},steps:["Exterior angle = 360 \u00f7 "+n+" = "+360/n+"\u00b0","Interior = 180 \u2212 "+360/n+" = "+(180-360/n)+"\u00b0"]};}
@@ -1545,7 +1550,7 @@ WT[4]=[
  trap:"Describing two transformations when the question asks for a single one.",
  gen:r=>{const t=R(r,0,1);
   if(t===0){const a=RNZ(r,-6,6),b=RNZ(r,-6,6);const v=x=>"("+fmt(x[0])+", "+fmt(x[1])+")";return{q:"The vector "+v([a,b])+", written as a column vector, translates shape A to shape B. Which vector translates B back to A?",ans:mcq(r,v([-a,-b]),[v([a,b]),v([-a,b]),v([b,a]),v([a,-b])]),steps:["Going back reverses both directions","Answer: "+v([-a,-b])]};}
-  const x=R(r,-5,5),y=R(r,-5,5),k=R(r,-4,4);const pt="("+fmt(x)+", "+fmt(y)+")";const ans="("+fmt(2*k-x)+", "+fmt(y)+")";return{q:"The point "+pt+" is reflected in the line x = "+k+". Where does it end up?",ans:mcq(r,ans,["("+fmt(x)+", "+fmt(2*k-y)+")","("+fmt(-x)+", "+fmt(y)+")","("+fmt(k-x)+", "+fmt(y)+")","("+fmt(2*k+x)+", "+fmt(y)+")","("+fmt(2*k-x+1)+", "+fmt(y)+")"]),steps:["Distance from x = "+k+" is "+Math.abs(x-k),"Same distance on the other side: x = "+(2*k-x),"Answer: "+ans]};}},
+  let x=R(r,-5,5),y=R(r,-5,5),k=R(r,-4,4);while(x===k)x=R(r,-5,5);const pt="("+fmt(x)+", "+fmt(y)+")";const ans="("+fmt(2*k-x)+", "+fmt(y)+")";return{q:"The point "+pt+" is reflected in the line x = "+k+". Where does it end up?",ans:mcq(r,ans,["("+fmt(x)+", "+fmt(2*k-y)+")","("+fmt(-x)+", "+fmt(y)+")","("+fmt(k-x)+", "+fmt(y)+")","("+fmt(2*k+x)+", "+fmt(y)+")","("+fmt(2*k-x+1)+", "+fmt(y)+")"]),steps:["Distance from x = "+k+" is "+Math.abs(x-k),"Same distance on the other side: x = "+(2*k-x),"Answer: "+ans]};}},
 {n:"Estimation and rounding",nc:1,g:"Estimate by rounding every number to 1 significant figure first. An error interval shows the smallest and largest values that round to the number.",
  trap:"Rounding 0.48 to 0 instead of 0.5 (1 s.f. is the first non-zero digit).",
  gen:r=>{const t=R(r,0,1);
@@ -1572,7 +1577,7 @@ WT[5]=[
   return{q:"Solve the simultaneous equations<br>"+lin(a,0)+" "+(b<0?"\u2212":"+")+" "+co(Math.abs(b),'y')+" = "+fmt(a*x+b*y)+"<br>"+lin(c,0)+" "+(d<0?"\u2212":"+")+" "+co(Math.abs(d),'y')+" = "+fmt(c*x+d*y),ans:{t:'multi',parts:[{l:"x =",v:x},{l:"y =",v:y}]},steps:["Multiply to match the x coefficients: \u00d7"+c+" and \u00d7"+a,"Subtract to eliminate x: "+fmt(b*c-a*d)+"y = "+fmt((a*x+b*y)*c-(c*x+d*y)*a),"y = "+fmt(y)+", then substitute: x = "+fmt(x)]};}},
 {n:"Quadratics (basic)",nc:1,g:"To factorise x<sup>2</sup> + bx + c, find two numbers that multiply to c and add to b. Set each bracket to zero to solve.",
  trap:"Getting the signs wrong: (x \u2212 3)(x + 5) gives \u221215, not +15.",
- gen:r=>{const p=RNZ(r,-9,9),q=RNZ(r,-9,9);const b=p+q,c=p*q;const br=v=>"(x "+sg(v)+")";
+ gen:r=>{let p=RNZ(r,-9,9),q=RNZ(r,-9,9);while(p===-q||p===q){p=RNZ(r,-9,9);q=RNZ(r,-9,9);}const b=p+q,c=p*q;const br=v=>"(x "+sg(v)+")";
   if(R(r,0,1)===0){const ans=br(p)+br(q);return{q:"Factorise x<sup>2</sup> "+(b?(b<0?"\u2212 ":"+ ")+(Math.abs(b)===1?"":Math.abs(b))+"x ":"")+sg(c),ans:mcq(r,ans,[br(-p)+br(-q),br(p)+br(-q),br(c)+"(x "+sg(1)+")",br(b)+br(c)]),steps:["Two numbers that multiply to "+fmt(c)+" and add to "+fmt(b)+": "+fmt(p)+" and "+fmt(q),"Answer: "+ans]};}
   const big=Math.max(-p,-q);return{q:"Solve x<sup>2</sup> "+(b?(b<0?"\u2212 ":"+ ")+(Math.abs(b)===1?"":Math.abs(b))+"x ":"")+sg(c)+" = 0<br>Type the LARGER solution.",ans:{t:'num',v:big},steps:["Factorise: "+br(p)+br(q)+" = 0","x = "+fmt(-p)+" or x = "+fmt(-q),"Larger: "+fmt(big)]};}},
 {n:"Pythagoras",nc:0,g:"a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>, where c is the hypotenuse (the longest side, opposite the right angle). Finding a shorter side? Subtract.",
@@ -1598,7 +1603,7 @@ WT[5]=[
 {n:"Direct proportion",nc:0,g:"Find the value of ONE (the unitary method), then multiply up. Recipes: scale every ingredient by the same factor.",
  trap:"Adding the extra people instead of multiplying by the scale factor.",
  gen:r=>{const n=R(r,3,8),c=R(r,40,300);const m=n+R(r,2,7);return{q:n+" identical books cost \u00a3"+fmt(n*c/100)+". How much do "+m+" of these books cost, in pounds?",ans:{t:'num',v:rd(m*c/100,2),unit:"\u00a3",dp:2},steps:["One book = \u00a3"+fmt(n*c/100)+" \u00f7 "+n+" = \u00a3"+(c/100).toFixed(2),m+" books = "+m+" \u00d7 \u00a3"+(c/100).toFixed(2)+" = \u00a3"+(m*c/100).toFixed(2)]};}},
-{n:"Similarity and congruence",nc:0,g:"Similar shapes: all lengths are multiplied by the same scale factor. Find it by dividing a pair of matching sides.",
+{n:"Similar shapes",nc:0,g:"Similar shapes: all lengths are multiplied by the same scale factor. Find it by dividing a pair of matching sides.",
  trap:"Adding the difference between sides instead of multiplying by the scale factor.",
  gen:r=>{const a=R(r,3,12),b=R(r,4,15),k=P(r,[1.5,2,2.5,3,4]);return{q:"Triangle B is an enlargement of triangle A. In A, two sides are "+a+" cm and "+b+" cm. The side matching "+a+" cm is "+fmt(a*k)+" cm in B. Work out the side in B matching "+b+" cm.",ans:{t:'num',v:rd(b*k,2),unit:"cm"},steps:["Scale factor = "+fmt(a*k)+" \u00f7 "+a+" = "+k,b+" \u00d7 "+k+" = "+fmt(b*k)+" cm"]};}},
 {n:"Constructions and loci",nc:1,g:"Locus of points a fixed distance from a point is a circle. Equidistant from two points: the perpendicular bisector. Equidistant from two lines: the angle bisector. Bearings: from north, clockwise, three figures.",
@@ -1611,7 +1616,7 @@ WT[5]=[
  gen:r=>{const p=P(r,[0.2,0.3,0.4,0.6,0.7,0.8]),q=P(r,[0.1,0.25,0.4,0.5,0.65,0.9]);
   if(R(r,0,1)===0)return{q:"P(A happens) = "+p+" and P(B happens) = "+q+". A and B are independent. Work out P(both happen).",ans:{t:'num',v:rd(p*q,4)},steps:["Multiply along: "+p+" \u00d7 "+q+" = "+fmt(p*q)]};
   const v=rd(p*(1-q)+(1-p)*q,4);return{q:"P(A happens) = "+p+" and P(B happens) = "+q+". A and B are independent. Work out P(exactly one happens).",ans:{t:'num',v},steps:["A only: "+p+" \u00d7 "+fmt(1-q)+" = "+fmt(p*(1-q)),"B only: "+fmt(1-p)+" \u00d7 "+q+" = "+fmt((1-p)*q),"Add: "+fmt(v)]};}},
-{n:"Curved shapes",nc:0,g:"Cylinder volume = \u03c0r<sup>2</sup>h. The formulae for cones and spheres are given on the formulae sheet: practise finding them quickly.",
+{n:"Curved shapes",nc:0,g:"Cylinder volume = \u03c0r<sup>2</sup>h. Cylinder volume is NOT on the formulae sheet, so learn it. Cone and sphere formulae are printed in the question when you need them.",
  trap:"Using the diameter instead of the radius.",
  gen:r=>{const rr=R(r,2,10),h=R(r,4,20);if(R(r,0,1)===0)return{q:"A cylinder has radius "+rr+" cm and height "+h+" cm. Work out its volume to 1 decimal place.",ans:{t:'num',v:rd(Math.PI*rr*rr*h,1),dp:1,unit:"cm<sup>3</sup>"},steps:["V = \u03c0 \u00d7 "+rr+"<sup>2</sup> \u00d7 "+h,"= "+rd(Math.PI*rr*rr*h,1)+" cm<sup>3</sup>"]};
   return{q:"A sphere has radius "+rr+" cm. Volume of a sphere = "+fr(4,3)+"\u03c0r<sup>3</sup>. Work out its volume to 1 decimal place.",ans:{t:'num',v:rd(4/3*Math.PI*rr*rr*rr,1),dp:1,unit:"cm<sup>3</sup>"},steps:["V = "+fr(4,3)+" \u00d7 \u03c0 \u00d7 "+rr+"<sup>3</sup>","= "+rd(4/3*Math.PI*rr**3,1)+" cm<sup>3</sup>"]};}},
@@ -1633,7 +1638,7 @@ WT[6]=[
   const px=R(r,-3,4),py=R(r,-5,9);return{q:"Find the equation of the line parallel to y = "+lin(m,c)+" that passes through ("+px+", "+py+").",ans:mcq(r,"y = "+lin(m,py-m*px),["y = "+lin(m,c),"y = "+lin(-m,py+m*px),"y = "+lin(m,py),"y = "+lin(px,py)]),steps:["Same gradient: m = "+fmt(m),"c = "+py+" \u2212 "+fmt(m)+" \u00d7 "+px+" = "+fmt(py-m*px),"y = "+lin(m,py-m*px)]};}},
 {n:"Quadratic graphs",nc:1,g:"The roots are where the curve crosses the x-axis (y = 0). The turning point is halfway between the roots.",
  trap:"Giving the y-intercept as a root.",
- gen:r=>{const p=R(r,-6,2),q=p+2*R(r,1,4);const tx=(p+q)/2,ty=(tx-p)*(tx-q);return{q:"The curve y = (x "+sg(-p)+")(x "+sg(-q)+") crosses the x-axis twice. Work out the x-coordinate of its turning point.",ans:{t:'num',v:tx},steps:["Roots: x = "+fmt(p)+" and x = "+fmt(q),"Halfway: ("+fmt(p)+" + "+fmt(q)+") \u00f7 2 = "+fmt(tx),"(The turning point is ("+fmt(tx)+", "+fmt(ty)+"))"]};}},
+ gen:r=>{const p=R(r,-6,2),q=p+2*R(r,1,4);const tx=(p+q)/2,ty=(tx-p)*(tx-q);const bk=v=>v===0?"x":"(x "+sg(-v)+")";return{q:"The curve y = "+(q===0?bk(q)+bk(p):bk(p)+bk(q))+" crosses the x-axis twice. Work out the x-coordinate of its turning point.",ans:{t:'num',v:tx},steps:["Roots: x = "+fmt(p)+" and x = "+fmt(q),"Halfway: ("+fmt(p)+" + "+fmt(q)+") \u00f7 2 = "+fmt(tx),"(The turning point is ("+fmt(tx)+", "+fmt(ty)+"))"]};}},
 {n:"Arcs and sectors",nc:0,g:"Arc length = (angle \u00f7 360) \u00d7 2\u03c0r. Sector area = (angle \u00f7 360) \u00d7 \u03c0r<sup>2</sup>.",
  trap:"Using 2\u03c0r for area or \u03c0r<sup>2</sup> for arc length.",
  gen:r=>{const rr=R(r,4,15),a=P(r,[30,40,45,60,72,80,100,120,135,150]);if(R(r,0,1)===0)return{q:"Work out the arc length of the sector. Give your answer to 1 decimal place.",svg:svgSector(rr,a),ans:{t:'num',v:rd(a/360*2*Math.PI*rr,1),dp:1,unit:"cm"},steps:[fr(a,360)+" \u00d7 2 \u00d7 \u03c0 \u00d7 "+rr,"= "+rd(a/360*2*Math.PI*rr,1)+" cm"]};
@@ -1645,7 +1650,7 @@ WT[6]=[
   if(t===0)return{q:base+"Work out P(A \u222a B). Give your answer as a fraction.",ans:{t:'frac',n:a+b+ab,d:tot},steps:["A \u222a B = A only + B only + both = "+(a+b+ab),"P = "+fr(a+b+ab,tot)]};
   if(t===1)return{q:base+"Work out P(A\u2032). Give your answer as a fraction.",ans:{t:'frac',n:b+n,d:tot},steps:["Not in A = B only + neither = "+(b+n),"P = "+fr(b+n,tot)]};
   return{q:base+"Work out P(A \u2229 B). Give your answer as a fraction.",ans:{t:'frac',n:ab,d:tot},steps:["A \u2229 B is the overlap: "+ab,"P = "+fr(ab,tot)]};}},
-{n:"Box plots and cumulative frequency",nc:1,g:"Interquartile range = upper quartile \u2212 lower quartile. For 11 ordered values, the quartiles are the 3rd and 9th values.",
+{n:"Quartiles and comparing data",nc:1,g:"Interquartile range = upper quartile \u2212 lower quartile. For 11 ordered values, the quartiles are the 3rd and 9th values. To compare two groups, compare an average (the median) AND a spread (the IQR), and say what each means.",
  trap:"Comparing only medians: always compare an average AND a spread, in context.",
  gen:r=>{const d=[];for(let i=0;i<11;i++)d.push(R(r,5,60));d.sort((a,b)=>a-b);
   if(R(r,0,1)===0)return{q:"Here are 11 values in order: "+d.join(", ")+"<br>Work out the interquartile range.",ans:{t:'num',v:d[8]-d[2]},steps:["Lower quartile = 3rd value = "+d[2],"Upper quartile = 9th value = "+d[8],"IQR = "+(d[8]-d[2])]};
@@ -1656,7 +1661,7 @@ WT[6]=[
 {n:"Harder rearranging",nc:1,g:"If the subject appears twice, collect those terms on one side, then factorise it out.",
  trap:"Dividing before collecting the subject terms together.",
  gen:r=>{const a=R(r,2,7),b=R(r,1,9);return{q:"Make x the subject of y = "+fr("x + "+b,"x \u2212 "+a)+"<br>(Hint: multiply both sides by (x \u2212 "+a+") first.)",ans:mcq(r,"x = "+fr(a+"y + "+b,"y \u2212 1"),["x = "+fr(a+"y \u2212 "+b,"y \u2212 1"),"x = "+fr(a+"y + "+b,"y + 1"),"x = "+fr("y + "+b,a+"y \u2212 1"),"x = "+a+"y + "+b]),steps:["y(x \u2212 "+a+") = x + "+b,"xy \u2212 "+a+"y = x + "+b,"xy \u2212 x = "+a+"y + "+b,"x(y \u2212 1) = "+a+"y + "+b,"x = "+fr(a+"y + "+b,"y \u2212 1")]};}},
-{n:"Counting",nc:1,g:"Product rule: if there are m ways to do one thing and n ways to do another, there are m \u00d7 n ways to do both.",
+{n:"Counting",nc:1,g:"Product rule: if there are m ways to do one thing and n ways to do another, there are m \u00d7 n ways to do both. Arranging n different items in a row: n \u00d7 (n \u2212 1) \u00d7 \u2026 \u00d7 1 ways.",
  trap:"Adding the choices instead of multiplying.",
  gen:r=>{if(R(r,0,1)===0){const s=R(r,3,8),m=R(r,3,9),d=R(r,2,6);return{q:"A caf\u00e9 offers "+s+" starters, "+m+" mains and "+d+" desserts. How many different three-course meals are possible?",ans:{t:'num',v:s*m*d},steps:[s+" \u00d7 "+m+" \u00d7 "+d+" = "+s*m*d]};}
   const n=R(r,4,7);let f=1;for(let i=2;i<=n;i++)f*=i;return{q:"How many different ways can "+n+" different books be arranged in a row on a shelf?",ans:{t:'num',v:f},steps:[n+" choices for the first place, "+(n-1)+" for the next, and so on",Array.from({length:n},(_,i)=>n-i).join(" \u00d7 ")+" = "+f]};}},
@@ -1702,7 +1707,7 @@ WT[7]=[
 {n:"Fractional and negative indices",nc:1,g:"A negative power means 1 over. A fractional power: the bottom is the root, the top is the power. Root first, then power.",
  trap:"Thinking 4<sup>\u22122</sup> is negative: it is <sup>1</sup>\u2044<sub>16</sub>.",
  gen:r=>{const t=R(r,0,1);
-  if(t===0){const base=P(r,[[8,3],[27,3],[64,3],[16,2],[25,2],[36,2],[49,2],[16,4],[81,4]]);const p=R(r,1,3);const root=Math.round(Math.pow(base[0],1/base[1]));return{q:"Work out "+base[0]+"<sup>"+p+"/"+base[1]+"</sup>",ans:{t:'num',v:Math.pow(root,p)},steps:["Root first: "+(base[1]===2?"\u221a":base[1]===3?"\u221b":"<sup>4</sup>\u221a")+base[0]+" = "+root,"Then power: "+root+"<sup>"+p+"</sup> = "+Math.pow(root,p)]};}
+  if(t===0){const base=P(r,[[8,3],[27,3],[64,3],[16,2],[25,2],[36,2],[49,2],[16,4],[81,4]]);let p=R(r,1,3);while(gcd(p,base[1])!==1)p=R(r,1,3);const root=Math.round(Math.pow(base[0],1/base[1]));return{q:"Work out "+base[0]+"<sup>"+p+"/"+base[1]+"</sup>",ans:{t:'num',v:Math.pow(root,p)},steps:["Root first: "+(base[1]===2?"\u221a":base[1]===3?"\u221b":"<sup>4</sup>\u221a")+base[0]+" = "+root,"Then power: "+root+"<sup>"+p+"</sup> = "+Math.pow(root,p)]};}
   const b=R(r,2,6),p=R(r,1,3);return{q:"Work out "+b+"<sup>\u2212"+p+"</sup>. Give your answer as a fraction.",ans:{t:'frac',n:1,d:Math.pow(b,p)},steps:["Negative power: 1 over","= "+fr(1,b+"<sup>"+p+"</sup>")+" = "+fr(1,Math.pow(b,p))]};}},
 {n:"Surds",nc:1,g:"Find the biggest square number that divides the number under the root: \u221a72 = \u221a36 \u00d7 \u221a2 = 6\u221a2.",
  trap:"Using a square factor that is not the biggest, so the surd is not fully simplified.",
@@ -1724,7 +1729,7 @@ WT[7]=[
 {n:"Identities",nc:1,g:"In an identity, both sides are equal for every x. Expand, then compare the coefficients of each power of x.",
  trap:"Solving for x: an identity has no single solution.",
  gen:r=>{const a=R(r,2,6),p=R(r,1,7),q=R(r,1,9);return{q:a+"(x + "+p+") + "+q+" \u2261 "+a+"x + c<br>Work out the value of c.",ans:{t:'num',v:a*p+q},steps:["Expand: "+a+"x + "+a*p+" + "+q,"Compare constants: c = "+(a*p+q)]};}},
-{n:"Regions",nc:1,g:"Draw each boundary line. Use a solid line for \u2264 or \u2265 and a dashed line for < or >. Test a point to see which side to shade.",
+{n:"Regions",nc:1,g:"Draw each boundary line. Use a solid line for \u2264 or \u2265 and a dashed line for &lt; or &gt;. Test a point to see which side to shade.",
  trap:"Shading the wrong side: always test a point such as (0, 0).",
  gen:r=>{const k=R(r,3,8),m=R(r,1,3);const pts=[[R(r,0,3),R(r,0,3)],[R(r,4,9),R(r,4,9)],[R(r,-3,-1),R(r,0,2)]];const ok=p=>p[0]+p[1]<k&&p[1]>=m*0&&p[1]<=2*p[0]+3&&p[1]>=0;
   const good=pts.find(ok);if(!good)return WT[7][11].gen(r);const bad=pts.filter(p=>!ok(p)).concat([[k,k],[0,-2]]);const s=p=>"("+p[0]+", "+p[1]+")";
@@ -1744,8 +1749,8 @@ WT[8]=[
   return{q:"Simplify "+fr("x<sup>2</sup> "+(b?(b<0?"\u2212 ":"+ ")+(Math.abs(b)===1?"":Math.abs(b))+"x ":"")+sg(c),"x "+sg(p)),ans:mcq(r,"x "+sg(q),["x "+sg(p),"x "+sg(-q),"x "+sg(c),"x<sup>2</sup> "+sg(q)]),steps:["Factorise the top: (x "+sg(p)+")(x "+sg(q)+")","Cancel (x "+sg(p)+"): x "+sg(q)]};}},
 {n:"Functions",nc:1,g:"fg(x) means do g first, then f. To find f<sup>−1</sup>(x), write y = f(x) and make x the subject.",
  trap:"Doing f first in fg(x).",
- gen:r=>{const a=R(r,2,5),b=R(r,-6,6),c=R(r,2,4),d=R(r,-5,5),x=R(r,-3,5);const g=c*x+d,f=a*g+b;if(R(r,0,1)===0)return{q:"f(x) = "+lin(a,b)+" and g(x) = "+lin(c,d)+". Work out fg("+x+").",ans:{t:'num',v:f},steps:["g("+x+") = "+fmt(g),"f("+fmt(g)+") = "+fmt(f)]};
-  return{q:"f(x) = "+lin(a,b)+". Find f<sup>−1</sup>(x).",ans:mcq(r,fr("x "+sg(-b),a),[fr("x "+sg(b),a),a+"x "+sg(-b),fr(1,lin(a,b)),fr("x",a)+" "+sg(-b)]),steps:["y = "+lin(a,b),"x = "+fr("y "+sg(-b),a),"f<sup>−1</sup>(x) = "+fr("x "+sg(-b),a)]};}},
+ gen:r=>{const a=R(r,2,5),b=R(r,-6,6),c=R(r,2,4),d=R(r,-5,5),x=R(r,-3,5);const g=c*x+d,f=a*g+b;if(R(r,0,1)===0)return{q:"f(x) = "+lin(a,b)+" and g(x) = "+lin(c,d)+". Work out fg("+fmt(x)+").",ans:{t:'num',v:f},steps:["g("+fmt(x)+") = "+fmt(g),"f("+fmt(g)+") = "+fmt(f)]};
+  const bb=b===0?RNZ(r,-6,6):b;const top=v=>v+" "+sg(-bb);return{q:"f(x) = "+lin(a,bb)+". Find f<sup>−1</sup>(x).",ans:mcq(r,fr(top("x"),a),[fr("x "+sg(bb),a),a+"x "+sg(-bb),fr(1,lin(a,bb)),fr("x",a)+" "+sg(-bb)]),steps:["Write y = "+lin(a,bb),"Rearrange for x: x = "+fr(top("y"),a),"So f<sup>−1</sup>(x) = "+fr(top("x"),a)]};}},
 {n:"Iteration",nc:0,g:"Put the starting value into the formula, then put each answer back in. Use the ANS button.",
  trap:"Rounding each answer before putting it back in.",
  gen:r=>{const c=R(r,2,9),x0=R(r,1,3);const f=x=>Math.cbrt(c+2*x);let x=x0;const s=[];for(let i=1;i<=3;i++){x=f(x);s.push("x<sub>"+i+"</sub> = "+rd(x,5));}return{q:"x<sub>n+1</sub> = \u221b("+c+" + 2x<sub>n</sub>) and x<sub>0</sub> = "+x0+". Work out x<sub>3</sub> to 3 decimal places.",ans:{t:'num',v:rd(x,3),dp:3},steps:s.concat(["x<sub>3</sub> = "+rd(x,3)])};}},
@@ -1758,7 +1763,7 @@ WT[8]=[
   return{q:"The graph of y = f(x) has a turning point at "+s([x0,y0])+". Where is the turning point of y = "+c[0]+"?",ans:mcq(r,s(c[1]),[s([x0+a,y0]),s([x0,y0-a]),s([-x0,-y0]),s([x0-a,y0+a])]),steps:["y = "+c[0]+": "+s(c[1])]};}},
 {n:"Tangent to a circle",nc:1,g:"The tangent is perpendicular to the radius at the point of contact. Perpendicular gradients multiply to \u22121.",
  trap:"Using the radius gradient as the tangent gradient.",
- gen:r=>{const p=P(r,[[3,4],[4,3],[5,12],[12,5],[6,8],[8,6]]);const x=p[0]*P(r,[1,-1]),y=p[1]*P(r,[1,-1]);const g=gcd(x,y);return{q:"The point ("+x+", "+y+") lies on the circle x<sup>2</sup> + y<sup>2</sup> = "+(x*x+y*y)+". Work out the gradient of the tangent at that point. (A fraction like \u22123/4 is fine.)",ans:{t:'frac',n:-x,d:y},steps:["Radius gradient = "+fr(y,x),"Tangent gradient = \u22121 \u00f7 that = "+(()=>{let n=-x/g,d=y/g;if(d<0){n=-n;d=-d;}return fmt(n)+"/"+d;})()]};}},
+ gen:r=>{const p=P(r,[[3,4],[4,3],[5,12],[12,5],[6,8],[8,6]]);const x=p[0]*P(r,[1,-1]),y=p[1]*P(r,[1,-1]);const g=gcd(x,y);return{q:"The point ("+fmt(x)+", "+fmt(y)+") lies on the circle x<sup>2</sup> + y<sup>2</sup> = "+(x*x+y*y)+". Work out the gradient of the tangent at that point. (A fraction like \u22123/4 is fine.)",ans:{t:'frac',n:-x,d:y},steps:["Radius gradient = "+fr(y,x),"Tangent gradient = \u22121 \u00f7 that = "+(()=>{let n=-x/g,d=y/g;if(d<0){n=-n;d=-d;}return fmt(n)+"/"+d;})()]};}},
 {n:"Gradients and areas of curves",nc:0,g:"Gradient of a curve: draw a tangent and find its gradient. Area under a curve: split into trapezia. On a velocity-time graph, gradient = acceleration and area = distance.",
  trap:"Forgetting units: acceleration is m/s<sup>2</sup>.",
  gen:r=>{const v=R(r,4,20),t=R(r,3,10);if(R(r,0,1)===0)return{q:"A velocity-time graph is a straight line from (0, 0) to ("+t+" s, "+v+" m/s). Work out the acceleration, in m/s<sup>2</sup>.",ans:{t:'num',v:rd(v/t,2),dp:2,unit:"m/s<sup>2</sup>"},steps:["Acceleration = gradient","= "+v+" \u00f7 "+t+" = "+fmt(rd(v/t,4))]};
@@ -1777,19 +1782,22 @@ WT[8]=[
   return{q:"Which line best proves that "+c[0]+"?",ans:mcq(r,c[1],["1 + 2 + 3 = 6, which works","n + n + n = 3n","(2n)<sup>2</sup> \u2212 n<sup>2</sup> = 3n<sup>2</sup>","2n + 2n = 4n"]),steps:["Use general terms and factorise: "+c[1]]};}},
 {n:"Exact values in harder forms",nc:1,g:"Rationalise a denominator by multiplying top and bottom by the surd: a \u2044 \u221ab = a\u221ab \u2044 b.",
  trap:"Multiplying only the bottom by the surd.",
- gen:r=>{const b=P(r,[2,3,5,6,7]),k=R(r,1,5);const a=k*b;return{q:"Write "+fr(a,"\u221a"+b)+" in the form c\u221a"+b+". Type the value of c.",ans:{t:'num',v:k},steps:["Multiply top and bottom by \u221a"+b+": "+fr(a+"\u221a"+b,b),"= "+k+"\u221a"+b]};}}
+ gen:r=>{const b=P(r,[2,3,5,6,7]),k=R(r,2,6);const a=k*b;return{q:"Write "+fr(a,"\u221a"+b)+" in the form c\u221a"+b+". Type the value of c.",ans:{t:'num',v:k},steps:["Multiply top and bottom by \u221a"+b+": "+fr(a+"\u221a"+b,b),"= "+k+"\u221a"+b]};}}
 ];
 /* ===================== GRADE 9 ===================== */
 WT[9]=[
-{n:"Vector proof",nc:1,g:"Write each route as a sum of vectors. Points are collinear if one vector is a multiple of the other AND they share a point.",
+{n:"Vector proof",nc:1,g:"Write each route as a sum of vectors along known sides. A midpoint is half-way along a vector. Points are collinear if one vector is a multiple of the other AND they share a point.",
  trap:"Showing vectors are parallel but not saying they share a point.",
- gen:r=>{const k=R(r,2,4),p=R(r,1,4),q=RNZ(r,-4,4);const ab=lin(p,0,'a')+" "+(q<0?"\u2212":"+")+" "+co(Math.abs(q),'b');return{q:"AB = "+ab+" and AC = "+lin(k*p,0,'a')+" "+(q<0?"\u2212":"+")+" "+co(Math.abs(k*q),'b')+". What does this show?",ans:mcq(r,"AC = "+k+"AB, so A, B and C lie on a straight line",["AB and AC are perpendicular","AC is "+k+" times shorter than AB","A, B and C form a right-angled triangle"]),steps:["AC = "+k+"("+ab+") = "+k+"AB","Parallel, and both start at A, so A, B, C are collinear"]};}},
+ gen:r=>{const t=R(r,0,2);
+  if(t===0){const k=R(r,2,4),p=R(r,1,4),q=RNZ(r,-4,4);const ab=lin(p,0,'a')+" "+(q<0?"\u2212":"+")+" "+co(Math.abs(q),'b');return{q:"AB = "+ab+" and AC = "+lin(k*p,0,'a')+" "+(q<0?"\u2212":"+")+" "+co(Math.abs(k*q),'b')+". What does this show?",ans:mcq(r,"AC = "+k+"AB, so A, B and C lie on a straight line",["AB and AC are perpendicular","AC is "+k+" times shorter than AB","A, B and C form a right-angled triangle"]),steps:["AC = "+k+"("+ab+") = "+k+"AB","AB and AC are parallel, and both start at A, so A, B and C are collinear"]};}
+  if(t===1)return{q:"OA = a and OB = b. M is the midpoint of AB. Find OM in terms of a and b.",ans:mcq(r,fr(1,2)+"(a + b)",[fr(1,2)+"(b \u2212 a)","a + b","a + "+fr(1,2)+"b",fr(1,2)+"(a \u2212 b)"]),steps:["AB = AO + OB = \u2212a + b = b \u2212 a","AM = "+fr(1,2)+"(b \u2212 a)","OM = OA + AM = a + "+fr(1,2)+"(b \u2212 a) = "+fr(1,2)+"(a + b)"]};
+  let m=R(r,1,3),n=R(r,1,3);while(m===n||gcd(m,n)!==1){m=R(r,1,3);n=R(r,1,3);}const s=m+n;return{q:"OA = a and OB = b. P lies on AB with AP : PB = "+m+" : "+n+". Find OP in terms of a and b.",ans:mcq(r,"OP = "+fr(n,s)+"a + "+fr(m,s)+"b",["OP = "+fr(m,s)+"a + "+fr(n,s)+"b","OP = a + "+fr(m,n)+"b","OP = "+fr(m,s)+"(b \u2212 a)","OP = "+fr(n,s)+"(a + b)"]),steps:["AB = b \u2212 a","AP = "+fr(m,s)+"(b \u2212 a)","OP = a + "+fr(m,s)+"(b \u2212 a) = "+fr(n,s)+"a + "+fr(m,s)+"b"]};}},
 {n:"Harder proof",nc:1,g:"Set out every line of algebra. End with a sentence that says what you have shown.",
  trap:"Stopping before the final statement: the last mark is for the conclusion.",
  gen:r=>{const c=P(r,[["(2n + 1)<sup>2</sup> \u2212 (2n \u2212 1)<sup>2</sup> is always a multiple of 8","4n<sup>2</sup> + 4n + 1 \u2212 (4n<sup>2</sup> \u2212 4n + 1) = 8n, a multiple of 8"],["n<sup>2</sup> + 6n + 10 is always positive","n<sup>2</sup> + 6n + 10 = (n + 3)<sup>2</sup> + 1, and a square is \u2265 0, so the total is at least 1"]]);return{q:"Which is a full proof that "+c[0]+"?",ans:mcq(r,c[1],["Try n = 1 and n = 2: both work","It is a square, so it must be true","Expanding gives 8n<sup>2</sup>, a multiple of 8"]),steps:[c[1]]};}},
 {n:"Probability with algebra",nc:0,g:"Write the probability using n, set it equal to the value given, then form and solve a quadratic.",
  trap:"Forgetting the second pick has n \u2212 1 in the denominator.",
- gen:r=>{const n=R(r,6,14),b=R(r,3,n-2);return{q:"A bag has n counters. "+b+" are black. Two are taken without replacement. P(both black) = "+fr(b*(b-1),n*(n-1))+" (not simplified). Work out n.",ans:{t:'num',v:n},steps:[fr(b,"n")+" \u00d7 "+fr(b-1,"n \u2212 1")+" = "+fr(b*(b-1),n*(n-1)),"n(n \u2212 1) = "+n*(n-1),"n = "+n]};}},
+ gen:r=>{const n=R(r,6,14),b=R(r,3,n-2);const N=b*(b-1),D=n*(n-1),g=gcd(N,D);return{q:"A bag has n counters. "+b+" are black. Two are taken at random without replacement. P(both black) = "+fr(N/g,D/g)+". Work out n.",ans:{t:'num',v:n},steps:[fr(b,"n")+" \u00d7 "+fr(b-1,"n \u2212 1")+" = "+fr(N,"n(n \u2212 1)")+" = "+fr(N/g,D/g),"So n(n \u2212 1) = "+N+" \u00d7 "+fr(D/g,N/g)+" = "+D+", which gives n<sup>2</sup> \u2212 n \u2212 "+D+" = 0","(n \u2212 "+n+")(n + "+(n-1)+") = 0, and n must be positive","n = "+n]};}},
 {n:"Completing the square (a \u2260 1)",nc:1,g:"Take a out of the x<sup>2</sup> and x terms first: ax<sup>2</sup> + bx + c = a(x<sup>2</sup> + (b\u2044a)x) + c. Then complete the square inside the bracket.",
  trap:"Forgetting to multiply the subtracted square by a.",
  gen:r=>{const a=R(r,2,4),h=RNZ(r,-5,5),k=R(r,-15,15);const b=2*a*h,c=a*h*h+k;return{q:"Write "+quad(a,b,c)+" in the form a(x + p)<sup>2</sup> + q. Type the value of q.",ans:{t:'num',v:k},steps:[a+"(x<sup>2</sup> "+(2*h<0?"\u2212 ":"+ ")+Math.abs(2*h)+"x) "+sg(c),a+"[(x "+sg(h)+")<sup>2</sup> \u2212 "+h*h+"] "+sg(c),"q = "+fmt(c)+" \u2212 "+a*h*h+" = "+fmt(k)]};}},
@@ -1803,9 +1811,18 @@ WT[9]=[
 {n:"Multi-step problems",nc:0,g:"Break the problem into steps and write what each number means. Average speed = TOTAL distance \u00f7 TOTAL time.",
  trap:"Averaging two speeds instead of using total distance \u00f7 total time.",
  gen:r=>{const d1=R(r,20,60),s1=P(r,[30,40,50,60]),d2=R(r,20,80),s2=P(r,[40,60,70,80]);const T=d1/s1+d2/s2;return{q:"A journey has two stages: "+d1+" km at "+s1+" km/h, then "+d2+" km at "+s2+" km/h. Work out the average speed for the whole journey, in km/h, to 1 decimal place.",ans:{t:'num',v:rd((d1+d2)/T,1),dp:1,unit:"km/h"},steps:["Times: "+rd(d1/s1,4)+" h and "+rd(d2/s2,4)+" h","Total distance "+(d1+d2)+" km, total time "+rd(T,4)+" h","Average speed = "+rd((d1+d2)/T,1)+" km/h"]};}},
-{n:"Non-linear simultaneous equations",nc:1,g:"Rearrange the linear equation for one letter, substitute into the other, then solve the quadratic.",
- trap:"Finding the x values but not the matching y values.",
- gen:r=>{const p=P(r,[[3,4],[4,3],[0,5],[5,0],[-3,4],[4,-3],[6,8],[8,6]]);const rr=p[0]*p[0]+p[1]*p[1];const m=1,c=p[1]-p[0];return{q:"Solve x<sup>2</sup> + y<sup>2</sup> = "+rr+" and y = x "+sg(c)+". One solution has x = "+p[0]+". Work out the matching y.",ans:{t:'num',v:p[1]},steps:["Substitute x = "+p[0]+" into y = x "+sg(c),"y = "+p[1],"Check: "+p[0]+"<sup>2</sup> + "+p[1]+"<sup>2</sup> = "+rr]};}}
+{n:"Non-linear simultaneous equations",nc:1,g:"Rearrange the linear equation for one letter, substitute it into the other equation, then solve the quadratic. Find the matching value of the other letter for EACH solution.",
+ trap:"Finding the x values but not the matching y values: each solution is a pair.",
+ gen:r=>{const S=[["x<sup>2</sup> + y<sup>2</sup> = 25","y = x + 1","2x<sup>2</sup> + 2x \u2212 24 = 0, so x<sup>2</sup> + x \u2212 12 = 0","(x + 4)(x \u2212 3) = 0",[3,4],[-4,-3]],
+  ["x<sup>2</sup> + y<sup>2</sup> = 25","y = x \u2212 1","2x<sup>2</sup> \u2212 2x \u2212 24 = 0, so x<sup>2</sup> \u2212 x \u2212 12 = 0","(x \u2212 4)(x + 3) = 0",[4,3],[-3,-4]],
+  ["x<sup>2</sup> + y<sup>2</sup> = 25","x + y = 7","2x<sup>2</sup> \u2212 14x + 24 = 0, so x<sup>2</sup> \u2212 7x + 12 = 0","(x \u2212 3)(x \u2212 4) = 0",[4,3],[3,4]],
+  ["x<sup>2</sup> + y<sup>2</sup> = 13","y = x + 1","2x<sup>2</sup> + 2x \u2212 12 = 0, so x<sup>2</sup> + x \u2212 6 = 0","(x + 3)(x \u2212 2) = 0",[2,3],[-3,-2]],
+  ["x<sup>2</sup> + y<sup>2</sup> = 20","y = x + 2","2x<sup>2</sup> + 4x \u2212 16 = 0, so x<sup>2</sup> + 2x \u2212 8 = 0","(x + 4)(x \u2212 2) = 0",[2,4],[-4,-2]],
+  ["x<sup>2</sup> + y<sup>2</sup> = 10","y = x + 2","2x<sup>2</sup> + 4x \u2212 6 = 0, so x<sup>2</sup> + 2x \u2212 3 = 0","(x + 3)(x \u2212 1) = 0",[1,3],[-3,-1]],
+  ["y = x<sup>2</sup> \u2212 3x + 4","y = x + 1","x<sup>2</sup> \u2212 4x + 3 = 0","(x \u2212 1)(x \u2212 3) = 0",[3,4],[1,2]],
+  ["y = x<sup>2</sup> + 2x \u2212 5","y = 2x + 4","x<sup>2</sup> \u2212 9 = 0","(x \u2212 3)(x + 3) = 0",[3,10],[-3,-2]]];
+  const s=P(r,S);const sub=s[1].startsWith("y = ")?"Substitute "+s[1]+" into "+s[0]:"Rearrange to y = "+(s[1]==="x + y = 7"?"7 \u2212 x":"")+" and substitute into "+s[0];
+  return{q:"Solve the simultaneous equations<br>"+s[0]+"<br>"+s[1]+"<br>Give the solution with the LARGER value of x.",ans:{t:'multi',parts:[{l:"x =",v:s[4][0]},{l:"y =",v:s[4][1]}]},steps:[sub,"Simplify: "+s[2],"Factorise: "+s[3],"Solutions: x = "+fmt(s[4][0])+", y = "+fmt(s[4][1])+" and x = "+fmt(s[5][0])+", y = "+fmt(s[5][1]),"The larger x is "+fmt(s[4][0])]};}}
 ];
 /* ===================== ENGINE ===================== */
 const WTKEY="hapMathsWT_v1";
@@ -1831,9 +1848,10 @@ function checkAns(ans,inputs){
   return{ok:true};}
  if(ans.dp!==undefined){return{ok:Math.abs(pv.v-ans.v)<=0.5*Math.pow(10,-ans.dp)+1e-9};}
  return{ok:Math.abs(pv.v-ans.v)<=1e-6*Math.max(1,Math.abs(ans.v))};}
-function ansText(ans){if(ans.t==='mcq')return ans.opts[ans.k];if(ans.t==='multi')return ans.parts.map(p=>p.l+" "+fmt(p.v)).join(", ");if(ans.t==='frac'){const g=gcd(ans.n,ans.d);let n=ans.n/g,d=ans.d/g;if(d<0){n=-n;d=-d;}return d===1?fmt(n):fmt(n)+"/"+d;}return(ans.unit==="\u00a3"?"\u00a3":"")+(ans.dp!==undefined?ans.v.toFixed(ans.dp):fmt(ans.v))+(ans.unit&&ans.unit!=="\u00a3"?" "+ans.unit:"");}
+function minusFix(h){return String(h).replace(/(^|>)([^<]*)/g,(m,a,b)=>a+b.replace(/(^|[\s(,=+\u00d7\u00f7:\[])-(?=[\d.])/g,'$1\u2212'));}
+function ansText(ans){if(ans.t==='mcq')return ans.opts[ans.k];if(ans.t==='multi')return ans.parts.map(p=>p.l+" "+fmt(p.v)).join(", ");if(ans.t==='frac'){const g=gcd(ans.n,ans.d);let n=ans.n/g,d=ans.d/g;if(d<0){n=-n;d=-d;}return d===1?fmt(n):fmt(n)+"/"+d;}return(ans.unit==="\u00a3"?"\u00a3":"")+(ans.dp!==undefined?ans.v.toFixed(ans.dp).replace('-','\u2212'):fmt(ans.v))+(ans.unit&&ans.unit!=="\u00a3"?" "+ans.unit:"");}
 /* ---- rendering a question ---- */
-function qHTML(Q,id){let h="<div class='wtq' id='"+id+"'><div class='wtqtext'>"+Q.q+"</div>"+(Q.svg?"<div class='wtsvg'>"+Q.svg+"</div>":"");
+function qHTML(Q,id){Q.q=minusFix(Q.q);Q.steps=Q.steps.map(minusFix);if(Q.ans.opts)Q.ans.opts=Q.ans.opts.map(minusFix);let h="<div class='wtq' id='"+id+"'><div class='wtqtext'>"+Q.q+"</div>"+(Q.svg?"<div class='wtsvg'>"+Q.svg+"</div>":"");
  if(Q.ans.t==='mcq')h+=Q.ans.opts.map((o,i)=>"<button class='opt wtopt' data-i='"+i+"'>"+o+"</button>").join("");
  else if(Q.ans.t==='multi')h+="<div class='wtin'>"+Q.ans.parts.map((p,i)=>"<label>"+p.l+" <input inputmode='decimal' data-i='"+i+"'></label>").join("")+"<button class='wtbtn wtcheck'>Check</button></div>";
  else h+="<div class='wtin'><input inputmode='decimal' data-i='0' placeholder='Your answer'>"+(Q.ans.unit?"<span class='wtunit'>"+Q.ans.unit+"</span>":"")+"<button class='wtbtn wtcheck'>Check</button></div>";
@@ -1865,7 +1883,7 @@ function renderTile(){const g=curG,p=tileProgress(g);
   return"<div class='wtskill' data-i='"+i+"'><div class='wtshead' role='button' tabindex='0'><span class='wtico"+(st.mastered?" m":"")+"'>"+icon+"</span><span class='wtsn'>"+s.n+(s.nc?" <span class='nc'>non-calculator</span>":"")+"</span><span class='wtst'>"+lab+"</span><span class='uchev'>\u25b8</span></div><div class='wtsbody'></div></div>";}).join("");
  $("#wtTile").innerHTML=h;$("#wtTile .wtback").addEventListener("click",closeTile);
  document.querySelectorAll("#wtTile .wtshead").forEach(hd=>hd.addEventListener("click",()=>{const box=hd.parentElement,body=box.querySelector('.wtsbody');if(box.classList.toggle('open'))openSkill(g,+box.dataset.i,body);else body.innerHTML='';}));}
-function openSkill(g,i,body){const s=WT[g][i];const ex=genSafe(s,mulberry(1000*g+i+7));
+function openSkill(g,i,body){const s=WT[g][i];const ex=genSafe(s,mulberry(1000*g+i+7));ex.q=minusFix(ex.q);ex.steps=ex.steps.map(minusFix);if(ex.ans.opts)ex.ans.opts=ex.ans.opts.map(minusFix);
  body.innerHTML="<div class='wtguide'><b>Guidance</b><p>"+s.g+"</p></div><div class='trap'><b>Where marks are lost:</b> "+s.trap+"</div>"+
   "<div class='wtex'><b>Worked example</b><div class='wtqtext'>"+ex.q+"</div>"+(ex.svg?"<div class='wtsvg'>"+ex.svg+"</div>":"")+ex.steps.map((x,k)=>"<div class='wtstep'><span>"+(k+1)+"</span><div class='wtsx'>"+x+"</div></div>").join("")+"<div class='wtans'>Answer: "+ansText(ex.ans)+"</div></div>"+
   "<button class='wtbtn wtgo'>Practise: 5 questions"+(s.nc?" (no calculator)":"")+"</button><div class='wtpractice'></div>";
@@ -1897,7 +1915,5 @@ function initWT(){renderTiles();$("#wtReset").addEventListener("click",resetWT);
 
 initWT();
 </script>
-<a href="https://geographyhub.github.io/Peckham_Hub/" class="phub" aria-label="Back to the Peckham Hub">&#8592; Peckham Hub</a>
-<style>.phub{position:fixed;left:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;background:#102A43;color:#F4B740;font:700 15px/1 'Archivo',Arial,sans-serif;padding:11px 15px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.35);border:2px solid #F4B740;opacity:.94}.phub:hover{opacity:1}@media print{.phub{display:none}}</style>
 </body>
 </html>
